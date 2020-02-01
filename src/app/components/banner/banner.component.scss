@@ -1,0 +1,13 @@
+@import "src/assets/styles/variables.scss";
+
+mat-card-title {
+  background-color: $bg-secondary;
+  color: $secondary;
+
+  padding: .5rem;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: normal;
+
+  font-size: 1.5rem;
+}

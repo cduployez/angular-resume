@@ -1,6 +1,7 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+    "typedef": [true, "call-signature", "parameter", "member-variable-declaration"],
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
@@ -12,13 +13,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "cv",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "cv",
       "kebab-case"
     ],
     "import-blacklist": [
@@ -54,7 +55,7 @@
     ],
     "no-empty": false,
     "no-inferrable-types": [
-      true,
+      false,
       "ignore-params"
     ],
     "no-non-null-assertion": true,

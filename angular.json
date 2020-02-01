@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "cv",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -30,6 +30,11 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/styles/variables.scss"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -122,8 +127,15 @@
               "devServerTarget": "cv-angular:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "."
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "cv-angular"
 }

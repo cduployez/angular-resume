@@ -1,0 +1,34 @@
+.container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .main {
+    flex: 5;
+
+    .main-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .main-grid-col {
+
+      }
+
+    }
+
+  }
+
+  .side {
+    flex: 2
+  }
+}
+
+
+
+
+
+
+
+
