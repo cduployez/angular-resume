@@ -1,3 +1,5 @@
+@import "src/assets/styles/variables.scss";
+
 .container {
 
   display: flex;
@@ -7,12 +9,26 @@
   .main {
     flex: 5;
 
+    h1 {
+      color: $primary;
+      font-size: 2rem;
+    }
+
     .main-grid {
       display: flex;
+      flex-direction: row;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+
 
       .main-grid-col {
+        text-align: left;
+        flex: 1;
+
+        ul {
+          list-style: none;
+          padding: 0;
+        }
 
       }
 
@@ -21,7 +37,18 @@
   }
 
   .side {
-    flex: 2
+    flex: 2;
+
+    img {
+      max-height: 12rem;
+    }
+
+    h2 {
+      border-bottom: 1px solid $primary;
+      color: $primary;
+      font-variant: small-caps;
+      text-align: center;
+    }
   }
 }
 
