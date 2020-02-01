@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cv-angular": {
+    "angular-resume": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cv-angular",
+            "outputPath": "dist/angular-resume",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cv-angular:build"
+            "browserTarget": "angular-resume:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cv-angular:build:production"
+              "browserTarget": "angular-resume:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cv-angular:build"
+            "browserTarget": "angular-resume:build"
           }
         },
         "test": {
@@ -120,11 +120,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cv-angular:serve"
+            "devServerTarget": "angular-resume:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cv-angular:serve:production"
+              "devServerTarget": "angular-resume:serve:production"
             }
           }
         },
@@ -137,5 +137,5 @@
       }
     }
   },
-  "defaultProject": "cv-angular"
+  "defaultProject": "angular-resume"
 }
