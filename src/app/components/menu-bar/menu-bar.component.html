@@ -1,11 +1,17 @@
-<nav>
-    <div class="title">CV – {{ projectService.latestRevisionYear }}</div>
+<nav [ngClass]="{'minimized': minimized}">
+    <div *ngIf="!minimized" class="title">
+        <span>CV – {{ projectService.latestRevisionYear }}</span>
+    </div>
     <div>
         <a [href]="linkService.pdfDownloadUrl" class="pdf">
             <fa-icon [icon]="iconsService.faFilePdf"></fa-icon>
         </a>
-        <a [href]="linkService.linkedInUrl" target="_blank" class="linkedin">
+        <a [href]="linkService.linkedInUrl" class="linkedin" target="_blank">
             <fa-icon [icon]="iconsService.faLinkedIn"></fa-icon>
         </a>
+        <fa-icon *ngIf="!minimized" class="minimize" (click)="minimized = true" [icon]="iconsService.faMinus"></fa-icon>
+        <fa-icon *ngIf="minimized" class="minimize" (click)="minimized = false" [icon]="iconsService.faPlus"></fa-icon>
     </div>
 </nav>
+
+<div *ngIf="minimized" class="placeholder"></div>

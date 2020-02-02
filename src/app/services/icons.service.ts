@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {faCode, faFilePdf} from '@fortawesome/free-solid-svg-icons';
+import {faCode, faFilePdf, faMinus, faPlus} from '@fortawesome/free-solid-svg-icons';
 import {IconDefinition} from '@fortawesome/fontawesome-common-types';
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
@@ -21,4 +21,13 @@ export class IconsService {
      */
     readonly faLinkedIn: IconDefinition = faLinkedin;
 
+    /**
+     * Font-Awesome - minus
+     */
+    readonly faMinus: IconDefinition = faMinus;
+
+    /**
+     * Font-Awesome - plus
+     */
+    readonly faPlus: IconDefinition = faPlus;
 }
