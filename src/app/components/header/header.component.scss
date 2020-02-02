@@ -5,9 +5,12 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  flex-flow: row wrap;
 
   .main {
+    min-width: 25rem;
     flex: 5;
+    margin-bottom: 2rem;
 
     h1 {
       color: $primary;
@@ -37,8 +40,17 @@
     }
 
     .main-grid.info {
+
       .main-grid-col ul {
         color: $blue-gray-500;
+      }
+
+      .main-grid-col-left {
+        flex: 1 1 35%;
+      }
+
+      .main-grid-col-right {
+        flex: 1 1 65%;
       }
     }
 
@@ -69,9 +81,11 @@
 
   .side {
     flex: 2;
+    min-width: 20rem;
 
     img {
       max-height: 12rem;
+      max-width: 100%;
     }
 
     h2 {
@@ -84,6 +98,30 @@
   }
 }
 
+@media (max-width: 930px) {
+  .side-left {
+    display: none;
+  }
+
+  .side-right {
+    display: none;
+  }
+
+/*  .side-right h2 {
+    border-bottom: none;
+    border-top: 1px solid $primary;
+  }*/
+}
+
+@media (max-width: 630px) {
+  .container {
+    flex-flow: column wrap;
+
+    .main {
+      min-width: unset;
+    }
+  }
+}
 
 
 
