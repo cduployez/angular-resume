@@ -6,7 +6,7 @@ const KEY_MENU_BAR_MINIMIZED: string = 'menuBarMinimized';
 export class SessionStorageService {
 
     constructor() {
-        this._menuBarMinimized = sessionStorage[KEY_MENU_BAR_MINIMIZED] || false;
+        this._menuBarMinimized = sessionStorage[KEY_MENU_BAR_MINIMIZED] === 'true' || false;
     }
 
     private _menuBarMinimized: boolean = false;
