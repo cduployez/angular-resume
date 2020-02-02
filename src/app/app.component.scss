@@ -1,3 +1,15 @@
 main {
   margin: 0 10% 5rem;
 }
+
+@media (max-width: 1023px) {
+  main {
+    margin: 0 5% 5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  main {
+    margin: 0 2% 5rem;
+  }
+}
