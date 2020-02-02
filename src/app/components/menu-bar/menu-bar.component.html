@@ -3,14 +3,14 @@
         <span>CV – {{ projectService.latestRevisionYear }}</span>
     </div>
     <div>
-        <a [href]="linkService.pdfDownloadUrl" class="pdf">
+        <a [href]="linkService.pdfDownloadUrl" class="pdf link">
             <fa-icon [icon]="iconsService.faFilePdf"></fa-icon>
         </a>
-        <a [href]="linkService.linkedInUrl" class="linkedin" target="_blank">
+        <a [href]="linkService.linkedInUrl" class="linkedin link" target="_blank">
             <fa-icon [icon]="iconsService.faLinkedIn"></fa-icon>
         </a>
-        <fa-icon *ngIf="!minimized" class="minimize" (click)="minimized = true" [icon]="iconsService.faMinus"></fa-icon>
-        <fa-icon *ngIf="minimized" class="minimize" (click)="minimized = false" [icon]="iconsService.faPlus"></fa-icon>
+        <fa-icon *ngIf="!minimized" class="link minimize" (click)="minimized = true" [icon]="iconsService.faMinus"></fa-icon>
+        <fa-icon *ngIf="minimized" class="link minimize" (click)="minimized = false" [icon]="iconsService.faPlus"></fa-icon>
     </div>
 </nav>
 
