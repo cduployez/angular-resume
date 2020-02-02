@@ -1,0 +1,11 @@
+@import "src/assets/styles/variables.scss";
+
+.date-range {
+  color: $primary;
+}
+
+.date-range:after {
+  content: '>';
+  margin-left: .2rem;
+  margin-right: .2rem;
+}
