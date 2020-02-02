@@ -1,0 +1,37 @@
+@import "src/assets/styles/variables.scss";
+
+nav {
+  background-color: #f5f5f5;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-size: larger;
+
+  -webkit-box-shadow: 0px 1px 15px 0px rgba(110, 110, 110, 0.5);
+  -moz-box-shadow: 0px 1px 15px 0px rgba(110, 110, 110, 0.5);
+  box-shadow: 0px 1px 15px 0px rgba(110, 110, 110, 0.5);
+
+  .title {
+    user-select: none;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 1rem;
+    font-size: larger;
+    color: $blue-gray-500;
+    transition: 0.3s;
+  }
+
+  a.linkedin:hover {
+    color: $linkedIn;
+  }
+
+  a.pdf:hover {
+    color: $pdf;
+  }
+}
+

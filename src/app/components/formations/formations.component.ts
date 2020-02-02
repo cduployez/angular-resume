@@ -1,14 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {FormationItem} from '../../model/formation/formation-item';
-import {CvDate} from '../../model/shared/cv-date';
 import {DateUtils} from '../../utils/date-utils';
+import {CvDate} from '../../model/shared/cv-date';
+
 
 @Component({
     selector: 'cv-formations',
     templateUrl: './formations.component.html',
     styleUrls: ['./formations.component.scss']
 })
-export class FormationsComponent implements OnInit {
+export class FormationsComponent {
 
     formationItems: FormationItem[] = FormationsComponent.initFormationItems();
 
@@ -33,9 +34,6 @@ export class FormationsComponent implements OnInit {
                 ['Baccalauréat Série Scientifique, Mention Très Bien',
                     'Section Européenne'])
         ];
-    }
-
-    ngOnInit(): void {
     }
 
 }

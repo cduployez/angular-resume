@@ -1,0 +1,11 @@
+<nav>
+    <div class="title">CV – {{ projectService.latestRevisionYear }}</div>
+    <div>
+        <a [href]="linkService.pdfDownloadUrl" class="pdf">
+            <fa-icon [icon]="iconsService.faFilePdf"></fa-icon>
+        </a>
+        <a [href]="linkService.linkedInUrl" target="_blank" class="linkedin">
+            <fa-icon [icon]="iconsService.faLinkedIn"></fa-icon>
+        </a>
+    </div>
+</nav>
