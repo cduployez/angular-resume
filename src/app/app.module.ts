@@ -13,6 +13,8 @@ import {ProjectsComponent} from './components/projects/projects.component';
 import {LanguagesComponent} from './components/languages/languages.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {DatePrefixComponent} from './components/shared/date-prefix/date-prefix.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {WorkInProgressComponent} from './components/shared/work-in-progress/work-in-progress.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +31,8 @@ import {DatePrefixComponent} from './components/shared/date-prefix/date-prefix.c
         LanguagesComponent,
         // Shared
         CategoryTitleComponent,
-        DatePrefixComponent
+        DatePrefixComponent,
+        WorkInProgressComponent
     ],
     imports: [
         BrowserModule,
