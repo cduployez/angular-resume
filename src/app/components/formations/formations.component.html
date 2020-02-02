@@ -2,8 +2,7 @@
 
 <div *ngFor="let item of formationItems;" class="formation-item">
     <div>
-        <span class="date-range">{{ item.cvDate.beginDate | date:'yyyy' }}
-            - {{ item.cvDate.endDate | date:'yyyy' }}</span>
+        <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
         <span class="title">{{ item.title }}</span>
     </div>
     <div>

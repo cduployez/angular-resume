@@ -2,16 +2,6 @@
 
 .formation-item {
 
-  .date-range {
-    color: $primary;
-  }
-
-  .date-range:after {
-    content: '>';
-    margin-left: .2rem;
-    margin-right: .2rem;
-  }
-
   .title {
     font-weight: bold;
   }
