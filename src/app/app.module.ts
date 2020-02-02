@@ -34,6 +34,8 @@ import {DatePrefixComponent} from './components/shared/date-prefix/date-prefix.c
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        // Font Awesome
+        FontAwesomeModule
     ],
     providers: [],
     bootstrap: [AppComponent]
