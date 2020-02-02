@@ -1,6 +1,6 @@
 <section class="container">
 
-    <div class="side">
+    <div class="side side-left">
         <img [src]="imageService.avatarUrl">
     </div>
 
@@ -9,17 +9,15 @@
         <h1>{{ profileService.fullName }}</h1>
         <!-- Infos complémentaires -->
         <div class="main-grid info">
-            <div class="main-grid-col">
+            <div class="main-grid-col main-grid-col-left">
                 <ul>
                     <li *ngFor="let info of leftInfoList">{{ info }}</li>
                 </ul>
             </div>
-            <div class="main-grid-col">
+            <div class="main-grid-col main-grid-col-right">
                 <ul>
                     <li *ngFor="let info of rightInfoList">{{ info }}</li>
                 </ul>
-            </div>
-            <div class="main-grid-col">
             </div>
         </div>
         <!-- Contact -->
@@ -32,7 +30,7 @@
         </div>
     </div>
 
-    <div class="side">
+    <div class="side side-right">
         <h2>{{goalTitle}}</h2>
         <p *ngFor="let goal of profileService.goals">{{goal}}</p>
     </div>
