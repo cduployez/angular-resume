@@ -1,9 +1,14 @@
 $bg: white;
 $text: black;
 
-$primary: rgb(33, 150, 243);
-$bg-primary: $primary;
+$light-blue: rgb(33, 150, 243);
+$light-gray: rgb(222, 235, 247);
 
-$secondary: $primary;
-$bg-secondary: rgb(222, 235, 247);
+$primary: $light-blue;
+$bg-primary: white;
+$primary-reverse: white;
+$bg-primary-reverse: $light-blue;
+
+$secondary: $light-blue;
+$bg-secondary: $light-gray;
 
