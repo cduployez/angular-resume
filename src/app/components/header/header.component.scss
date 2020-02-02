@@ -8,9 +8,10 @@
   flex-flow: row wrap;
 
   .main {
-    min-width: 25rem;
     flex: 5;
     margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 
     h1 {
       color: $primary;
@@ -81,7 +82,6 @@
 
   .side {
     flex: 2;
-    min-width: 20rem;
 
     img {
       max-height: 12rem;
@@ -98,22 +98,21 @@
   }
 }
 
-@media (max-width: 930px) {
-  .side-left {
-    display: none;
-  }
+@media (max-width: 1023px) {
 
   .side-right {
     display: none;
   }
-
-/*  .side-right h2 {
-    border-bottom: none;
-    border-top: 1px solid $primary;
-  }*/
 }
 
-@media (max-width: 630px) {
+@media (max-width: 767px) {
+
+  .side-left {
+    display: none;
+  }
+}
+
+/*@media (max-width: 630px) {
   .container {
     flex-flow: column wrap;
 
@@ -121,7 +120,7 @@
       min-width: unset;
     }
   }
-}
+}*/
 
 
 
