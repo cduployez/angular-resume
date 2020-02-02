@@ -15,6 +15,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {DatePrefixComponent} from './components/shared/date-prefix/date-prefix.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {WorkInProgressComponent} from './components/shared/work-in-progress/work-in-progress.component';
+import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 
 @NgModule({
     declarations: [
@@ -32,7 +33,8 @@ import {WorkInProgressComponent} from './components/shared/work-in-progress/work
         // Shared
         CategoryTitleComponent,
         DatePrefixComponent,
-        WorkInProgressComponent
+        WorkInProgressComponent,
+        MenuBarComponent
     ],
     imports: [
         BrowserModule,
