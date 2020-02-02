@@ -1,0 +1,11 @@
+@import "src/assets/styles/variables.scss";
+
+.title {
+  font-variant: small-caps;
+  background-color: $bg-primary-reverse;
+  color: $primary-reverse;
+  padding: .2em;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  text-align: center;
+}
