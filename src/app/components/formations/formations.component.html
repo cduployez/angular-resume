@@ -1,16 +1,13 @@
 <cv-category-title title="Formation"></cv-category-title>
 
-<div *ngFor="let item of formationItems">
+<div *ngFor="let item of formationItems;" class="formation-item">
     <div>
-      <span>
-        {{ item.cvDate.beginDate | date:'yyyy' }} - {{ item.cvDate.endDate | date:'yyyy' }} {{ dateSuffix }}
-      </span>
-        <span>
-            {{ item.title }}
-        </span>
+        <span class="date-range">{{ item.cvDate.beginDate | date:'yyyy' }}
+            - {{ item.cvDate.endDate | date:'yyyy' }}</span>
+        <span class="title">{{ item.title }}</span>
     </div>
     <div>
-        <p *ngFor="let description of item.descriptions">
+        <p *ngFor="let description of item.descriptions" class="description">
             {{ description }}
         </p>
     </div>
