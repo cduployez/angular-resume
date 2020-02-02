@@ -1,33 +1,41 @@
 import {Component, OnInit} from '@angular/core';
-import {DatedItem} from '../../model/dated-item';
+import {FormationItem} from '../../model/formation/formation-item';
+import {CvDate} from '../../model/shared/cv-date';
+import {DateUtils} from '../../utils/date-utils';
 
 @Component({
-  selector: 'cv-formations',
-  templateUrl: './formations.component.html',
-  styleUrls: ['./formations.component.scss']
+    selector: 'cv-formations',
+    templateUrl: './formations.component.html',
+    styleUrls: ['./formations.component.scss']
 })
 export class FormationsComponent implements OnInit {
 
-  formationItems: DatedItem[] = FormationsComponent.initFormationItems();
+    formationItems: FormationItem[] = FormationsComponent.initFormationItems();
 
-  dateSuffix: string = '>';
+    constructor() {
+    }
 
-  constructor() {
-  }
+    private static initFormationItems(): FormationItem[] {
 
-  private static initFormationItems(): DatedItem[] {
-    return [
-      {
-        beginDate: new Date('01-01-2015'),
-        endDate: new Date('12-31-2017'),
-        displayMonths: false,
-        title: 'Hello World',
-        description: 'Lorem Ipsum'
-      }
-    ];
-  }
+        return [
+            new FormationItem(
+                new CvDate(DateUtils.fromYear(2015), DateUtils.fromYear(2017), 'year'),
+                'ISEN Lille – Ecole d’ingénieur',
+                ['Spécialisé en Développement Logiciel et Big Data', 'Contrat de professionnalisation']
+            ),
+            new FormationItem(
+                new CvDate(DateUtils.fromYear(2012), DateUtils.fromYear(2015), 'year'),
+                'ISEN Lille – Ecole d’ingénieur',
+                ['Cycle Informatique et Réseaux, Diplômé Bachelor ISEN']
+            ),
+            new FormationItem(new CvDate(DateUtils.fromYear(2009), DateUtils.fromYear(2012), 'year'),
+                'Institut de Genech',
+                ['Baccalauréat Série Scientifique, Mention Très Bien',
+                    'Section Européenne'])
+        ];
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }

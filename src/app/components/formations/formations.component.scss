@@ -1,0 +1,30 @@
+@import "src/assets/styles/variables.scss";
+
+.formation-item {
+
+  .date-range {
+    color: $primary;
+  }
+
+  .date-range:after {
+    content: '>';
+    margin-left: .2rem;
+    margin-right: .2rem;
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+  .description {
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+  }
+
+}
+
+.formation-item:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+
