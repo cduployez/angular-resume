@@ -3,7 +3,7 @@
 .container {
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   .main {
@@ -12,12 +12,13 @@
     h1 {
       color: $primary;
       font-size: 2rem;
+      margin-top: 0;
     }
 
     .main-grid {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-start;
 
 
@@ -28,10 +29,40 @@
         ul {
           list-style: none;
           padding: 0;
+          margin: 0;
         }
 
       }
 
+    }
+
+    .main-grid.info {
+      .main-grid-col ul {
+        color: $blue-gray-500;
+      }
+    }
+
+    .main-grid.contact {
+
+      margin-top: 1rem;
+
+      .main-grid-col ul li {
+        color: $primary;
+
+        :before {
+          content: '>';
+          margin-right: .2rem;
+        }
+
+        a {
+          text-decoration: none;
+          color: $primary;
+        }
+      }
+    }
+
+    .flex-merge-row {
+      flex: 1 1 100%;
     }
 
   }
@@ -48,6 +79,7 @@
       color: $primary;
       font-variant: small-caps;
       text-align: center;
+      margin-top: 0;
     }
   }
 }
