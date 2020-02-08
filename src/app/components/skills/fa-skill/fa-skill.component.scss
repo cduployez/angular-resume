@@ -1,0 +1,30 @@
+@import "src/assets/styles/variables.scss";
+
+.icon-with-title {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  .icon {
+    display: inline-block;
+    /* Circle */
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    /* Colors */
+    background-color: $bg-primary-reverse;
+    color: $primary-reverse;
+    /* Alignment */
+    text-align: center;
+
+    fa-icon {
+      font-size: 25pt;
+    }
+  }
+
+  .title {
+    color: $text;
+  }
+}
+
