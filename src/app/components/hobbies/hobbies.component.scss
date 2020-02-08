@@ -5,7 +5,7 @@
 }
 
 .title:before {
-  content: '>';
+  content: $title-delimiter;
   margin-right: .2rem;
 }
 

@@ -6,7 +6,7 @@
 }
 
 .date-range:after {
-  content: '>';
+  content: $title-delimiter;
   margin-left: .2rem;
   margin-right: .2rem;
 }

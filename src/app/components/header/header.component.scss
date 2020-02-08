@@ -63,7 +63,7 @@
         color: $primary;
 
         :before {
-          content: '>';
+          content: $title-delimiter;
           margin-right: .2rem;
         }
 
