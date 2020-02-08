@@ -1,0 +1,16 @@
+@import "src/assets/styles/variables.scss";
+
+.icon {
+  background-color: $bg;
+  color: $primary;
+  font-weight: bold;
+  font-size: smaller;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 50%;
+  width: 50%;
+  padding-right: .1rem;
+  padding-left: .1rem;
+  user-select: none;
+}

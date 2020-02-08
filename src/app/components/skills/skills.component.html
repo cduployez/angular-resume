@@ -17,7 +17,15 @@
 
 <cv-item-container>
     <p>Web</p>
-    <cv-work-in-progress></cv-work-in-progress>
+    <div class="row-container">
+        <div class="row">
+            <cv-fa-skill [faIcon]="iconsService.faAngular" title="Angular"></cv-fa-skill>
+            <cv-fa-skill [faIcon]="iconsService.faHtml5" title="HTML"></cv-fa-skill>
+            <cv-fa-skill [faIcon]="iconsService.faCss3" title="CSS"></cv-fa-skill>
+            <cv-js-skill title="Javascript" iconText="JS"></cv-js-skill>
+            <cv-js-skill title="Typescript" iconText="TS"></cv-js-skill>
+        </div>
+    </div>
 </cv-item-container>
 
 <cv-item-container>
