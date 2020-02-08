@@ -2,7 +2,6 @@
 
 .icon {
   background-color: $bg;
-  color: $primary;
   font-weight: bold;
   font-size: smaller;
   display: flex;
@@ -13,4 +12,10 @@
   padding-right: .1rem;
   padding-left: .1rem;
   user-select: none;
+
+  span {
+    color: var(--icon-text);
+  }
 }
+
+

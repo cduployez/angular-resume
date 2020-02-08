@@ -22,7 +22,13 @@
     /* Alignment */
     text-align: center;
     margin-left: .2em;
-    margin-right:.2em;
+    margin-right: .2em;
+    transition: 0.3s;
+  }
+
+  .icon:hover {
+    color: var(--icon-color);
+    background-color: var(--icon-bg);
   }
 
   .title {
