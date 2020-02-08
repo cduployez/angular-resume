@@ -1,3 +1,18 @@
 <cv-category-title title="Expériences"></cv-category-title>
 
-<cv-work-in-progress></cv-work-in-progress>
+<div *ngFor="let item of experienceItems;" class="formation-item">
+    <div>
+        <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
+        <span class="title">{{ item.enterprise }}</span>
+        <span *ngIf="item.jobType" class="jobType">({{item.jobType}})</span>
+    </div>
+    <div>
+        <p *ngIf="item.project">{{item.project}}</p>
+        <p *ngFor="let description of item.descriptions" class="description">
+            {{ description }}
+        </p>
+        <p>
+            <span *ngFor="let skill of item.skills">{{skill}}</span>
+        </p>
+    </div>
+</div>
