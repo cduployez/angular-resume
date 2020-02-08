@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {faCode, faFilePdf, faMinus, faPlus} from '@fortawesome/free-solid-svg-icons';
+import {faAngleDoubleUp, faCode, faFilePdf, faMinus, faPlus} from '@fortawesome/free-solid-svg-icons';
 import {IconDefinition} from '@fortawesome/fontawesome-common-types';
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
@@ -30,4 +30,9 @@ export class IconsService {
      * Font-Awesome - plus
      */
     readonly faPlus: IconDefinition = faPlus;
+
+    /**
+     * Font-Awesome - angle double up
+     */
+    readonly faAngleDoubleUp: IconDefinition = faAngleDoubleUp;
 }
