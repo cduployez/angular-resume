@@ -28,6 +28,7 @@ import { BadgeComponent } from './components/shared/badge/badge.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FaSkillComponent } from './components/skills/fa-skill/fa-skill.component';
 import { SkillComponent } from './components/skills/skill/skill.component';
+import { TextSkillComponent } from './components/skills/text-skill/text-skill.component';
 
 // the second parameter 'fr-FR' is optional
 registerLocaleData(localeFr, 'fr-FR');
@@ -56,8 +57,9 @@ registerLocaleData(localeFr, 'fr-FR');
         ItemContainerComponent,
         BadgesComponent,
         BadgeComponent,
-        FaSkillComponent,
         SkillComponent,
+        FaSkillComponent,
+        TextSkillComponent,
         FooterComponent
     ],
     imports: [
