@@ -1,0 +1,18 @@
+@import "src/assets/styles/variables.scss";
+
+span {
+  margin-left: .1rem;
+  margin-right: .1rem;
+  padding: .2rem;
+  border-radius: 5px;
+  border: 1px solid $gray;
+  color: $gray;
+  background-color: $bg;
+  transition: 0.3s;
+  cursor: default;
+}
+
+span:hover {
+  color: $bg;
+  background-color: $gray;
+}

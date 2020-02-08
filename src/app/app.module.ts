@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppComponent} from './app.component';
@@ -15,7 +15,19 @@ import {BrowserModule} from '@angular/platform-browser';
 import {DatePrefixComponent} from './components/shared/date-prefix/date-prefix.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {WorkInProgressComponent} from './components/shared/work-in-progress/work-in-progress.component';
-import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
+import {MenuBarComponent} from './components/menu-bar/menu-bar.component';
+
+import {registerLocaleData} from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+import { TitleComponent } from './components/shared/title/title.component';
+import { DescriptionComponent } from './components/shared/description/description.component';
+import { SubtitleComponent } from './components/shared/subtitle/subtitle.component';
+import { ItemContainerComponent } from './components/shared/item-container/item-container.component';
+import { BadgesComponent } from './components/shared/badges/badges.component';
+import { BadgeComponent } from './components/shared/badge/badge.component';
+
+// the second parameter 'fr-FR' is optional
+registerLocaleData(localeFr, 'fr-FR');
 
 @NgModule({
     declarations: [
@@ -34,7 +46,13 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
         CategoryTitleComponent,
         DatePrefixComponent,
         WorkInProgressComponent,
-        MenuBarComponent
+        MenuBarComponent,
+        TitleComponent,
+        DescriptionComponent,
+        SubtitleComponent,
+        ItemContainerComponent,
+        BadgesComponent,
+        BadgeComponent
     ],
     imports: [
         BrowserModule,
@@ -42,7 +60,9 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
         // Font Awesome
         FontAwesomeModule
     ],
-    providers: [],
+    providers: [
+        {provide: LOCALE_ID, useValue: 'fr-FR'}
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
