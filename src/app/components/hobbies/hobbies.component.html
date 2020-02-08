@@ -1,3 +1,6 @@
 <cv-category-title title="Loisirs"></cv-category-title>
 
-<cv-work-in-progress></cv-work-in-progress>
+<cv-item-container *ngFor="let item of hobbyItems">
+    <span class="title">{{item.title}}</span>
+    <span class="values">{{item.valuesFormat}}<ng-container *ngIf="item.ellipsis">...</ng-container></span>
+</cv-item-container>
