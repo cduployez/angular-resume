@@ -1,0 +1,19 @@
+p {
+  text-align: center;
+  font-variant: small-caps;
+}
+
+.row-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* FIXME : Remove me once component is complete */
+  margin-bottom: 2em;
+}
