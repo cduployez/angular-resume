@@ -53,7 +53,7 @@ export class ExperiencesComponent implements OnInit {
                 new CvDate(DateUtils.fromYear(2014), DateUtils.fromYear(2016), 'year'),
                 'ISEN',
                 null,
-                'Club Informatique ISEN',
+                'Club Informatique',
                 ['Responsable Evènementiel', 'Soutien des étudiants : cours, logiciel, matériel'],
                 ['Linux', 'Organisationnel']
             )
