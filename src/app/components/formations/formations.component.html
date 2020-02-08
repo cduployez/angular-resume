@@ -5,9 +5,5 @@
         <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
         <cv-title [title]="item.title"></cv-title>
     </div>
-    <div>
-        <p *ngFor="let description of item.descriptions" class="description">
-            {{ description }}
-        </p>
-    </div>
+    <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
 </div>

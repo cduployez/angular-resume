@@ -7,9 +7,7 @@
     </div>
     <div>
         <p *ngIf="item.project">{{item.project}}</p>
-        <p *ngFor="let description of item.descriptions" class="description">
-            {{ description }}
-        </p>
+        <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
         <p>
             <span *ngFor="let skill of item.skills">{{skill}}</span>
         </p>
