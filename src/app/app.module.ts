@@ -23,6 +23,8 @@ import { TitleComponent } from './components/shared/title/title.component';
 import { DescriptionComponent } from './components/shared/description/description.component';
 import { SubtitleComponent } from './components/shared/subtitle/subtitle.component';
 import { ItemContainerComponent } from './components/shared/item-container/item-container.component';
+import { BadgesComponent } from './components/shared/badges/badges.component';
+import { BadgeComponent } from './components/shared/badge/badge.component';
 
 // the second parameter 'fr-FR' is optional
 registerLocaleData(localeFr, 'fr-FR');
@@ -48,7 +50,9 @@ registerLocaleData(localeFr, 'fr-FR');
         TitleComponent,
         DescriptionComponent,
         SubtitleComponent,
-        ItemContainerComponent
+        ItemContainerComponent,
+        BadgesComponent,
+        BadgeComponent
     ],
     imports: [
         BrowserModule,

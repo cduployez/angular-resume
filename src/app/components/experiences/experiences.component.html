@@ -8,8 +8,6 @@
     <div>
         <cv-subtitle *ngIf="item.project" [subtitle]="item.project"></cv-subtitle>
         <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
-        <div>
-            <span *ngFor="let skill of item.skills">{{skill}}</span>
-        </div>
+        <cv-badges [badges]="item.skills"></cv-badges>
     </div>
 </cv-item-container>
