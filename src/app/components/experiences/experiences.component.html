@@ -1,6 +1,6 @@
 <cv-category-title title="Expériences"></cv-category-title>
 
-<div *ngFor="let item of experienceItems;" class="formation-item">
+<cv-item-container *ngFor="let item of experienceItems;">
     <div>
         <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
         <cv-title [detail]="item.jobType" [title]="item.enterprise"></cv-title>
@@ -8,8 +8,8 @@
     <div>
         <cv-subtitle *ngIf="item.project" [subtitle]="item.project"></cv-subtitle>
         <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
-        <p>
+        <div>
             <span *ngFor="let skill of item.skills">{{skill}}</span>
-        </p>
+        </div>
     </div>
-</div>
+</cv-item-container>

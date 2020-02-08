@@ -22,6 +22,7 @@ import localeFr from '@angular/common/locales/fr';
 import { TitleComponent } from './components/shared/title/title.component';
 import { DescriptionComponent } from './components/shared/description/description.component';
 import { SubtitleComponent } from './components/shared/subtitle/subtitle.component';
+import { ItemContainerComponent } from './components/shared/item-container/item-container.component';
 
 // the second parameter 'fr-FR' is optional
 registerLocaleData(localeFr, 'fr-FR');
@@ -46,7 +47,8 @@ registerLocaleData(localeFr, 'fr-FR');
         MenuBarComponent,
         TitleComponent,
         DescriptionComponent,
-        SubtitleComponent
+        SubtitleComponent,
+        ItemContainerComponent
     ],
     imports: [
         BrowserModule,
