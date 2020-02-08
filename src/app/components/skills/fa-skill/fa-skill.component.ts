@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FaSkillItem} from '../../../model/skill/fa-skill-item';
+import {FaSkillItem} from '../../../model/skill/skill-item/fa-skill-item';
 
 @Component({
     selector: 'cv-fa-skill',

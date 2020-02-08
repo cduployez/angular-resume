@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {TextSkillItem} from '../../../model/skill/text-skill-item';
+import {TextSkillItem} from '../../../model/skill/skill-item/text-skill-item';
 
 @Component({
     selector: 'cv-text-skill',

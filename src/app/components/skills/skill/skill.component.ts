@@ -1,18 +1,27 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {SkillEnum} from '../../../model/skill/skill-enum';
 
 @Component({
-  selector: 'cv-skill',
-  templateUrl: './skill.component.html',
-  styleUrls: ['./skill.component.scss']
+    selector: 'cv-skill',
+    templateUrl: './skill.component.html',
+    styleUrls: ['./skill.component.scss']
 })
 export class SkillComponent implements OnInit {
 
-  @Input()
-  title: string;
+    @Input()
+    title: string;
 
-  constructor() { }
+    @Input()
+    iconClass: SkillEnum;
 
-  ngOnInit(): void {
-  }
+    constructor() {
+    }
+
+    ngOnInit(): void {
+    }
+
+    optionalClass(iconClass: SkillEnum): string {
+        return iconClass ? iconClass.toString() : '';
+    }
 
 }
