@@ -19,6 +19,7 @@ import {MenuBarComponent} from './components/menu-bar/menu-bar.component';
 
 import {registerLocaleData} from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { TitleComponent } from './components/shared/title/title.component';
 
 // the second parameter 'fr-FR' is optional
 registerLocaleData(localeFr, 'fr-FR');
@@ -40,7 +41,8 @@ registerLocaleData(localeFr, 'fr-FR');
         CategoryTitleComponent,
         DatePrefixComponent,
         WorkInProgressComponent,
-        MenuBarComponent
+        MenuBarComponent,
+        TitleComponent
     ],
     imports: [
         BrowserModule,

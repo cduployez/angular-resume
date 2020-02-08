@@ -3,7 +3,7 @@
 <div *ngFor="let item of formationItems;" class="formation-item">
     <div>
         <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
-        <span class="title">{{ item.title }}</span>
+        <cv-title [title]="item.title"></cv-title>
     </div>
     <div>
         <p *ngFor="let description of item.descriptions" class="description">
