@@ -8,7 +8,14 @@ import {CvDate} from '../../../model/shared/cv-date';
 })
 export class DatePrefixComponent {
 
-    @Input()
-    cvDate: CvDate;
+    private _cvDate: CvDate;
 
+    @Input()
+    get cvDate(): CvDate {
+        return this._cvDate;
+    }
+
+    set cvDate(value: CvDate) {
+        this._cvDate = value;
+    }
 }

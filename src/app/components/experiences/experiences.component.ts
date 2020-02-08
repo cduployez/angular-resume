@@ -18,7 +18,7 @@ export class ExperiencesComponent implements OnInit {
     private static initExperienceItems(): ExperienceItem[] {
         return [
             new ExperienceItem(
-                new CvDate(DateUtils.fromDate(1, 1, 2017), /* Actuel */null, 'month'),
+                CvDate.monthRange(DateUtils.fromDate(1, 1, 2017), /* Actuel */null),
                 'Worldline',
                 null,
                 'Projet SI-VIC',
@@ -26,7 +26,7 @@ export class ExperiencesComponent implements OnInit {
                 ['Java', 'Spring 5', 'Keycloak', 'MySQL', 'Angular 8', 'Etat d\'esprit agile']
             ),
             new ExperienceItem(
-                new CvDate(DateUtils.fromDate(1, 9, 2017), DateUtils.fromDate(31, 12, 2017), 'month'),
+                CvDate.monthRange(DateUtils.fromDate(1, 9, 2017), DateUtils.fromDate(31, 12, 2017)),
                 'Worldline',
                 null,
                 'Projet Télépaiement',
@@ -34,7 +34,7 @@ export class ExperiencesComponent implements OnInit {
                 ['Java', 'Java EE', 'MySQL', 'Web']
             ),
             new ExperienceItem(
-                new CvDate(DateUtils.fromDate(1, 9, 2016), DateUtils.fromDate(31, 8, 2017), 'month'),
+                CvDate.monthRange(DateUtils.fromDate(1, 9, 2016), DateUtils.fromDate(31, 8, 2017)),
                 'Worldline',
                 'Alternance',
                 'Projets Datadock, Saveurs & Vie ; Sujets de R&D',
@@ -42,7 +42,7 @@ export class ExperiencesComponent implements OnInit {
                 ['Java', 'Spring Boot', 'Angular 2', 'Ionic 2', 'MongoDB', 'Docker']
             ),
             new ExperienceItem(
-                new CvDate(DateUtils.fromDate(1, 5, 2016), DateUtils.fromDate(31, 7, 2016), 'month'),
+                CvDate.monthRange(DateUtils.fromDate(1, 5, 2016), DateUtils.fromDate(31, 7, 2016)),
                 'Intelligent Solutions',
                 'Stage',
                 'Projet IMail',
@@ -50,7 +50,7 @@ export class ExperiencesComponent implements OnInit {
                 ['C#', 'MVC .Net', 'SQL', 'Web']
             ),
             new ExperienceItem(
-                new CvDate(DateUtils.fromYear(2014), DateUtils.fromYear(2016), 'year'),
+                CvDate.yearRange(2014, 2016),
                 'ISEN',
                 null,
                 'Club Informatique',

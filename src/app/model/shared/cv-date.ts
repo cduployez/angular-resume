@@ -1,14 +1,11 @@
-export class CvDate {
+import {DateUtils} from '../../utils/date-utils';
 
-    /**
-     * Afficher ou non les mois
-     */
-    private _format: 'year' | 'month';
+export class CvDate {
 
     /**
      * Format utilisé par DatePipe
      */
-    private _datePipeFormat: string;
+    readonly datePipeFormat: 'MMMM yyyy' | 'yyyy';
 
     /**
      * Date de début
@@ -19,40 +16,42 @@ export class CvDate {
      */
     endDate?: Date;
 
-    constructor(beginDate: Date, endDate: Date, format: 'year' | 'month') {
+    /**
+     * Constructor
+     *
+     * @param beginDate Begin date
+     * @param endDate End date
+     * @param format Display months or only years
+     */
+    private constructor(beginDate: Date, endDate: Date, format: 'year' | 'month') {
         this.beginDate = beginDate;
         this.endDate = endDate;
-        this.format = format;
+        this.datePipeFormat = this.initDatePipeFormat(format);
     }
 
-    /**
-     * Afficher ou non les mois
-     */
-    get format(): 'year' | 'month' {
-        return this._format;
+    static year(year: number): CvDate {
+        const date: Date = DateUtils.fromYear(year);
+        return new CvDate(date, date, 'year');
     }
 
-    set format(value: 'year' | 'month') {
-        this._format = value;
-        this.updateDatePipeFormat(value);
+    static yearRange(beginYear: number, endYear: number): CvDate {
+        return new CvDate(DateUtils.fromYear(beginYear), DateUtils.fromYear(endYear), 'year');
     }
 
-    get datePipeFormat(): string {
-        return this._datePipeFormat;
+    static monthRange(beginDate: Date, endDate: Date): CvDate {
+        return new CvDate(beginDate, endDate, 'month');
     }
 
-    updateDatePipeFormat(format: 'month' | 'year'): void {
+    initDatePipeFormat(format: 'month' | 'year'): 'MMMM yyyy' | 'yyyy' {
         // If not defined --> default to year format
         if (!format) {
-            this.updateDatePipeFormat('year');
+            return this.initDatePipeFormat('year');
         }
         switch (format) {
             case 'month':
-                this._datePipeFormat = 'MMMM yyyy';
-                break;
+                return 'MMMM yyyy';
             case 'year':
-                this._datePipeFormat = 'yyyy';
-                break;
+                return 'yyyy';
         }
     }
 }
