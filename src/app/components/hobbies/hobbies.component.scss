@@ -1,0 +1,16 @@
+@import "src/assets/styles/variables.scss";
+
+.title {
+  color: $primary;
+}
+
+.title:before {
+  content: '>';
+  margin-right: .2rem;
+}
+
+.title:after {
+  content: ':';
+  margin-left: .2rem;
+  margin-right: .2rem;
+}
