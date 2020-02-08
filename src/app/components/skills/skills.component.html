@@ -1,14 +1,27 @@
 <cv-category-title title="Compétences"></cv-category-title>
 
-<p>Langages & Frameworks</p>
+<cv-item-container>
+    <p>Langages & Frameworks</p>
 
-<div class="row">
-    <cv-fa-skill [faIcon]="iconsService.faJava" title="Java"></cv-fa-skill>
-    <cv-fa-skill [faIcon]="iconsService.faLeaf" title="Spring"></cv-fa-skill>
-    <cv-text-skill iconText="C++" title="C++"></cv-text-skill>
-    <cv-text-skill iconText="C#" title="C#"></cv-text-skill>
-    <cv-fa-skill [faIcon]="iconsService.faPython" title="Python"></cv-fa-skill>
-    <cv-fa-skill [faIcon]="iconsService.faAndroid" title="Android"></cv-fa-skill>
-</div>
+    <div class="row-container">
+        <div class="row">
+            <cv-fa-skill [faIcon]="iconsService.faJava" title="Java"></cv-fa-skill>
+            <cv-fa-skill [faIcon]="iconsService.faLeaf" title="Spring"></cv-fa-skill>
+            <cv-text-skill iconText="C++" title="C++"></cv-text-skill>
+            <cv-text-skill iconText="C#" title="C#"></cv-text-skill>
+            <cv-fa-skill [faIcon]="iconsService.faPython" title="Python"></cv-fa-skill>
+            <cv-fa-skill [faIcon]="iconsService.faAndroid" title="Android"></cv-fa-skill>
+        </div>
+    </div>
+</cv-item-container>
 
-<cv-work-in-progress></cv-work-in-progress>
+<cv-item-container>
+    <p>Web</p>
+    <cv-work-in-progress></cv-work-in-progress>
+</cv-item-container>
+
+<cv-item-container>
+    <p>Divers</p>
+    <cv-work-in-progress></cv-work-in-progress>
+</cv-item-container>
+
