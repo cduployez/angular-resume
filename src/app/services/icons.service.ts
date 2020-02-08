@@ -1,7 +1,17 @@
 import {Injectable} from '@angular/core';
-import {faAngleDoubleUp, faCode, faFilePdf, faLeaf, faMinus, faPlus} from '@fortawesome/free-solid-svg-icons';
+import {faAngleDoubleUp, faCode, faDatabase, faFeather, faFilePdf, faKey, faLeaf, faMinus, faPlus} from '@fortawesome/free-solid-svg-icons';
 import {IconDefinition} from '@fortawesome/fontawesome-common-types';
-import {faAndroid, faAngular, faCss3Alt, faHtml5, faJava, faLinkedin, faPython} from '@fortawesome/free-brands-svg-icons';
+import {
+    faAndroid,
+    faAngular,
+    faCss3Alt,
+    faEnvira,
+    faGitAlt,
+    faHtml5,
+    faJava,
+    faLinkedin,
+    faPython
+} from '@fortawesome/free-brands-svg-icons';
 
 @Injectable({providedIn: 'root'})
 export class IconsService {
@@ -71,4 +81,34 @@ export class IconsService {
      * Font-Awesome - CSS 3
      */
     readonly faCss3: IconDefinition = faCss3Alt;
+
+    /**
+     * Font-Awesome - Git
+     */
+    readonly faGit: IconDefinition = faGitAlt;
+
+    /**
+     * Font-Awesome - Database
+     * Used for MySQL
+     */
+    readonly faDatabase: IconDefinition = faDatabase;
+
+    /**
+     * Font-Awesome - Key
+     * Used for Keycloak
+     */
+    readonly faKey: IconDefinition = faKey;
+
+    /**
+     * Font-Awesome - Feather
+     * Used for Maven
+     */
+    readonly faFeather: IconDefinition = faFeather;
+
+    /**
+     * Font-Awesome - Envira
+     * Used for MongoDB
+     */
+    readonly faEnvira: IconDefinition = faEnvira;
+
 }
