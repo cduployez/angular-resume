@@ -6,7 +6,7 @@
         <cv-title [detail]="item.jobType" [title]="item.enterprise"></cv-title>
     </div>
     <div>
-        <p *ngIf="item.project">{{item.project}}</p>
+        <cv-subtitle *ngIf="item.project" [subtitle]="item.project"></cv-subtitle>
         <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
         <p>
             <span *ngFor="let skill of item.skills">{{skill}}</span>
