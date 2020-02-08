@@ -1,0 +1,15 @@
+@import "src/assets/styles/variables.scss";
+
+.title {
+  font-weight: bold;
+}
+
+.team-size {
+  color: $primary;
+}
+
+.team-size:before {
+  content: $title-delimiter;
+  margin-left: .2rem;
+  margin-right: .2rem;
+}
