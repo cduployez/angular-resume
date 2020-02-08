@@ -1,0 +1,14 @@
+import {SkillItem} from './skill-item';
+import {IconDefinition} from '@fortawesome/fontawesome-common-types';
+import {SkillTypeEnum} from './skill-type-enum';
+
+export class FaSkillItem extends SkillItem {
+
+    faIcon: IconDefinition;
+
+    constructor(title: string, faIcon: IconDefinition) {
+        super(title, SkillTypeEnum.FA);
+        this.faIcon = faIcon;
+    }
+
+}

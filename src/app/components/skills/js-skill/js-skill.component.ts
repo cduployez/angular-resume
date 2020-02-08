@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {JsSkillItem} from '../../../model/skill/js-skill-item';
 
 @Component({
     selector: 'cv-js-skill',
@@ -8,10 +9,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class JsSkillComponent implements OnInit {
 
     @Input()
-    title: string;
-
-    @Input()
-    iconText: string;
+    item: JsSkillItem;
 
     constructor() {
     }

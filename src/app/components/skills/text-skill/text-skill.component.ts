@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {TextSkillItem} from '../../../model/skill/text-skill-item';
 
 @Component({
     selector: 'cv-text-skill',
@@ -8,10 +9,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class TextSkillComponent implements OnInit {
 
     @Input()
-    title: string;
-
-    @Input()
-    iconText: string;
+    item: TextSkillItem;
 
     constructor() {
     }

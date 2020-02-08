@@ -1,43 +1,20 @@
 <cv-category-title title="Compétences"></cv-category-title>
 
-<cv-item-container>
-    <p>Langages & Frameworks</p>
+<cv-item-container *ngFor="let group of skillItemGroups">
+    <p>{{ group.title }}</p>
 
     <div class="row-container">
         <div class="row">
-            <cv-fa-skill [faIcon]="iconsService.faJava" title="Java"></cv-fa-skill>
-            <cv-fa-skill [faIcon]="iconsService.faLeaf" title="Spring"></cv-fa-skill>
-            <cv-text-skill iconText="C++" title="C++"></cv-text-skill>
-            <cv-text-skill iconText="C#" title="C#"></cv-text-skill>
-            <cv-fa-skill [faIcon]="iconsService.faPython" title="Python"></cv-fa-skill>
-            <cv-fa-skill [faIcon]="iconsService.faAndroid" title="Android"></cv-fa-skill>
+            <ng-container *ngFor="let item of group.skillItems">
+                <ng-container [ngSwitch]="item.skillTypeEnum">
+                    <cv-fa-skill *ngSwitchCase="faTypeEnum"
+                                 [item]="faSkillItem(item)"></cv-fa-skill>
+                    <cv-text-skill *ngSwitchCase="textTypeEnum"
+                                   [item]="textSkillItem(item)"></cv-text-skill>
+                    <cv-js-skill *ngSwitchCase="jsTypeEnum"
+                                 [item]="jsSkillItem(item)"></cv-js-skill>
+                </ng-container>
+            </ng-container>
         </div>
     </div>
 </cv-item-container>
-
-<cv-item-container>
-    <p>Web</p>
-    <div class="row-container">
-        <div class="row">
-            <cv-fa-skill [faIcon]="iconsService.faAngular" title="Angular"></cv-fa-skill>
-            <cv-fa-skill [faIcon]="iconsService.faHtml5" title="HTML"></cv-fa-skill>
-            <cv-fa-skill [faIcon]="iconsService.faCss3" title="CSS"></cv-fa-skill>
-            <cv-js-skill iconText="JS" title="Javascript"></cv-js-skill>
-            <cv-js-skill iconText="TS" title="Typescript"></cv-js-skill>
-        </div>
-    </div>
-</cv-item-container>
-
-<cv-item-container>
-    <p>Divers</p>
-    <div class="row-container">
-        <div class="row">
-            <cv-fa-skill [faIcon]="iconsService.faKey" title="Keycloak"></cv-fa-skill>
-            <cv-fa-skill [faIcon]="iconsService.faDatabase" title="MySQL"></cv-fa-skill>
-            <cv-fa-skill [faIcon]="iconsService.faEnvira" title="MongoDB"></cv-fa-skill>
-            <cv-fa-skill [faIcon]="iconsService.faFeather" title="Maven"></cv-fa-skill>
-            <cv-fa-skill [faIcon]="iconsService.faGit" title="Git"></cv-fa-skill>
-        </div>
-    </div>
-</cv-item-container>
-
