@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IconDefinition} from '@fortawesome/fontawesome-common-types';
+import {FaSkillItem} from '../../../model/skill/fa-skill-item';
 
 @Component({
     selector: 'cv-fa-skill',
@@ -9,10 +9,7 @@ import {IconDefinition} from '@fortawesome/fontawesome-common-types';
 export class FaSkillComponent implements OnInit {
 
     @Input()
-    faIcon: IconDefinition;
-
-    @Input()
-    title: string;
+    item: FaSkillItem;
 
     constructor() {
     }
