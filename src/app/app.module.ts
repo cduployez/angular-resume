@@ -29,6 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FaSkillComponent } from './components/skills/fa-skill/fa-skill.component';
 import { SkillComponent } from './components/skills/skill/skill.component';
 import { TextSkillComponent } from './components/skills/text-skill/text-skill.component';
+import { JsSkillComponent } from './components/skills/js-skill/js-skill.component';
 
 // the second parameter 'fr-FR' is optional
 registerLocaleData(localeFr, 'fr-FR');
@@ -60,7 +61,8 @@ registerLocaleData(localeFr, 'fr-FR');
         SkillComponent,
         FaSkillComponent,
         TextSkillComponent,
-        FooterComponent
+        FooterComponent,
+        JsSkillComponent
     ],
     imports: [
         BrowserModule,
