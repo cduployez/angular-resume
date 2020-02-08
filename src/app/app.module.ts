@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppComponent} from './app.component';
@@ -15,7 +15,13 @@ import {BrowserModule} from '@angular/platform-browser';
 import {DatePrefixComponent} from './components/shared/date-prefix/date-prefix.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {WorkInProgressComponent} from './components/shared/work-in-progress/work-in-progress.component';
-import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
+import {MenuBarComponent} from './components/menu-bar/menu-bar.component';
+
+import {registerLocaleData} from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+// the second parameter 'fr-FR' is optional
+registerLocaleData(localeFr, 'fr-FR');
 
 @NgModule({
     declarations: [
@@ -42,7 +48,9 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
         // Font Awesome
         FontAwesomeModule
     ],
-    providers: [],
+    providers: [
+        {provide: LOCALE_ID, useValue: 'fr-FR'}
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
