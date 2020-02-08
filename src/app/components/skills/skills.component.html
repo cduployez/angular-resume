@@ -3,9 +3,15 @@
 <p>Langages & Frameworks</p>
 
 <div class="row">
-    <cv-fa-skill title="Java" [faIcon]="iconsService.faJava"></cv-fa-skill>
-    <cv-fa-skill title="Python" [faIcon]="iconsService.faPython"></cv-fa-skill>
-    <cv-fa-skill title="Android" [faIcon]="iconsService.faAndroid"></cv-fa-skill>
+    <cv-fa-skill [faIcon]="iconsService.faJava" title="Java"></cv-fa-skill>
+    <cv-skill title="C++">
+        <span>C++</span>
+    </cv-skill>
+    <cv-skill title="C#">
+        <span>C#</span>
+    </cv-skill>
+    <cv-fa-skill [faIcon]="iconsService.faPython" title="Python"></cv-fa-skill>
+    <cv-fa-skill [faIcon]="iconsService.faAndroid" title="Android"></cv-fa-skill>
 </div>
 
 <!-- Java, Spring, C++, C#, Python, Android
