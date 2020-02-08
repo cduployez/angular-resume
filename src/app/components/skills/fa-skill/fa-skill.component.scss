@@ -5,9 +5,13 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  margin-left: .5rem;
+  margin-right: .5rem;
 
   .icon {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* Circle */
     height: 3rem;
     width: 3rem;
