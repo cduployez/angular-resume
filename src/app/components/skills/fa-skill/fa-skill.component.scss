@@ -1,34 +1,3 @@
-@import "src/assets/styles/variables.scss";
-
-.icon-with-title {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: .5rem;
-  margin-right: .5rem;
-
-  .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Circle */
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    /* Colors */
-    background-color: $bg-primary-reverse;
-    color: $primary-reverse;
-    /* Alignment */
-    text-align: center;
-
-    fa-icon {
-      font-size: 25pt;
-    }
-  }
-
-  .title {
-    color: $text;
-  }
+fa-icon {
+  font-size: 22pt;
 }
-

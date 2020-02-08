@@ -32,14 +32,14 @@ export class IconsService {
     readonly faPlus: IconDefinition = faPlus;
 
     /**
-     * Font-Awesome - Java
-     */
-    readonly faJava: IconDefinition = faJava;
-
-    /**
      * Font-Awesome - angle double up
      */
     readonly faAngleDoubleUp: IconDefinition = faAngleDoubleUp;
+
+    /**
+     * Font-Awesome - Java
+     */
+    readonly faJava: IconDefinition = faJava;
 
     /**
      * Font-Awesome - Python
