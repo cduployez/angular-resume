@@ -25,6 +25,7 @@ import { SubtitleComponent } from './components/shared/subtitle/subtitle.compone
 import { ItemContainerComponent } from './components/shared/item-container/item-container.component';
 import { BadgesComponent } from './components/shared/badges/badges.component';
 import { BadgeComponent } from './components/shared/badge/badge.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 // the second parameter 'fr-FR' is optional
 registerLocaleData(localeFr, 'fr-FR');
@@ -52,7 +53,8 @@ registerLocaleData(localeFr, 'fr-FR');
         SubtitleComponent,
         ItemContainerComponent,
         BadgesComponent,
-        BadgeComponent
+        BadgeComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,
