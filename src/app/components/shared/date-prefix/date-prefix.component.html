@@ -1,6 +1,11 @@
 <span class="date-range">
     <span>{{ cvDate.beginDate | date: cvDate.datePipeFormat }}</span>
-    <span *ngIf="cvDate.beginDate !== cvDate.endDate"> - </span>
-    <span *ngIf="cvDate.endDate">{{ cvDate.endDate | date: cvDate.datePipeFormat }}</span>
-    <span *ngIf="cvDate.beginDate && !cvDate.endDate">Actuel</span>
+    <ng-container *ngIf="cvDate.beginDate !== cvDate.endDate">
+        <span> - </span>
+        <span *ngIf="cvDate.endDate else current">{{ cvDate.endDate | date: cvDate.datePipeFormat }}</span>
+    </ng-container>
 </span>
+
+<ng-template #current>
+    <span>Actuel</span>
+</ng-template>

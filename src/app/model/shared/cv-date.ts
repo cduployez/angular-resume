@@ -1,3 +1,5 @@
+import {DateUtils} from '../../utils/date-utils';
+
 export class CvDate {
 
     /**
@@ -39,6 +41,19 @@ export class CvDate {
 
     get datePipeFormat(): string {
         return this._datePipeFormat;
+    }
+
+    static year(year: number): CvDate {
+        const date: Date = DateUtils.fromYear(year);
+        return new CvDate(date, date, 'year');
+    }
+
+    static yearRange(beginDate: Date, endDate: Date): CvDate {
+        return new CvDate(beginDate, endDate, 'year');
+    }
+
+    static monthRange(beginDate: Date, endDate: Date): CvDate {
+        return new CvDate(beginDate, endDate, 'month');
     }
 
     updateDatePipeFormat(format: 'month' | 'year'): void {
