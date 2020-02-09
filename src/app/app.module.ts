@@ -31,6 +31,8 @@ import { SkillComponent } from './components/skills/skill/skill.component';
 import { TextSkillComponent } from './components/skills/text-skill/text-skill.component';
 import { JsSkillComponent } from './components/skills/js-skill/js-skill.component';
 import { CategoryComponent } from './components/shared/category/category.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 // the second parameter 'fr-FR' is optional
 registerLocaleData(localeFr, 'fr-FR');
@@ -70,7 +72,8 @@ registerLocaleData(localeFr, 'fr-FR');
         BrowserModule,
         BrowserAnimationsModule,
         // Font Awesome
-        FontAwesomeModule
+        FontAwesomeModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [
         {provide: LOCALE_ID, useValue: 'fr-FR'}
