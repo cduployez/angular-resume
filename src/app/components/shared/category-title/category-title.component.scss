@@ -1,12 +1,25 @@
 @import "../../../../assets/styles/variables";
 
 .title {
-  font-variant: small-caps;
   background-color: $bg-primary-reverse;
   color: $primary-reverse;
-  padding: .2em;
   border-radius: 5px;
-  font-size: 1.3rem;
-  text-align: center;
   margin-top: 0;
+  margin-bottom: 1rem;
+
+  h3 {
+    padding: .2em;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0;
+    font-variant: small-caps;
+  }
+
+  .expand-button {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    font-size: smaller;
+    position: absolute;
+    margin: auto;
+  }
 }

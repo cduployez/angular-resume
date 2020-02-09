@@ -31,6 +31,11 @@ export class CategoryComponent implements OnInit {
     title: string;
 
     /**
+     * true if category is displayed, false if hidden
+     */
+    categoryDisplayed: boolean = true;
+
+    /**
      * openClose animation state
      */
     openCloseState: 'open' | 'closed' = 'open';
@@ -45,7 +50,21 @@ export class CategoryComponent implements OnInit {
      * Open/Close category
      */
     toggle(): void {
-        this.openCloseState = this.openCloseState === 'closed' ? 'open' : 'closed';
+        if (this.categoryDisplayed) {
+            this.close();
+        } else {
+            this.open();
+        }
+    }
+
+    open(): void {
+        this.categoryDisplayed = true;
+        this.openCloseState = 'open';
+    }
+
+    close(): void {
+        this.categoryDisplayed = false;
+        this.openCloseState = 'closed';
     }
 
 }
