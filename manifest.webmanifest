@@ -1,11 +1,11 @@
 {
-  "name": "angular-resume",
-  "short_name": "angular-resume",
+  "name": "Clément Duployez",
+  "short_name": "CDU - CV 2020",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
-  "scope": "/angular-resume",
-  "start_url": "/angular-resume",
+  "scope": "angular-resume",
+  "start_url": "angular-resume",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
