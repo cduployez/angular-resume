@@ -1,11 +1,11 @@
-<cv-category-title title="Langages"></cv-category-title>
-
-<cv-item-container *ngFor="let item of languageItems">
-    <div>
-        <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
-        <cv-title [title]="item.title"></cv-title>
-    </div>
-    <div>
-        <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
-    </div>
-</cv-item-container>
+<cv-category title="Langages">
+    <cv-item-container *ngFor="let item of languageItems">
+        <div>
+            <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
+            <cv-title [title]="item.title"></cv-title>
+        </div>
+        <div>
+            <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
+        </div>
+    </cv-item-container>
+</cv-category>

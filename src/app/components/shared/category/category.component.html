@@ -1,0 +1,8 @@
+<cv-category-title (click)="toggle()"
+                   [categoryDisplayed]="categoryDisplayed"
+                   [title]="title"
+></cv-category-title>
+
+<div [@openClose]="openCloseState">
+    <ng-content></ng-content>
+</div>

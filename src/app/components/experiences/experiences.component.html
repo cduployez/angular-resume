@@ -1,13 +1,14 @@
-<cv-category-title title="Expériences"></cv-category-title>
+<cv-category title="Expériences">
+    <cv-item-container *ngFor="let item of experienceItems">
+        <div>
+            <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
+            <cv-title [detail]="item.jobType" [title]="item.enterprise"></cv-title>
+        </div>
+        <div>
+            <cv-subtitle *ngIf="item.project" [subtitle]="item.project"></cv-subtitle>
+            <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
+            <cv-badges [badges]="item.skills"></cv-badges>
+        </div>
+    </cv-item-container>
+</cv-category>
 
-<cv-item-container *ngFor="let item of experienceItems">
-    <div>
-        <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
-        <cv-title [detail]="item.jobType" [title]="item.enterprise"></cv-title>
-    </div>
-    <div>
-        <cv-subtitle *ngIf="item.project" [subtitle]="item.project"></cv-subtitle>
-        <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
-        <cv-badges [badges]="item.skills"></cv-badges>
-    </div>
-</cv-item-container>

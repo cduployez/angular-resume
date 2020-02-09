@@ -1,12 +1,12 @@
-<cv-category-title title="Projets informatiques"></cv-category-title>
-
-<cv-item-container *ngFor="let item of projectItems">
-    <div>
-        <span class="title">{{ item.projectTitle }}</span>
-        <span class="team-size">{{ item.teamSize }} personnes</span>
-    </div>
-    <div>
-        <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
-        <cv-badges [badges]="item.skills"></cv-badges>
-    </div>
-</cv-item-container>
+<cv-category title="Projets informatiques">
+    <cv-item-container *ngFor="let item of projectItems">
+        <div>
+            <span class="title">{{ item.projectTitle }}</span>
+            <span class="team-size">{{ item.teamSize }} personnes</span>
+        </div>
+        <div>
+            <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
+            <cv-badges [badges]="item.skills"></cv-badges>
+        </div>
+    </cv-item-container>
+</cv-category>
