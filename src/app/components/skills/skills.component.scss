@@ -11,7 +11,8 @@ p {
   .row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   /* FIXME : Remove me once component is complete */

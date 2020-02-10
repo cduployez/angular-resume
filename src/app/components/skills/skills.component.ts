@@ -18,7 +18,7 @@ export class SkillsComponent implements OnInit {
     textTypeEnum: SkillTypeEnum = SkillTypeEnum.TEXT;
     jsTypeEnum: SkillTypeEnum = SkillTypeEnum.JS;
 
-    skillItemGroups: { title: string, skillItems: SkillItem[] }[];
+    skillItemGroups: { title: string, skillItemLists: SkillItem[][] }[];
 
     constructor(public iconsService: IconsService) {
         this.skillItemGroups = this.initSkillItemGroups();
@@ -39,37 +39,37 @@ export class SkillsComponent implements OnInit {
         return item as JsSkillItem;
     }
 
-    private initSkillItemGroups(): { title: string, skillItems: SkillItem[] }[] {
+    private initSkillItemGroups(): { title: string, skillItemLists: SkillItem[][] }[] {
         return [
             {
                 title: 'Langages & Frameworks',
-                skillItems: [
-                    new FaSkillItem(SkillEnum.JAVA, 'Java', this.iconsService.faJava),
-                    new FaSkillItem(SkillEnum.SPRING, 'Spring', this.iconsService.faLeaf),
-                    new TextSkillItem(SkillEnum.C_PLUS_PLUS, 'C++', 'C++'),
-                    new TextSkillItem(SkillEnum.C_SHARP, 'C#', 'C#'),
-                    new FaSkillItem(SkillEnum.PYTHON, 'Python', this.iconsService.faPython),
-                    new FaSkillItem(SkillEnum.ANDROID, 'Android', this.iconsService.faAndroid)
+                skillItemLists: [
+                    [new FaSkillItem(SkillEnum.JAVA, 'Java', this.iconsService.faJava),
+                        new FaSkillItem(SkillEnum.SPRING, 'Spring', this.iconsService.faLeaf),
+                        new TextSkillItem(SkillEnum.C_PLUS_PLUS, 'C++', 'C++')],
+                    [new TextSkillItem(SkillEnum.C_SHARP, 'C#', 'C#'),
+                        new FaSkillItem(SkillEnum.PYTHON, 'Python', this.iconsService.faPython),
+                        new FaSkillItem(SkillEnum.ANDROID, 'Android', this.iconsService.faAndroid)]
                 ]
             },
             {
                 title: 'Web',
-                skillItems: [
-                    new FaSkillItem(SkillEnum.ANGULAR, 'Angular', this.iconsService.faAngular),
-                    new FaSkillItem(SkillEnum.HTML, 'HTML', this.iconsService.faHtml5),
-                    new FaSkillItem(SkillEnum.CSS, 'CSS', this.iconsService.faCss3),
-                    new JsSkillItem(SkillEnum.JAVASCRIPT, 'Javascript', 'JS'),
-                    new JsSkillItem(SkillEnum.TYPESCRIPT, 'Typescript', 'TS')
+                skillItemLists: [
+                    [new FaSkillItem(SkillEnum.ANGULAR, 'Angular', this.iconsService.faAngular),
+                        new FaSkillItem(SkillEnum.HTML, 'HTML', this.iconsService.faHtml5),
+                        new FaSkillItem(SkillEnum.CSS, 'CSS', this.iconsService.faCss3)],
+                    [new JsSkillItem(SkillEnum.JAVASCRIPT, 'Javascript', 'JS'),
+                        new JsSkillItem(SkillEnum.TYPESCRIPT, 'Typescript', 'TS')]
                 ]
             },
             {
                 title: 'Divers',
-                skillItems: [
-                    new FaSkillItem(SkillEnum.KEYCLOAK, 'Keycloak', this.iconsService.faKey),
-                    new FaSkillItem(SkillEnum.MYSQL, 'MySQL', this.iconsService.faDatabase),
-                    new FaSkillItem(SkillEnum.MONGODB, 'MongoDB', this.iconsService.faEnvira),
-                    new FaSkillItem(SkillEnum.MAVEN, 'Maven', this.iconsService.faFeather),
-                    new FaSkillItem(SkillEnum.GIT, 'Git', this.iconsService.faGit)
+                skillItemLists: [
+                    [new FaSkillItem(SkillEnum.KEYCLOAK, 'Keycloak', this.iconsService.faKey),
+                        new FaSkillItem(SkillEnum.MYSQL, 'MySQL', this.iconsService.faDatabase),
+                        new FaSkillItem(SkillEnum.MONGODB, 'MongoDB', this.iconsService.faEnvira)],
+                    [new FaSkillItem(SkillEnum.MAVEN, 'Maven', this.iconsService.faFeather),
+                        new FaSkillItem(SkillEnum.GIT, 'Git', this.iconsService.faGit)]
                 ]
             }
 
