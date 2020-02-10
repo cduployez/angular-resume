@@ -1,18 +1,19 @@
 <cv-category title="Compétences">
     <cv-item-container *ngFor="let group of skillItemGroups">
         <p>{{ group.title }}</p>
-
         <div class="row-container">
             <div class="row">
-                <ng-container *ngFor="let item of group.skillItems">
-                    <ng-container [ngSwitch]="item.skillTypeEnum">
-                        <cv-fa-skill *ngSwitchCase="faTypeEnum"
-                                     [item]="faSkillItem(item)"></cv-fa-skill>
-                        <cv-text-skill *ngSwitchCase="textTypeEnum"
-                                       [item]="textSkillItem(item)"></cv-text-skill>
-                        <cv-js-skill *ngSwitchCase="jsTypeEnum"
-                                     [item]="jsSkillItem(item)"></cv-js-skill>
-                    </ng-container>
+                <ng-container *ngFor="let skillItems of group.skillItemLists">
+                    <div *ngFor="let item of skillItems">
+                        <ng-container [ngSwitch]="item.skillTypeEnum">
+                            <cv-fa-skill *ngSwitchCase="faTypeEnum"
+                                         [item]="faSkillItem(item)"></cv-fa-skill>
+                            <cv-text-skill *ngSwitchCase="textTypeEnum"
+                                           [item]="textSkillItem(item)"></cv-text-skill>
+                            <cv-js-skill *ngSwitchCase="jsTypeEnum"
+                                         [item]="jsSkillItem(item)"></cv-js-skill>
+                        </ng-container>
+                    </div>
                 </ng-container>
             </div>
         </div>
