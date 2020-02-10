@@ -3,8 +3,8 @@
         <p>{{ group.title }}</p>
         <div class="row-container">
             <div class="row">
-                <ng-container *ngFor="let skillItems of group.skillItemLists">
-                    <div *ngFor="let item of skillItems">
+                <div *ngFor="let skillItems of group.skillItemLists" class="row-group">
+                    <ng-container *ngFor="let item of skillItems">
                         <ng-container [ngSwitch]="item.skillTypeEnum">
                             <cv-fa-skill *ngSwitchCase="faTypeEnum"
                                          [item]="faSkillItem(item)"></cv-fa-skill>
@@ -13,8 +13,8 @@
                             <cv-js-skill *ngSwitchCase="jsTypeEnum"
                                          [item]="jsSkillItem(item)"></cv-js-skill>
                         </ng-container>
-                    </div>
-                </ng-container>
+                    </ng-container>
+                </div>
             </div>
         </div>
     </cv-item-container>
