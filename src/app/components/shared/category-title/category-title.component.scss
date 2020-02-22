@@ -1,8 +1,6 @@
-@import "../../../../assets/styles/variables";
-
 .title {
-  background-color: $bg-primary-reverse;
-  color: $primary-reverse;
+  background-color: var(--primary);
+  color: var(--on-primary);
   border-radius: 5px;
   margin-top: 0;
   margin-bottom: 1rem;

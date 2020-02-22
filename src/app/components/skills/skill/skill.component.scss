@@ -17,8 +17,8 @@
     width: 3rem;
     border-radius: 50%;
     /* Colors */
-    background-color: $bg-primary-reverse;
-    color: $primary-reverse;
+    background-color: var(--primary);
+    color: var(--on-primary);
     /* Alignment */
     text-align: center;
     margin-left: .2em;
@@ -32,7 +32,7 @@
   }
 
   .title {
-    color: $text;
+    color: var(--on-background);
   }
 }
 
