@@ -1,4 +1,4 @@
 <div [ngClass]="{'open': categoryDisplayed, 'closed': !categoryDisplayed}" class="title">
         <fa-icon *ngIf="!categoryDisplayed" [icon]="iconsService.faPlus" class="expand-button"></fa-icon>
-        <h3>{{ title }}</h3>
+        <h3>{{ categoryTitle }}</h3>
 </div>

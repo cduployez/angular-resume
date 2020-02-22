@@ -28,7 +28,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 export class CategoryComponent implements OnInit {
 
     @Input()
-    title: string;
+    categoryTitle: string;
 
     /**
      * true if category is displayed, false if hidden

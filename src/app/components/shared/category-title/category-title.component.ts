@@ -9,7 +9,7 @@ import {IconsService} from '../../../services/icons.service';
 export class CategoryTitleComponent {
 
     @Input()
-    title: string;
+    categoryTitle: string;
 
     @Input()
     categoryDisplayed: boolean = true;
