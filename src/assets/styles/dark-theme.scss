@@ -1,8 +1,8 @@
 @import "variables.scss";
 
 .dark-theme {
-  --primary: #{$blue};
-  --secondary: #{$blue-gray-500};
+  --primary: #{$pale-blue};
+  --secondary: #{$blue-gray-50};
 
   --background: #{$black};
 
@@ -11,11 +11,11 @@
   --on-background: #{$white};
 
   --navbar: #181818;
-  --on-navbar: #{#E1F5FE}; /* light-blue-50 */
+  --on-navbar: #{$blue-gray-50};
   --navbar-shadow: rgba(145, 145, 145, 0.5);
 
-  --banner: #{$light-blue};
-  --on-banner: #{$blue};
+  --banner: #{$dark-gray};
+  --on-banner: #{$on-dark-gray};
 
   --on-footer: #{$light-blue};
 
