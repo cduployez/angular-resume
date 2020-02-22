@@ -1,19 +1,25 @@
-main {
-  margin: 0 10% 5rem;
+.page-container {
+  margin: 0;
+  padding: 0;
   background-color: var(--background);
 
-  .columns {
-    display: flex;
-    flex-flow: row-reverse wrap;
-    justify-content: space-between;
+  main {
+    margin: 0;
+    padding: 0 10% 5rem;
 
-    div {
-      width: calc(50vw - 15%);
+    .columns {
+      display: flex;
+      flex-flow: row-reverse wrap;
+      justify-content: space-between;
+
+      div {
+        width: calc(50vw - 15%);
+      }
     }
-  }
 
-  cv-footer {
-    display: none;
+    cv-footer {
+      display: none;
+    }
   }
 }
 
@@ -38,3 +44,5 @@ main {
     margin: 0 2% 5rem;
   }
 }
+
+
