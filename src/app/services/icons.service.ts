@@ -12,6 +12,8 @@ import {
     faLinkedin,
     faPython
 } from '@fortawesome/free-brands-svg-icons';
+import {faMoon as faMoonSolid} from '@fortawesome/free-solid-svg-icons/faMoon';
+import {faMoon as faMoonRegular} from '@fortawesome/free-regular-svg-icons';
 
 @Injectable({providedIn: 'root'})
 export class IconsService {
@@ -110,5 +112,17 @@ export class IconsService {
      * Used for MongoDB
      */
     readonly faEnvira: IconDefinition = faEnvira;
+
+    /**
+     * Font-Awesome - Moon (filled)
+     * Used for dark theme
+     */
+    readonly faMoonSolid: IconDefinition = faMoonSolid;
+
+    /**
+     * Font-Awesome - Moon (bordered)
+     * Used for light theme
+     */
+    readonly faMoonRegular: IconDefinition = faMoonRegular;
 
 }
