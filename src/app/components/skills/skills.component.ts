@@ -10,7 +10,7 @@ import {SkillEnum} from '../../model/skill/skill-enum';
 @Component({
     selector: 'cv-skills',
     templateUrl: './skills.component.html',
-    styleUrls: ['./skills.component.scss']
+    styleUrls: ['./skills.component.scss', './skills-icon-colors.component.scss']
 })
 export class SkillsComponent implements OnInit {
 
