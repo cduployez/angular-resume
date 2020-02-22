@@ -1,3 +1,5 @@
+@import "src/assets/styles/variables.scss";
+
 span {
   display: inline-block;
   margin: .2rem;
@@ -6,7 +8,7 @@ span {
   border: 1px solid var(--on-badge);
   color: var(--on-badge);
   background-color: var(--badge);
-  transition: 0.3s;
+  transition: $transition-delay;
   cursor: default;
 }
 

@@ -12,6 +12,7 @@ export class SessionStorageService {
 
     constructor() {
         this._menuBarMinimized = sessionStorage[KEY_MENU_BAR_MINIMIZED] === 'true' || false;
+        this._theme = sessionStorage[KEY_THEME] || ThemeEnum.DEFAULT;
     }
 
     get theme(): ThemeEnum {

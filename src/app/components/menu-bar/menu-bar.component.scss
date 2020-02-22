@@ -9,10 +9,12 @@ nav {
   padding: 1rem;
   margin-bottom: 2rem;
   font-size: larger;
+  user-select: none;
+  transition: $transition-delay;
 
-  -webkit-box-shadow: 0 1px 15px 0 rgba(110, 110, 110, 0.5);
-  -moz-box-shadow: 0 1px 15px 0 rgba(110, 110, 110, 0.5);
-  box-shadow: 0 1px 15px 0 rgba(110, 110, 110, 0.5);
+  -webkit-box-shadow: 0 1px 15px 0 var(--navbar-shadow);
+  -moz-box-shadow: 0 1px 15px 0 var(--navbar-shadow);
+  box-shadow: 0 1px 15px 0 var(--navbar-shadow);
 
   .title {
     user-select: none;
@@ -22,7 +24,7 @@ nav {
     text-decoration: none;
     padding: 1rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: $transition-delay;
     color: var(--on-navbar);
   }
 
@@ -40,6 +42,10 @@ nav {
 
   a.pdf:hover {
     color: $pdf;
+  }
+
+  .theme-button:hover {
+    color: $yellow;
   }
 
   .minimize:hover {
@@ -65,6 +71,6 @@ nav.minimized {
 }
 
 .placeholder {
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 

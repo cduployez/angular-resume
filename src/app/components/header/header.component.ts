@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ImageService} from '../../services/image.service';
 import {ProfileService} from '../../services/profile.service';
+import {ThemeService} from '../../services/theme.service';
 
 @Component({
     selector: 'cv-header',
@@ -15,7 +16,8 @@ export class HeaderComponent {
     readonly rightInfoList: string[];
 
     constructor(public profileService: ProfileService,
-                public imageService: ImageService) {
+                public imageService: ImageService,
+                public themeService: ThemeService) {
         this.leftInfoList = [
             this.profileService.ageWithSuffix,
             this.profileService.city

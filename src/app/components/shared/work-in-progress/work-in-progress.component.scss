@@ -1,5 +1,8 @@
+@import "src/assets/styles/variables.scss";
+
 div {
   text-align: center;
   color: var(--secondary);
   background-color: var(--on-secondary);
+  transition: $transition-delay;
 }

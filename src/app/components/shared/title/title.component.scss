@@ -1,7 +1,13 @@
+@import "src/assets/styles/variables.scss";
+
 .title {
   font-weight: bold;
+  color: var(--on-background);
+  transition: $transition-delay;
 }
 
 .detail {
   margin-left: .2rem;
+  color: var(--on-background);
+  transition: $transition-delay;
 }

@@ -1,5 +1,8 @@
+@import "src/assets/styles/variables.scss";
+
 .icon {
-  background-color: var(--background);
+  background-color: var(--on-icon);
+  transition: $transition-delay;
   font-weight: bold;
   font-size: smaller;
   display: flex;
@@ -12,7 +15,7 @@
   user-select: none;
 
   span {
-    color: var(--icon-text);
+    color: var(--icon-inner-text);
   }
 }
 

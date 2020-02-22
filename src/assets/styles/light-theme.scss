@@ -12,6 +12,7 @@
 
   --navbar: #f5f5f5;
   --on-navbar: #{$blue-gray-500};
+  --navbar-shadow: rgba(110, 110, 110, 0.5);
 
   --banner: #{$light-blue};
   --on-banner: #{$blue};
@@ -19,6 +20,13 @@
   --on-footer: #{$light-blue};
 
   --badge: #{$white};
-  --on-badge: #{$gray};
+  --on-badge: #90A4AE;
+
+
+  --icon: #{$blue};
+  --on-icon: #{$white};
+  --icon-hover-color: #{$black};
+  --icon-hover-bg: #{$white};
+  --icon-inner-text: var(--icon);
 
 }
