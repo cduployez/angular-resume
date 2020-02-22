@@ -1,0 +1,31 @@
+@import "variables.scss";
+
+.dark-theme {
+  --primary: #{$pale-blue};
+  --secondary: #{$blue-gray-50};
+
+  --background: #{$black};
+
+  --on-primary: #{$black};
+  --on-secondary: #{$black};
+  --on-background: #{$white};
+
+  --navbar: #181818;
+  --on-navbar: #{$blue-gray-50};
+  --navbar-shadow: rgba(145, 145, 145, 0.5);
+
+  --banner: #{$dark-gray};
+  --on-banner: #{$on-dark-gray};
+
+  --on-footer: #{$light-blue};
+
+  --badge: #{$black};
+  --on-badge: #CFD8DC;
+
+  --icon: #{$dark-gray};
+  --on-icon: #{$blue-gray-50};
+  --icon-hover-color: #{$white};
+  --icon-hover-bg: #{$black};
+  --icon-inner-text: var(--icon);
+
+}
