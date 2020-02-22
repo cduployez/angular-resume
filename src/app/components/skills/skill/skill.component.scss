@@ -17,8 +17,8 @@
     width: 3rem;
     border-radius: 50%;
     /* Colors */
-    background-color: var(--primary);
-    color: var(--on-primary);
+    background-color: var(--icon);
+    color: var(--on-icon);
     /* Alignment */
     text-align: center;
     margin-left: .2em;
@@ -27,8 +27,8 @@
   }
 
   .icon:hover {
-    color: var(--icon-color);
-    background-color: var(--icon-bg);
+    color: var(--icon-hover-color);
+    background-color: var(--icon-hover-bg);
   }
 
   .title {

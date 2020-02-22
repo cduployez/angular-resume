@@ -44,6 +44,10 @@ nav {
     color: $pdf;
   }
 
+  .theme-button:hover {
+    color: $yellow;
+  }
+
   .minimize:hover {
     color: var(--primary);
   }
@@ -67,6 +71,6 @@ nav.minimized {
 }
 
 .placeholder {
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 

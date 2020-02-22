@@ -9,7 +9,7 @@
         <a [href]="linkService.linkedInUrl" class="linkedin link" target="_blank">
             <fa-icon [icon]="iconsService.faLinkedIn"></fa-icon>
         </a>
-        <fa-icon (click)="nextTheme()" [icon]="themeIcon" class="link"></fa-icon>
+        <fa-icon (click)="nextTheme()" [icon]="themeIcon" class="link theme-button"></fa-icon>
         <fa-icon (click)="minimized = true" *ngIf="!minimized" [icon]="iconsService.faMinus"
                  class="link minimize"></fa-icon>
         <fa-icon (click)="minimized = false" *ngIf="minimized" [icon]="iconsService.faPlus"

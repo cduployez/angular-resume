@@ -20,6 +20,12 @@
   --on-footer: #{$light-blue};
 
   --badge: #{$black};
-  --on-badge: #{$gray};
+  --on-badge: #CFD8DC;
+
+  --icon: #{$dark-gray};
+  --on-icon: #{$blue-gray-50};
+  --icon-hover-color: #{$white};
+  --icon-hover-bg: #{$black};
+  --icon-inner-text: var(--icon);
 
 }
