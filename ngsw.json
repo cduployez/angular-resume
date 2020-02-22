@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1581368406187,
+  "timestamp": 1582383309782,
   "index": "./index.html",
   "assetGroups": [
     {
@@ -17,7 +17,7 @@
         "./polyfills-es5.277e2e1d6fb2daf91a5c.js",
         "./runtime-es2015.0811dcefd377500b5b1a.js",
         "./runtime-es5.0811dcefd377500b5b1a.js",
-        "./styles.62736eb861500535bd95.css"
+        "./styles.57f3bc1d7032c38f8019.css"
       ],
       "patterns": []
     },
@@ -26,6 +26,12 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
+        "./Gudea-Bold.0926e1bf335012126a82.ttf",
+        "./Gudea-Italic.8a0d3ca1fc63c6100cc7.ttf",
+        "./Gudea-Regular.bc1331fe1a2b22912f3a.ttf",
+        "./assets/fonts/Gudea-Bold.ttf",
+        "./assets/fonts/Gudea-Italic.ttf",
+        "./assets/fonts/Gudea-Regular.ttf",
         "./assets/icons/icon-128x128.png",
         "./assets/icons/icon-144x144.png",
         "./assets/icons/icon-152x152.png",
@@ -43,6 +49,12 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "./Gudea-Bold.0926e1bf335012126a82.ttf": "337e3933c80dfc002dec4874958cb33e66f13310",
+    "./Gudea-Italic.8a0d3ca1fc63c6100cc7.ttf": "3ae9a4e08c3ae78411b76d4364e3b60779ea9f25",
+    "./Gudea-Regular.bc1331fe1a2b22912f3a.ttf": "64c560f753caba8016cc564c9cb3ec6236241d7e",
+    "./assets/fonts/Gudea-Bold.ttf": "337e3933c80dfc002dec4874958cb33e66f13310",
+    "./assets/fonts/Gudea-Italic.ttf": "3ae9a4e08c3ae78411b76d4364e3b60779ea9f25",
+    "./assets/fonts/Gudea-Regular.ttf": "64c560f753caba8016cc564c9cb3ec6236241d7e",
     "./assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "./assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "./assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -51,11 +63,11 @@
     "./assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "./assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "./assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "./assets/styles/font-gudea.scss": "1f0c3a8b0e651a5999a6b53fc74361b0295e384e",
+    "./assets/styles/font-gudea.scss": "58aabf2017b19a42cf17cd2df3fc87e2e16174dd",
     "./assets/styles/icon-colors.scss": "93b964563e9629bd471ffe591c9afe8e437cf6f4",
     "./assets/styles/variables.scss": "161d9224b52110fa4841019202adbd19dbc400a1",
     "./favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "./index.html": "f998b23c22cb1125ee649ec30037217d37cb02ab",
+    "./index.html": "fb21dfe39b2f18315c041ad2c3368ba331d6cc11",
     "./main-es2015.a2b3a9933381bbecc047.js": "ad2d95f3daaad0cc0cfe64d441517fb031b3628e",
     "./main-es5.a2b3a9933381bbecc047.js": "f0c5fb02d85f8f99223d5e1e9679aaacece6a1bc",
     "./manifest.webmanifest": "c91bd8aec77c44768709846b15bdc788790d615e",
@@ -63,7 +75,7 @@
     "./polyfills-es5.277e2e1d6fb2daf91a5c.js": "8d03638471d7374e81cf33adfdea439f84ac3873",
     "./runtime-es2015.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "./runtime-es5.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "./styles.62736eb861500535bd95.css": "6f1160eb5173d9483c23724fb078ae4b6266d6c7"
+    "./styles.57f3bc1d7032c38f8019.css": "bae63487aa2e3d37bb25773e174ac717a80f2585"
   },
   "navigationUrls": [
     {
