@@ -10,7 +10,7 @@ nav {
   margin-bottom: 2rem;
   font-size: larger;
   user-select: none;
-  transition: 0.3s;
+  transition: $transition-delay;
 
   -webkit-box-shadow: 0 1px 15px 0 var(--navbar-shadow);
   -moz-box-shadow: 0 1px 15px 0 var(--navbar-shadow);
@@ -24,7 +24,7 @@ nav {
     text-decoration: none;
     padding: 1rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: $transition-delay;
     color: var(--on-navbar);
   }
 

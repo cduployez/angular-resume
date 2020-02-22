@@ -1,8 +1,10 @@
+@import "src/assets/styles/variables.scss";
+
 .page-container {
   margin: 0;
   padding: 0;
   background-color: var(--background);
-  transition: 0.3s;
+  transition: $transition-delay;
 
   main {
     margin: 0;

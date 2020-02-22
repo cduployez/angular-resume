@@ -1,7 +1,9 @@
+@import "src/assets/styles/variables.scss";
+
 h1 {
   background-color: var(--banner);
   color: var(--on-banner);
-  transition: 0.3s;
+  transition: $transition-delay;
 
   padding: .5rem;
   border-radius: 5px;

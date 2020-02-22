@@ -92,7 +92,7 @@
     img.dark-theme {
       opacity: 0.5;
       filter: grayscale(1);
-      transition: 0.3s;
+      transition: $transition-delay;
     }
 
     img.dark-theme:hover {

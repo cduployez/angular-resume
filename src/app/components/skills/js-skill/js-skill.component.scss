@@ -1,6 +1,8 @@
+@import "src/assets/styles/variables.scss";
+
 .icon {
   background-color: var(--background);
-  transition: 0.3s;
+  transition: $transition-delay;
   font-weight: bold;
   font-size: smaller;
   display: flex;
