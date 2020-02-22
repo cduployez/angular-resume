@@ -14,7 +14,7 @@
     margin-right: 2rem;
 
     h1 {
-      color: $primary;
+      color: var(--primary);
       font-size: 2rem;
       margin-top: 0;
     }
@@ -43,7 +43,7 @@
     .main-grid.info {
 
       .main-grid-col ul {
-        color: $blue-gray-500;
+        color: var(--secondary);
       }
 
       .main-grid-col-left {
@@ -60,7 +60,7 @@
       margin-top: 1rem;
 
       .main-grid-col ul li {
-        color: $primary;
+        color: var(--primary);
 
         :before {
           content: $title-delimiter;
@@ -69,7 +69,7 @@
 
         a {
           text-decoration: none;
-          color: $primary;
+          color: var(--primary);
         }
       }
     }
@@ -90,8 +90,8 @@
     }
 
     h2 {
-      border-bottom: 1px solid $primary;
-      color: $primary;
+      border-bottom: 1px solid var(--primary);
+      color: var(--primary);
       font-variant: small-caps;
       text-align: center;
       margin-top: 0;
@@ -112,16 +112,6 @@
     display: none;
   }
 }
-
-/*@media (max-width: 630px) {
-  .container {
-    flex-flow: column wrap;
-
-    .main {
-      min-width: unset;
-    }
-  }
-}*/
 
 
 

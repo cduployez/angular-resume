@@ -1,16 +1,14 @@
-@import "src/assets/styles/variables.scss";
-
 p {
   text-align: center;
   font-size: 25pt;
 
   fa-icon {
-    color: $light-gray;
+    color: var(--on-footer);
     cursor: pointer;
     transition: 0.3s;
   }
 
   fa-icon:hover {
-    color: $blue-gray-500;
+    color: var(--primary);
   }
 }

@@ -1,0 +1,24 @@
+@import "variables.scss";
+
+.light-theme {
+  --primary: #{$blue};
+  --secondary: #{$blue-gray-500};
+
+  --background: #{$white};
+
+  --on-primary: #{$white};
+  --on-secondary: #{$white};
+  --on-background: #{$black};
+
+  --navbar: #f5f5f5;
+  --on-navbar: #{$blue-gray-500};
+
+  --banner: #{$light-blue};
+  --on-banner: #{$blue};
+
+  --on-footer: #{$light-blue};
+
+  --badge: #{$white};
+  --on-badge: #{$gray};
+
+}

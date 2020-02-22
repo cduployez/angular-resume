@@ -1,7 +1,7 @@
 @import "src/assets/styles/variables.scss";
 
 .title {
-  color: $primary;
+  color: var(--primary);
 }
 
 .title:before {

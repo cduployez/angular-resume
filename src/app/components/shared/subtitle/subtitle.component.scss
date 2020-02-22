@@ -1,7 +1,5 @@
-@import "src/assets/styles/variables.scss";
-
 .subtitle {
   font-variant: all-small-caps;
   font-weight: bold;
-  color: $text;
+  color: var(--primary);
 }

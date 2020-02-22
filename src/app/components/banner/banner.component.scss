@@ -1,8 +1,6 @@
-@import "src/assets/styles/variables.scss";
-
 h1 {
-  background-color: $bg-secondary;
-  color: $secondary;
+  background-color: var(--banner);
+  color: var(--on-banner);
 
   padding: .5rem;
   border-radius: 5px;
