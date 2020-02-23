@@ -1,32 +1,25 @@
 @import "src/assets/styles/variables.scss";
 
-.page-container {
+main {
   margin: 0;
-  padding: 0;
-  background-color: var(--background);
-  transition: $transition-delay;
+  padding: 0 10% 5rem;
 
-  main {
-    margin: 0;
-    padding: 0 10% 5rem;
+  .columns {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
 
-    .columns {
-      display: flex;
-      flex-flow: row-reverse wrap;
-      justify-content: space-between;
-
-      div {
-        width: calc(50vw - 15%);
-      }
+    div {
+      width: calc(50vw - 15%);
     }
+  }
 
-    cv-footer {
-      display: none;
-    }
+  cv-footer {
+    display: none;
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $tablet-width) {
   main {
     margin: 0 5% 5rem;
 
@@ -42,7 +35,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $phone-width) {
   main {
     margin: 0 2% 5rem;
   }

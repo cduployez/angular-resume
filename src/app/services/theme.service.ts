@@ -1,12 +1,16 @@
 import {Injectable} from '@angular/core';
 import {SessionStorageService} from './session-storage.service';
 import {ThemeEnum} from '../model/enums/theme.enum';
+import {Subject} from 'rxjs';
 
 const THEMES: ThemeEnum[] = [ThemeEnum.LIGHT, ThemeEnum.DARK];
 
 @Injectable({providedIn: 'root'})
 export class ThemeService {
+
     private _theme: ThemeEnum;
+
+    themeChange$: Subject<{ previousTheme: ThemeEnum, currentTheme: ThemeEnum }> = new Subject<{ previousTheme: ThemeEnum, currentTheme: ThemeEnum }>();
 
     constructor(private sessionStorageService: SessionStorageService) {
         this._theme = sessionStorageService.theme;
@@ -21,8 +25,10 @@ export class ThemeService {
 
     set theme(theme: ThemeEnum) {
         theme = theme ? theme : ThemeEnum.DEFAULT;
+        const previousTheme: ThemeEnum = this._theme;
         this._theme = theme;
         this.sessionStorageService.theme = theme;
+        this.themeChange$.next({previousTheme, currentTheme: theme});
     }
 
     nextTheme(): ThemeEnum {
