@@ -1,4 +1,4 @@
 export enum ThemeEnum {
 
-    LIGHT = 'light-theme', DARK = 'dark-theme', DEFAULT = LIGHT
+    LIGHT = 'light-theme', DARK = 'dark-theme'
 }
