@@ -1,6 +1,7 @@
 import {Component, OnInit, Renderer2} from '@angular/core';
 import {ThemeService} from './services/theme.service';
 import {ThemeEnum} from './model/enums/theme.enum';
+import {BodyService} from './services/body.service';
 
 @Component({
     selector: 'cv-app-root',
@@ -10,7 +11,8 @@ import {ThemeEnum} from './model/enums/theme.enum';
 export class AppComponent implements OnInit {
 
     constructor(private themeService: ThemeService,
-                private renderer2: Renderer2) {
+                private bodyService: BodyService,
+                private renderer: Renderer2) {
 
     }
 
@@ -20,11 +22,7 @@ export class AppComponent implements OnInit {
     }
 
     onThemeChange(themeInfo: { previousTheme: ThemeEnum, currentTheme: ThemeEnum }): void {
-        if (themeInfo.previousTheme) {
-            this.renderer2.removeClass(window.document.body, themeInfo.previousTheme);
-        }
-        if (themeInfo.currentTheme) {
-            this.renderer2.addClass(window.document.body, themeInfo.currentTheme);
-        }
+        this.bodyService.removeClass(this.renderer, themeInfo?.previousTheme);
+        this.bodyService.addClass(this.renderer, themeInfo?.currentTheme);
     }
 }
