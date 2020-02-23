@@ -21,7 +21,7 @@ main {
 
 @media (max-width: $tablet-width) {
   main {
-    margin: 0 5% 5rem;
+    padding: 0 5% 5rem;
 
     .columns {
       div {
@@ -37,7 +37,7 @@ main {
 
 @media (max-width: $phone-width) {
   main {
-    margin: 0 2% 5rem;
+    padding: 0 2% 5rem;
   }
 }
 
