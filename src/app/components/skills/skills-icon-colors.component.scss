@@ -1,3 +1,5 @@
+@import "src/assets/styles/variables.scss";
+
 ::ng-deep {
   .icon.javascript, .icon.typescript {
     span {
@@ -59,12 +61,12 @@
 
   .icon.javascript:hover, .icon.typescript:hover {
     --icon-hover-color: white;
-    --icon-hover-bg: $yellow;
+    --icon-hover-bg: #{$yellow};
   }
 
   .icon.javascript:hover, .icon.typescript:hover {
     span {
-      --icon-inner-text: $yellow;
+      --icon-inner-text: #{$yellow};
     }
   }
 
