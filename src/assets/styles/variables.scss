@@ -1,3 +1,4 @@
+/* Colors */
 $white: #FFFFFF;
 $black: #000000;
 
@@ -15,12 +16,50 @@ $blue-gray-50: #E1F5FE;
 
 $yellow: rgb(231, 171, 60);
 
+/* Menu bar items */
 $linkedIn: rgb(0, 119, 191);
 $pdf: #FF3500;
 
+/* Skill items */
+$on-java: lightgray;
+$java: #bf0c24;
+$on-cplusplus: white;
+$cplusplus: rgb(43, 127, 189);
+$on-csharp: white;
+$csharp: rgb(43, 127, 189);
+$on-spring: white;
+$spring: rgb(109, 179, 63);
+$on-angular: rgb(221, 3, 48);
+$angular: #f2f2f2;
+$on-python: rgb(255, 210, 66);
+$python: rgb(54, 111, 157);
+$on-android: rgb(48, 221, 129);
+$android: #f2f2f2;
+$on-html: white;
+$html: #f2f2f2;
+$on-css: white;
+$css: rgb(43, 127, 189);
+$on-javascript: white;
+$javascript: #{$yellow};
+$on-typescript: #{$on-javascript};
+$typescript: #{$javascript};
+$on-keycloak: rgb(51, 198, 233);
+$keycloak: #f2f2f2;
+$on-mysql: rgb(0, 117, 143);
+$mysql: #f2f2f2;
+$on-mongodb: rgb(16, 170, 80);
+$mongodb: #f2f2f2;
+$on-maven: rgb(186, 32, 71);
+$maven: #f2f2f2;
+$on-git: rgb(222, 76, 54);
+$git: #f2f2f2;
+
+/* Text */
 $title-delimiter: '>';
 
+/* Delays */
 $transition-delay: 0.3s;
 
+/* Widths */
 $tablet-width: 1023px;
 $phone-width: 767px;

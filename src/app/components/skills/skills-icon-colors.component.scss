@@ -1,3 +1,5 @@
+@import "src/assets/styles/variables.scss";
+
 ::ng-deep {
   .icon.javascript, .icon.typescript {
     span {
@@ -6,90 +8,97 @@
   }
 
   .icon:hover {
-    --icon-hover-color: black;
-    --icon-hover-bg: white;
+    --icon-hover-color: var(--icon);
+    --icon-hover-bg: var(--on-icon);
     color: var(--icon-hover-color);
     background-color: var(--icon-hover-bg);
   }
 
   .icon.java:hover {
-    --icon-hover-color: lightgray;
-    --icon-hover-bg: #bf0c24;
+    --icon-hover-color: #{$on-java};
+    --icon-hover-bg: #{$java};
   }
 
   .icon.cplusplus:hover {
-    --icon-hover-color: white;
-    --icon-hover-bg: rgb(43, 127, 189);
+    --icon-hover-color: #{$on-cplusplus};
+    --icon-hover-bg: #{$cplusplus};
   }
 
   .icon.csharp:hover {
-    --icon-hover-color: white;
-    --icon-hover-bg: rgb(43, 127, 189);
+    --icon-hover-color: #{$on-csharp};
+    --icon-hover-bg: #{$csharp};
   }
 
   .icon.spring:hover {
-    --icon-hover-color: white;
-    --icon-hover-bg: rgb(109, 179, 63);
+    --icon-hover-color: #{$on-spring};
+    --icon-hover-bg: #{$spring};
   }
 
   .icon.angular:hover {
-    --icon-hover-color: rgb(221, 3, 48);
-    --icon-hover-bg: #f2f2f2;
+    --icon-hover-color: #{$on-angular};
+    --icon-hover-bg: #{$angular};
   }
 
   .icon.python:hover {
-    --icon-hover-color: rgb(255, 210, 66);
-    --icon-hover-bg: rgb(54, 111, 157);
+    --icon-hover-color: #{$on-python};
+    --icon-hover-bg: #{$python};
   }
 
   .icon.android:hover {
-    --icon-hover-color: rgb(48, 221, 129);
-    --icon-hover-bg: #f2f2f2;
+    --icon-hover-color: #{$on-android};
+    --icon-hover-bg: #{$android};
   }
 
   .icon.html:hover {
-    --icon-hover-color: white;
-    --icon-hover-bg: rgb(232, 96, 59);
+    --icon-hover-color: #{$on-html};
+    --icon-hover-bg: #{$html};
   }
 
   .icon.css:hover {
-    --icon-hover-color: white;
-    --icon-hover-bg: rgb(43, 127, 189);
+    --icon-hover-color: #{$on-css};
+    --icon-hover-bg: #{$css};
   }
 
-  .icon.javascript:hover, .icon.typescript:hover {
-    --icon-hover-color: white;
-    --icon-hover-bg: $yellow;
-  }
+  .icon.javascript:hover {
+    --icon-hover-color: #{$on-javascript};
+    --icon-hover-bg: #{$javascript};
 
-  .icon.javascript:hover, .icon.typescript:hover {
     span {
-      --icon-inner-text: $yellow;
+      --icon-inner-text: #{$javascript};
+    }
+  }
+
+  .icon.typescript:hover {
+    --icon-hover-color: #{$on-typescript};
+    --icon-hover-bg: #{$typescript};
+
+    span {
+      --icon-inner-text: #{$typescript};
     }
   }
 
   .icon.keycloak:hover {
-    --icon-hover-color: rgb(51, 198, 233);
-    --icon-hover-bg: #f2f2f2;
+    --icon-hover-color: #{$on-keycloak};
+    --icon-hover-bg: #{$keycloak};
   }
 
   .icon.mysql:hover {
-    --icon-hover-color: rgb(0, 117, 143);
-    --icon-hover-bg: #f2f2f2;
+    --icon-hover-color: #{$on-mysql};
+    --icon-hover-bg: #{$mysql};
   }
 
   .icon.mongodb:hover {
-    --icon-hover-color: rgb(16, 170, 80);
-    --icon-hover-bg: #f2f2f2;
+    --icon-hover-color: #{$on-mongodb};
+    --icon-hover-bg: #{$mongodb};
   }
 
   .icon.maven:hover {
-    --icon-hover-color: rgb(186, 32, 71);
-    --icon-hover-bg: #f2f2f2;
+    --icon-hover-color: #{$on-maven};
+    --icon-hover-bg: #{$maven};
   }
 
   .icon.git:hover {
-    --icon-hover-color: rgb(222, 76, 54);
-    --icon-hover-bg: #f2f2f2;
+    --icon-hover-color: #{$on-git};
+    --icon-hover-bg: #{$git};
   }
 }
