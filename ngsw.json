@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1582396840268,
+  "timestamp": 1582474776528,
   "index": "./index.html",
   "assetGroups": [
     {
@@ -10,14 +10,14 @@
       "urls": [
         "./favicon.ico",
         "./index.html",
-        "./main-es2015.6092eb9f7eab1c0c6579.js",
-        "./main-es5.6092eb9f7eab1c0c6579.js",
+        "./main-es2015.422fe849808f6ba6509a.js",
+        "./main-es5.422fe849808f6ba6509a.js",
         "./manifest.webmanifest",
         "./polyfills-es2015.ca64e4516afbb1b890d5.js",
         "./polyfills-es5.277e2e1d6fb2daf91a5c.js",
         "./runtime-es2015.0811dcefd377500b5b1a.js",
         "./runtime-es5.0811dcefd377500b5b1a.js",
-        "./styles.3cdae1d7784d1d2a8d9d.css"
+        "./styles.80b580e2389d7af5b640.css"
       ],
       "patterns": []
     },
@@ -69,17 +69,17 @@
     "./assets/styles/font-gudea.scss": "58aabf2017b19a42cf17cd2df3fc87e2e16174dd",
     "./assets/styles/light-theme.scss": "57366db8ef10ad66a762b84d66a746149de97b3f",
     "./assets/styles/themes.scss": "c4db28cfc7f1d3dcbe47b96c0532c0b0762f8777",
-    "./assets/styles/variables.scss": "1b3ecff7dc3e6c63a0479b6e86f9692cc831ee40",
+    "./assets/styles/variables.scss": "49edd59c4ed4777d5d9180055530996f5a662134",
     "./favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "./index.html": "de686fb4fe4d6a23a9ad28430835e62efc5a157f",
-    "./main-es2015.6092eb9f7eab1c0c6579.js": "5d1f141512e57a87200e7698f1168103140680f6",
-    "./main-es5.6092eb9f7eab1c0c6579.js": "8afb96518d29a39691cd558260daa066bb3ab10c",
+    "./index.html": "fe4e7f73c4464956bdba86d7fc48c1c2c26ba116",
+    "./main-es2015.422fe849808f6ba6509a.js": "040274fe79c97370202725363683f4abdde974b6",
+    "./main-es5.422fe849808f6ba6509a.js": "48dde6c7ca3e7e7f8cddbcafca57bd366f086c6b",
     "./manifest.webmanifest": "c91bd8aec77c44768709846b15bdc788790d615e",
     "./polyfills-es2015.ca64e4516afbb1b890d5.js": "8779ed8d9bf0580e1b50b352a9b8fd520be24433",
     "./polyfills-es5.277e2e1d6fb2daf91a5c.js": "8d03638471d7374e81cf33adfdea439f84ac3873",
     "./runtime-es2015.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "./runtime-es5.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "./styles.3cdae1d7784d1d2a8d9d.css": "008b4271937775db212cd7fa85d87d635a587982"
+    "./styles.80b580e2389d7af5b640.css": "c3943802d636bcae087bb2711aa8297b7436a564"
   },
   "navigationUrls": [
     {
