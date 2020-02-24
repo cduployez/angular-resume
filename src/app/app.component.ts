@@ -1,6 +1,6 @@
 import {Component, OnInit, Renderer2} from '@angular/core';
 import {ThemeService} from './services/theme.service';
-import {ThemeEnum} from './model/enums/theme.enum';
+import {ThemeEnum} from './model/ui/theme.enum';
 import {BodyService} from './services/body.service';
 
 @Component({

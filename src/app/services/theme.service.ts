@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {SessionStorageService} from './session-storage.service';
-import {ThemeEnum} from '../model/enums/theme.enum';
+import {ThemeEnum} from '../model/ui/theme.enum';
 import {Subject} from 'rxjs';
 import {ThemeEnumUtils} from '../utils/theme-enum-utils';
 

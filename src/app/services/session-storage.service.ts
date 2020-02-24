@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {ThemeEnum} from '../model/enums/theme.enum';
+import {ThemeEnum} from '../model/ui/theme.enum';
 
 const KEY_MENU_BAR_MINIMIZED: string = 'menuBarMinimized';
 const KEY_THEME: string = 'theme';

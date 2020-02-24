@@ -14,5 +14,7 @@ export enum SkillEnum {
     MYSQL = 'mysql',
     MONGODB = 'mongodb',
     MAVEN = 'maven',
-    GIT = 'git'
+    GIT = 'git',
+    LINUX = 'linux',
+    DOCKER = 'docker'
 }

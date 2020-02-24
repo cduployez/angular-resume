@@ -5,7 +5,7 @@ import {LinkService} from '../../services/link.service';
 import {SessionStorageService} from '../../services/session-storage.service';
 import {IconDefinition} from '@fortawesome/fontawesome-common-types';
 import {ThemeService} from '../../services/theme.service';
-import {ThemeEnum} from '../../model/enums/theme.enum';
+import {ThemeEnum} from '../../model/ui/theme.enum';
 
 @Component({
     selector: 'cv-menu-bar',
