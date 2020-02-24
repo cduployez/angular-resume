@@ -6,8 +6,8 @@ export class JsSkillItem extends SkillItem {
 
     iconText: string;
 
-    constructor(skillEnum: SkillEnum, title: string, iconText: string) {
-        super(skillEnum, title, SkillTypeEnum.JS);
+    constructor(title: string, skillEnum: SkillEnum, keywords: SkillEnum[], iconText: string) {
+        super(title, skillEnum, keywords, SkillTypeEnum.JS);
         this.iconText = iconText;
     }
 

@@ -2,7 +2,7 @@ import {ExperienceItem} from '../model/experience/experience-item';
 import {CvDate} from '../model/shared/cv-date';
 import {DateUtils} from '../utils/date-utils';
 import {SkillBadge} from '../model/experience/skill-badge';
-import {SkillEnum} from '../model/skill/skill-enum';
+import {SkillEnumUtils} from '../utils/skill-enum-utils';
 
 export class ExperienceFactory {
 
@@ -15,11 +15,11 @@ export class ExperienceFactory {
                 'Projet SI-VIC',
                 ['Lead Developer au sein d\'une équipe en méthode agile, développement d\'une solution d\'aide aux victimes en cas d\'événements majeurs sur le territoire Français'],
                 [
-                    new SkillBadge('Java', [SkillEnum.JAVA]),
-                    new SkillBadge('Spring 5', [SkillEnum.SPRING], [SkillEnum.JAVA]),
-                    new SkillBadge('Keycloak', [SkillEnum.KEYCLOAK]),
-                    new SkillBadge('MySQL', [SkillEnum.MYSQL]),
-                    new SkillBadge('Angular 8', [SkillEnum.ANGULAR], [SkillEnum.TYPESCRIPT, SkillEnum.CSS, SkillEnum.HTML]),
+                    new SkillBadge('Java', SkillEnumUtils.javaKeyword),
+                    new SkillBadge('Spring 5', SkillEnumUtils.springKeyword, SkillEnumUtils.springChildrenKeywords),
+                    new SkillBadge('Keycloak', SkillEnumUtils.keycloakKeyword),
+                    new SkillBadge('Angular 8', SkillEnumUtils.angularKeyword, SkillEnumUtils.angularChildrenKeywords),
+                    new SkillBadge('MySQL', SkillEnumUtils.mySqlKeyword),
                     new SkillBadge('Etat d\'esprit agile')
                 ]
             ),
@@ -30,10 +30,10 @@ export class ExperienceFactory {
                 'Projet Télépaiement',
                 ['Mise en place du télépaiement des forfaits de post-stationnement'],
                 [
-                    new SkillBadge('Java', [SkillEnum.JAVA]),
-                    new SkillBadge('Java EE', [SkillEnum.JAVA_EE], [SkillEnum.JAVA]),
-                    new SkillBadge('MySQL', [SkillEnum.MYSQL]),
-                    new SkillBadge('Web', [SkillEnum.HTML, SkillEnum.CSS, SkillEnum.JAVASCRIPT])
+                    new SkillBadge('Java', SkillEnumUtils.javaKeyword),
+                    new SkillBadge('Java EE', SkillEnumUtils.javaEeKeyword, SkillEnumUtils.javaEeChildrenKeywords),
+                    new SkillBadge('Web', SkillEnumUtils.webKeywords),
+                    new SkillBadge('MySQL', SkillEnumUtils.mySqlKeyword)
                 ]
             ),
             new ExperienceItem(
@@ -43,12 +43,13 @@ export class ExperienceFactory {
                 'Projets Datadock, Saveurs & Vie ; Sujets de R&D',
                 ['Assistant développeur sur différents projets de dématérialisation'],
                 [
-                    new SkillBadge('Java', [SkillEnum.JAVA]),
-                    new SkillBadge('Spring Boot', [SkillEnum.SPRING], [SkillEnum.JAVA]),
-                    new SkillBadge('Angular 2', [SkillEnum.ANGULAR]),
-                    new SkillBadge('Ionic 2', [SkillEnum.ANGULAR], [SkillEnum.HTML, SkillEnum.CSS, SkillEnum.TYPESCRIPT]),
-                    new SkillBadge('MongoDB', [SkillEnum.MONGODB]),
-                    new SkillBadge('Docker', [SkillEnum.DOCKER])
+                    new SkillBadge('Java', SkillEnumUtils.javaKeyword),
+                    new SkillBadge('Spring Boot', SkillEnumUtils.springKeyword, SkillEnumUtils.springChildrenKeywords),
+                    new SkillBadge('Keycloak', SkillEnumUtils.keycloakKeyword),
+                    new SkillBadge('Angular 2', SkillEnumUtils.angularKeyword, SkillEnumUtils.angularChildrenKeywords),
+                    new SkillBadge('Ionic 2', SkillEnumUtils.angularKeyword, SkillEnumUtils.angularChildrenKeywords),
+                    new SkillBadge('MongoDB', SkillEnumUtils.mongoDbKeyword),
+                    new SkillBadge('Docker', SkillEnumUtils.dockerKeyword)
                 ]
             ),
             new ExperienceItem(
@@ -58,10 +59,10 @@ export class ExperienceFactory {
                 'Projet IMail',
                 ['Développement de modules et optimisation pour la solution d\'emailing professionnel IMAIL'],
                 [
-                    new SkillBadge('C#', [SkillEnum.C_SHARP]),
-                    new SkillBadge('MVC .Net', [SkillEnum.MVC_NET], [SkillEnum.C_SHARP, SkillEnum.HTML]),
-                    new SkillBadge('SQL'),
-                    new SkillBadge('Web', [SkillEnum.HTML, SkillEnum.CSS, SkillEnum.JAVASCRIPT])
+                    new SkillBadge('C#', SkillEnumUtils.cSharpKeyword),
+                    new SkillBadge('MVC .Net', SkillEnumUtils.mvcNetKeyword, SkillEnumUtils.mvcNetChildrenKeywords),
+                    new SkillBadge('Web', SkillEnumUtils.webKeywords),
+                    new SkillBadge('SQL')
                 ]
             ),
             new ExperienceItem(
@@ -71,7 +72,7 @@ export class ExperienceFactory {
                 'Club Informatique',
                 ['Responsable Evènementiel', 'Soutien des étudiants : cours, logiciel, matériel'],
                 [
-                    new SkillBadge('Linux', [SkillEnum.LINUX]),
+                    new SkillBadge('Linux', SkillEnumUtils.linuxKeyword),
                     new SkillBadge('Organisationnel')
                 ]
             )

@@ -1,5 +1,7 @@
 <div class="icon-with-title">
-    <div class="icon" [class]="optionalClass(iconClass)">
+    <div (mouseenter)="enableBadge()" (mouseleave)="disableBadge()"
+         [class]="optionalClass(skillEnum)"
+         [ngClass]="{active: active, icon: true}">
         <ng-content></ng-content>
     </div>
     <span class="title">{{title}}</span>

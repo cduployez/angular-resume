@@ -26,7 +26,7 @@
     transition: $transition-delay;
   }
 
-  .icon:hover {
+  .icon:hover, .icon.active {
     color: var(--icon-hover-color);
     background-color: var(--icon-hover-bg);
   }

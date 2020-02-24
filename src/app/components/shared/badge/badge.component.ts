@@ -1,6 +1,6 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {SkillBadge} from '../../../model/experience/skill-badge';
-import {ActiveSkillService} from '../../../services/ui/active-skill.service';
+import {ActiveSkillsService} from '../../../services/ui/active-skills.service';
 import {SkillEnum} from '../../../model/skill/skill-enum';
 
 @Component({
@@ -17,7 +17,7 @@ export class BadgeComponent implements OnInit, OnDestroy {
 
     mouseInside: boolean = false;
 
-    constructor(private activeSkillsService: ActiveSkillService) {
+    constructor(private activeSkillsService: ActiveSkillsService) {
     }
 
     ngOnInit(): void {

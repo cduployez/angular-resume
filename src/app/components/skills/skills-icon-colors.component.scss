@@ -7,59 +7,59 @@
     }
   }
 
-  .icon:hover {
+  .icon:hover, .icon.active {
     --icon-hover-color: var(--icon);
     --icon-hover-bg: var(--on-icon);
     color: var(--icon-hover-color);
     background-color: var(--icon-hover-bg);
   }
 
-  .icon.java:hover {
+  .icon.java:hover, .icon.java.active {
     --icon-hover-color: #{$on-java};
     --icon-hover-bg: #{$java};
   }
 
-  .icon.cplusplus:hover {
+  .icon.cplusplus:hover, .icon.cplusplus.active {
     --icon-hover-color: #{$on-cplusplus};
     --icon-hover-bg: #{$cplusplus};
   }
 
-  .icon.csharp:hover {
+  .icon.csharp:hover, .icon.csharp.active {
     --icon-hover-color: #{$on-csharp};
     --icon-hover-bg: #{$csharp};
   }
 
-  .icon.spring:hover {
+  .icon.spring:hover, .icon.spring.active {
     --icon-hover-color: #{$on-spring};
     --icon-hover-bg: #{$spring};
   }
 
-  .icon.angular:hover {
+  .icon.angular:hover, .icon.angular.active {
     --icon-hover-color: #{$on-angular};
     --icon-hover-bg: #{$angular};
   }
 
-  .icon.python:hover {
+  .icon.python:hover, .icon.python.active {
     --icon-hover-color: #{$on-python};
     --icon-hover-bg: #{$python};
   }
 
-  .icon.android:hover {
+  .icon.android:hover, .icon.android.active {
     --icon-hover-color: #{$on-android};
     --icon-hover-bg: #{$android};
   }
 
-  .icon.html:hover {
+  .icon.html:hover, .icon.html.active {
     --icon-hover-color: #{$on-html};
     --icon-hover-bg: #{$html};
   }
 
-  .icon.css:hover {
+  .icon.css:hover, .icon.css.active {
     --icon-hover-color: #{$on-css};
     --icon-hover-bg: #{$css};
   }
 
-  .icon.javascript:hover {
+  .icon.javascript:hover, .icon.javascript.active {
     --icon-hover-color: #{$on-javascript};
     --icon-hover-bg: #{$javascript};
 
@@ -68,7 +68,7 @@
     }
   }
 
-  .icon.typescript:hover {
+  .icon.typescript:hover, .icon.typescript.active {
     --icon-hover-color: #{$on-typescript};
     --icon-hover-bg: #{$typescript};
 
@@ -77,27 +77,27 @@
     }
   }
 
-  .icon.keycloak:hover {
+  .icon.keycloak:hover, .icon.keycloak.active {
     --icon-hover-color: #{$on-keycloak};
     --icon-hover-bg: #{$keycloak};
   }
 
-  .icon.mysql:hover {
+  .icon.mysql:hover, .icon.mysql.active {
     --icon-hover-color: #{$on-mysql};
     --icon-hover-bg: #{$mysql};
   }
 
-  .icon.mongodb:hover {
+  .icon.mongodb:hover, .icon.mongodb.active {
     --icon-hover-color: #{$on-mongodb};
     --icon-hover-bg: #{$mongodb};
   }
 
-  .icon.maven:hover {
+  .icon.maven:hover, .icon.maven.active {
     --icon-hover-color: #{$on-maven};
     --icon-hover-bg: #{$maven};
   }
 
-  .icon.git:hover {
+  .icon.git:hover, .icon.git.active {
     --icon-hover-color: #{$on-git};
     --icon-hover-bg: #{$git};
   }

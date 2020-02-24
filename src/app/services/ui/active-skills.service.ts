@@ -3,17 +3,18 @@ import {SkillEnum} from '../../model/skill/skill-enum';
 import {Injectable} from '@angular/core';
 
 @Injectable({providedIn: 'root'})
-export class ActiveSkillService {
-
-    private _activeSkillEnums: SkillEnum[];
+export class ActiveSkillsService {
 
     activeSkillEnums$: Subject<SkillEnum[]> = new Subject<SkillEnum[]>();
 
+    activeChildrenSkillEnums$: Subject<SkillEnum[]> = new Subject<SkillEnum[]>();
+
     set activeSkillEnums(skillEnums: SkillEnum[]) {
-        if (this._activeSkillEnums !== skillEnums) {
-            this._activeSkillEnums = skillEnums;
-            this.activeSkillEnums$.next(skillEnums);
-        }
+        this.activeSkillEnums$.next(skillEnums);
+    }
+
+    set activeChildrenSkillEnums(skillEnums: SkillEnum[]) {
+        this.activeChildrenSkillEnums$.next(skillEnums);
     }
 
 }

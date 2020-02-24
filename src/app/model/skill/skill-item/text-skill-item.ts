@@ -6,8 +6,8 @@ export class TextSkillItem extends SkillItem {
 
     iconText: string;
 
-    constructor(skillEnum: SkillEnum, title: string, iconText: string) {
-        super(skillEnum, title, SkillTypeEnum.TEXT);
+    constructor(title: string, skillEnum: SkillEnum, keywords: SkillEnum[], iconText: string) {
+        super(title, skillEnum, keywords, SkillTypeEnum.TEXT);
         this.iconText = iconText;
     }
 
