@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IconsService} from '../../services/icons.service';
+import {IconsService} from '../../services/ui/icons.service';
 import {SkillItem} from '../../model/skill/skill-item/skill-item';
 import {FaSkillItem} from '../../model/skill/skill-item/fa-skill-item';
 import {TextSkillItem} from '../../model/skill/skill-item/text-skill-item';

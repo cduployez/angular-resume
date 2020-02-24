@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {DateUtils} from '../utils/date-utils';
+import {DateUtils} from '../../utils/date-utils';
 
 @Injectable({providedIn: 'root'})
 export class ProfileService {

@@ -1,7 +1,7 @@
 import {Component, OnInit, Renderer2} from '@angular/core';
-import {ThemeService} from './services/theme.service';
+import {ThemeService} from './services/ui/theme.service';
 import {ThemeEnum} from './model/ui/theme.enum';
-import {BodyService} from './services/body.service';
+import {BodyService} from './services/ui/body.service';
 
 @Component({
     selector: 'cv-app-root',
