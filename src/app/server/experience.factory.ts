@@ -3,6 +3,7 @@ import {CvDate} from '../model/shared/cv-date';
 import {DateUtils} from '../utils/date-utils';
 import {SkillBadge} from '../model/experience/skill-badge';
 import {SkillEnumUtils} from '../utils/skill-enum-utils';
+import {SkillBadgeUtils} from '../utils/skill-badge-utils';
 
 export class ExperienceFactory {
 
@@ -15,7 +16,7 @@ export class ExperienceFactory {
                 'Projet SI-VIC',
                 ['Lead Developer au sein d\'une équipe en méthode agile, développement d\'une solution d\'aide aux victimes en cas d\'événements majeurs sur le territoire Français'],
                 [
-                    new SkillBadge('Java', SkillEnumUtils.javaKeyword),
+                    SkillBadgeUtils.java,
                     new SkillBadge('Spring 5', SkillEnumUtils.springKeyword, SkillEnumUtils.springChildrenKeywords),
                     new SkillBadge('Keycloak', SkillEnumUtils.keycloakKeyword),
                     new SkillBadge('Angular 8', SkillEnumUtils.angularKeyword, SkillEnumUtils.angularChildrenKeywords),
@@ -30,7 +31,7 @@ export class ExperienceFactory {
                 'Projet Télépaiement',
                 ['Mise en place du télépaiement des forfaits de post-stationnement'],
                 [
-                    new SkillBadge('Java', SkillEnumUtils.javaKeyword),
+                    SkillBadgeUtils.java,
                     new SkillBadge('Java EE', SkillEnumUtils.javaEeKeyword, SkillEnumUtils.javaEeChildrenKeywords),
                     new SkillBadge('Web', SkillEnumUtils.webKeywords),
                     new SkillBadge('MySQL', SkillEnumUtils.mySqlKeyword)
@@ -43,7 +44,7 @@ export class ExperienceFactory {
                 'Projets Datadock, Saveurs & Vie ; Sujets de R&D',
                 ['Assistant développeur sur différents projets de dématérialisation'],
                 [
-                    new SkillBadge('Java', SkillEnumUtils.javaKeyword),
+                    SkillBadgeUtils.java,
                     new SkillBadge('Spring Boot', SkillEnumUtils.springKeyword, SkillEnumUtils.springChildrenKeywords),
                     new SkillBadge('Keycloak', SkillEnumUtils.keycloakKeyword),
                     new SkillBadge('Angular 2', SkillEnumUtils.angularKeyword, SkillEnumUtils.angularChildrenKeywords),
@@ -59,7 +60,7 @@ export class ExperienceFactory {
                 'Projet IMail',
                 ['Développement de modules et optimisation pour la solution d\'emailing professionnel IMAIL'],
                 [
-                    new SkillBadge('C#', SkillEnumUtils.cSharpKeyword),
+                    SkillBadgeUtils.cSharp,
                     new SkillBadge('MVC .Net', SkillEnumUtils.mvcNetKeyword, SkillEnumUtils.mvcNetChildrenKeywords),
                     new SkillBadge('Web', SkillEnumUtils.webKeywords),
                     new SkillBadge('SQL')

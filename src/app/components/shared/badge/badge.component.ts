@@ -37,11 +37,13 @@ export class BadgeComponent implements OnInit, OnDestroy {
     enableBadge(): void {
         this.mouseInside = true;
         this.activeSkillsService.activeSkillEnums = this.badge?.keywords;
+        this.activeSkillsService.activeChildrenSkillEnums = this.badge?.childrenKeywords;
     }
 
     disableBadge(): void {
         this.mouseInside = false;
         this.activeSkillsService.activeSkillEnums = null;
+        this.activeSkillsService.activeChildrenSkillEnums = null;
         this.active = false;
     }
 

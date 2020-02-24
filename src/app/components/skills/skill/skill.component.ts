@@ -22,6 +22,8 @@ export class SkillComponent implements OnInit, OnDestroy {
 
     active: boolean = false;
 
+    childrenActive: boolean = false;
+
     constructor(private activeSkillsService: ActiveSkillsService) {
     }
 
@@ -36,12 +38,19 @@ export class SkillComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
+        this.activeSkillsService.activeSkillEnums$.subscribe(this.checkActive.bind(this));
         this.activeSkillsService.activeChildrenSkillEnums$.subscribe(this.checkActiveChildren.bind(this));
+    }
+
+    checkActive(skillEnums: SkillEnum[]): void {
+        if (!this.mouseInside) {
+            this.active = skillEnums?.some(s => this._skillEnum === s);
+        }
     }
 
     checkActiveChildren(skillEnums: SkillEnum[]): void {
         if (!this.mouseInside) {
-            this.active = skillEnums?.some(s => this._skillEnum === s);
+            this.childrenActive = skillEnums?.some(s => this._skillEnum === s);
         }
     }
 
@@ -60,6 +69,7 @@ export class SkillComponent implements OnInit, OnDestroy {
         this.activeSkillsService.activeSkillEnums = null;
         this.activeSkillsService.activeChildrenSkillEnums = null;
         this.active = false;
+        this.childrenActive = false;
     }
 
 

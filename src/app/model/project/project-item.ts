@@ -1,3 +1,5 @@
+import {SkillBadge} from '../experience/skill-badge';
+
 export class ProjectItem {
 
     /**
@@ -18,10 +20,10 @@ export class ProjectItem {
     /**
      * Compétences
      */
-    skills: string[];
+    skills: SkillBadge[];
 
 
-    constructor(projectTitle: string, teamSize: number, descriptions: string[], skills: string[]) {
+    constructor(projectTitle: string, teamSize: number, descriptions: string[], skills: SkillBadge[]) {
         this.projectTitle = projectTitle;
         this.teamSize = teamSize;
         this.descriptions = descriptions;

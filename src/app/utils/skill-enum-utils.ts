@@ -16,11 +16,19 @@ export class SkillEnumUtils {
 
     static readonly javaEeChildrenKeywords: SkillEnum[] = SkillEnumUtils.javaKeyword;
 
+    static readonly pythonKeyword: SkillEnum[] = [SkillEnum.PYTHON];
+
+    static readonly openCvChildrenKeywords: SkillEnum[] = SkillEnumUtils.pythonKeyword;
+
     static readonly androidChildrenKeywords: SkillEnum[] = SkillEnumUtils.javaKeyword;
+
+    static readonly xamarinChildrenKeywords: SkillEnum[] = [SkillEnum.C_SHARP, SkillEnum.ANDROID];
 
     static readonly cSharpKeyword: SkillEnum[] = [SkillEnum.C_SHARP];
 
     static readonly mvcNetKeyword: SkillEnum[] = [SkillEnum.MVC_NET];
+
+    static readonly netChildrenKeywords: SkillEnum[] = SkillEnumUtils.cSharpKeyword;
 
     static readonly mvcNetChildrenKeywords: SkillEnum[] = [SkillEnum.C_SHARP, SkillEnum.HTML];
 
