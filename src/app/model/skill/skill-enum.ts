@@ -1,8 +1,10 @@
 export enum SkillEnum {
     JAVA = 'java',
+    JAVA_EE = 'javaee',
     SPRING = 'spring',
     C_PLUS_PLUS = 'cplusplus',
     C_SHARP = 'csharp',
+    MVC_NET = 'mvcnet',
     ANGULAR = 'angular',
     PYTHON = 'python',
     ANDROID = 'android',
