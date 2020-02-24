@@ -9,9 +9,12 @@ export class SkillItem {
 
     skillEnum: SkillEnum;
 
-    constructor(skillEnum: SkillEnum, title: string, skillTypeEnum: SkillTypeEnum) {
-        this.skillEnum = skillEnum;
+    childrenKeywords: SkillEnum[];
+
+    constructor(title: string, skillEnum: SkillEnum, keywords: SkillEnum[], skillTypeEnum: SkillTypeEnum) {
         this.title = title;
+        this.skillEnum = skillEnum;
+        this.childrenKeywords = keywords;
         this.skillTypeEnum = skillTypeEnum;
     }
 

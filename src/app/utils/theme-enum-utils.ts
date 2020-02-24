@@ -1,4 +1,4 @@
-import {ThemeEnum} from '../model/enums/theme.enum';
+import {ThemeEnum} from '../model/ui/theme.enum';
 
 export class ThemeEnumUtils {
 

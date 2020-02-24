@@ -1,4 +1,5 @@
 import {CvDate} from '../shared/cv-date';
+import {SkillBadge} from './skill-badge';
 
 /**
  * ELément de la catégorie 'Expérience'
@@ -33,10 +34,10 @@ export class ExperienceItem {
     /**
      * Compétences
      */
-    skills: string[];
+    skills: SkillBadge[];
 
 
-    constructor(cvDate: CvDate, enterprise: string, jobType: string, project: string, descriptions: string[], skills: string[]) {
+    constructor(cvDate: CvDate, enterprise: string, jobType: string, project: string, descriptions: string[], skills: SkillBadge[]) {
         this.cvDate = cvDate;
         this.enterprise = enterprise;
         this.jobType = jobType;

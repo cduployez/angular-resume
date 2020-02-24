@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
-import {ProjectService} from '../../services/project.service';
-import {IconsService} from '../../services/icons.service';
-import {LinkService} from '../../services/link.service';
-import {SessionStorageService} from '../../services/session-storage.service';
+import {ProjectService} from '../../services/data/project.service';
+import {IconsService} from '../../services/ui/icons.service';
+import {LinkService} from '../../services/data/link.service';
+import {SessionStorageService} from '../../services/data/session-storage.service';
 import {IconDefinition} from '@fortawesome/fontawesome-common-types';
-import {ThemeService} from '../../services/theme.service';
-import {ThemeEnum} from '../../model/enums/theme.enum';
+import {ThemeService} from '../../services/ui/theme.service';
+import {ThemeEnum} from '../../model/ui/theme.enum';
 
 @Component({
     selector: 'cv-menu-bar',

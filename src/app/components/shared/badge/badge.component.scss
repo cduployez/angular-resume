@@ -12,7 +12,7 @@ span {
   cursor: default;
 }
 
-span:hover {
+span:hover, span.active {
   color: var(--badge);
   background-color: var(--on-badge);
 }

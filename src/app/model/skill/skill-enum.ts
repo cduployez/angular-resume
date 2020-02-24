@@ -1,11 +1,15 @@
 export enum SkillEnum {
     JAVA = 'java',
+    JAVA_EE = 'javaee',
     SPRING = 'spring',
     C_PLUS_PLUS = 'cplusplus',
     C_SHARP = 'csharp',
+    MVC_NET = 'mvcnet',
+    NET = 'net',
     ANGULAR = 'angular',
     PYTHON = 'python',
     ANDROID = 'android',
+    XAMARIN = 'xamarin',
     HTML = 'html',
     CSS = 'css',
     JAVASCRIPT = 'javascript',
@@ -14,5 +18,7 @@ export enum SkillEnum {
     MYSQL = 'mysql',
     MONGODB = 'mongodb',
     MAVEN = 'maven',
-    GIT = 'git'
+    GIT = 'git',
+    LINUX = 'linux',
+    DOCKER = 'docker'
 }

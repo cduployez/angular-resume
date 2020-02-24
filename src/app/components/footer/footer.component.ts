@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IconsService} from '../../services/icons.service';
+import {IconsService} from '../../services/ui/icons.service';
 
 @Component({
     selector: 'cv-footer',

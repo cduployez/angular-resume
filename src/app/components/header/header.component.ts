@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {ImageService} from '../../services/image.service';
-import {ProfileService} from '../../services/profile.service';
-import {ThemeService} from '../../services/theme.service';
+import {ImageService} from '../../services/ui/image.service';
+import {ProfileService} from '../../services/data/profile.service';
+import {ThemeService} from '../../services/ui/theme.service';
 
 @Component({
     selector: 'cv-header',

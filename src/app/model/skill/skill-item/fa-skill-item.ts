@@ -7,8 +7,8 @@ export class FaSkillItem extends SkillItem {
 
     faIcon: IconDefinition;
 
-    constructor(skillEnum: SkillEnum, title: string, faIcon: IconDefinition) {
-        super(skillEnum, title, SkillTypeEnum.FA);
+    constructor(title: string, skillEnum: SkillEnum, keywords: SkillEnum[], faIcon: IconDefinition) {
+        super(title, skillEnum, keywords, SkillTypeEnum.FA);
         this.faIcon = faIcon;
     }
 

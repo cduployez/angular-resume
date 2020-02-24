@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {SessionStorageService} from './session-storage.service';
-import {ThemeEnum} from '../model/enums/theme.enum';
+import {SessionStorageService} from '../data/session-storage.service';
+import {ThemeEnum} from '../../model/ui/theme.enum';
 import {Subject} from 'rxjs';
-import {ThemeEnumUtils} from '../utils/theme-enum-utils';
+import {ThemeEnumUtils} from '../../utils/theme-enum-utils';
 
 const THEMES: ThemeEnum[] = Object.keys(ThemeEnum).map(k => ThemeEnum[k]);
 
