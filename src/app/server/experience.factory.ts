@@ -44,7 +44,7 @@ export class ExperienceFactory {
                 JobTypeEnum.CDI,
                 'Projet SI-VIC',
                 ['Lead Developer au sein d\'une équipe en méthode agile, développement d\'une solution d\'aide aux victimes en cas d\'événements majeurs sur le territoire Français',
-                    'Gestion et amélioration pendant la crise Covid-19, afin de permettre le dénombrement quotidien, le suivi et l\'analyse des parcours de soins des patients dans les hôpitaux'],
+                    'Gestion et amélioration pendant la crise Covid-19 : dénombrement quotidien, suivi et analyse des parcours de soins des patients dans les hôpitaux'],
                 [
                     SkillBadgeUtils.java,
                     new SkillBadge('Spring 5', SkillEnumUtils.springKeyword, SkillEnumUtils.springChildrenKeywords),
