@@ -12,7 +12,7 @@ export class ExperienceFactory {
             new ExperienceItem(
                 CvDate.monthRange(DateUtils.fromDate(1, 1, 2017), /* Current */null),
                 'Worldline',
-                null,
+                JobTypeEnum.CDI,
                 'Projet SI-VIC',
                 ['Lead Developer au sein d\'une équipe en méthode agile, développement d\'une solution d\'aide aux victimes en cas d\'événements majeurs sur le territoire Français'],
                 [
@@ -27,7 +27,7 @@ export class ExperienceFactory {
             new ExperienceItem(
                 CvDate.monthRange(DateUtils.fromDate(1, 9, 2017), DateUtils.fromDate(31, 12, 2017)),
                 'Worldline',
-                null,
+                JobTypeEnum.CDI,
                 'Projet Télépaiement',
                 ['Mise en place du télépaiement des forfaits de post-stationnement'],
                 [
@@ -40,7 +40,7 @@ export class ExperienceFactory {
             new ExperienceItem(
                 CvDate.monthRange(DateUtils.fromDate(1, 9, 2016), DateUtils.fromDate(31, 8, 2017)),
                 'Worldline',
-                'Alternance',
+                JobTypeEnum.ALTERNANCE,
                 'Projets Datadock, Saveurs & Vie ; Sujets de R&D',
                 ['Assistant développeur sur différents projets de dématérialisation'],
                 [
@@ -56,7 +56,7 @@ export class ExperienceFactory {
             new ExperienceItem(
                 CvDate.monthRange(DateUtils.fromDate(1, 5, 2016), DateUtils.fromDate(31, 7, 2016)),
                 'Intelligent Solutions',
-                'Stage',
+                JobTypeEnum.STAGE,
                 'Projet IMail',
                 ['Développement de modules et optimisation pour la solution d\'emailing professionnel IMAIL'],
                 [

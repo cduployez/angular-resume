@@ -2,7 +2,7 @@
     <cv-item-container *ngFor="let item of experienceItems">
         <div>
             <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
-            <cv-title [detail]="item.jobType" [title]="item.enterprise"></cv-title>
+            <cv-title [detail]="item.jobTypeText" [title]="item.enterprise"></cv-title>
         </div>
         <div>
             <cv-subtitle *ngIf="item.project" [subtitle]="item.project"></cv-subtitle>
