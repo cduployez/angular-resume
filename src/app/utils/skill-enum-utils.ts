@@ -38,9 +38,22 @@ export class SkillEnumUtils {
 
     static readonly webKeywords: SkillEnum[] = [SkillEnum.HTML, SkillEnum.CSS, SkillEnum.JAVASCRIPT];
 
+    static readonly apacheTapestryKeyword: SkillEnum[] = [SkillEnum.APACHE_TAPESTRY];
+
+    static readonly apacheTapestryChildrenKeywords: SkillEnum[] = [SkillEnum.HTML, SkillEnum.CSS, SkillEnum.JAVA];
+
     static readonly mongoDbKeyword: SkillEnum[] = [SkillEnum.MONGODB];
 
     static readonly dockerKeyword: SkillEnum[] = [SkillEnum.DOCKER];
 
+    static readonly kubernetesKeyword: SkillEnum[] = [SkillEnum.KUBERNETES];
+
+    static readonly kubernetesChildrenKeywords: SkillEnum[] = SkillEnumUtils.dockerKeyword;
+
+    static readonly azureKeyword: SkillEnum[] = [SkillEnum.AZURE];
+
+    static readonly azureChildrenKeywords: SkillEnum[] = [SkillEnum.DOCKER, SkillEnum.KUBERNETES];
+
     static readonly linuxKeyword: SkillEnum[] = [SkillEnum.LINUX];
+
 }
