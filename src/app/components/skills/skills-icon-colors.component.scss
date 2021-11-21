@@ -1,11 +1,34 @@
 @import "src/assets/styles/variables.scss";
 
-::ng-deep {
-  .icon.javascript, .icon.typescript {
+/**
+  Mixin to add colors to font-awesome badges
+ */
+@mixin badgeColor($badgeClassName, $hoverTextColor, $hoverBackgroundColor) {
+  .icon.#{$badgeClassName}:hover, .icon.#{$badgeClassName}.active {
+    --icon-hover-color: #{$hoverTextColor};
+    --icon-hover-bg: #{$hoverBackgroundColor};
+  }
+}
+
+/**
+  Mixin to add colors to shaped badges (javascript, typescript)
+ */
+@mixin badgeShapeColor($badgeClassName, $hoverTextColor, $hoverBackgroundColor) {
+  .icon.#{$badgeClassName} span {
+    --icon-text: var(--icon-inner-text);
+  }
+
+  .icon.#{$badgeClassName}:hover, .icon.#{$badgeClassName}.active {
+    --icon-hover-color: #{$hoverTextColor};
+    --icon-hover-bg: #{$hoverBackgroundColor};
+
     span {
-      --icon-text: var(--icon-inner-text);
+      --icon-inner-text: #{$hoverBackgroundColor};
     }
   }
+}
+
+::ng-deep {
 
   .icon:hover, .icon.active {
     --icon-hover-color: var(--icon);
@@ -14,101 +37,22 @@
     background-color: var(--icon-hover-bg);
   }
 
-  .icon.java:hover, .icon.java.active {
-    --icon-hover-color: #{$on-java};
-    --icon-hover-bg: #{$java};
-  }
-
-  .icon.cplusplus:hover, .icon.cplusplus.active {
-    --icon-hover-color: #{$on-cplusplus};
-    --icon-hover-bg: #{$cplusplus};
-  }
-
-  .icon.csharp:hover, .icon.csharp.active {
-    --icon-hover-color: #{$on-csharp};
-    --icon-hover-bg: #{$csharp};
-  }
-
-  .icon.spring:hover, .icon.spring.active {
-    --icon-hover-color: #{$on-spring};
-    --icon-hover-bg: #{$spring};
-  }
-
-  .icon.angular:hover, .icon.angular.active {
-    --icon-hover-color: #{$on-angular};
-    --icon-hover-bg: #{$angular};
-  }
-
-  .icon.python:hover, .icon.python.active {
-    --icon-hover-color: #{$on-python};
-    --icon-hover-bg: #{$python};
-  }
-
-  .icon.android:hover, .icon.android.active {
-    --icon-hover-color: #{$on-android};
-    --icon-hover-bg: #{$android};
-  }
-
-  .icon.html:hover, .icon.html.active {
-    --icon-hover-color: #{$on-html};
-    --icon-hover-bg: #{$html};
-  }
-
-  .icon.css:hover, .icon.css.active {
-    --icon-hover-color: #{$on-css};
-    --icon-hover-bg: #{$css};
-  }
-
-  .icon.javascript:hover, .icon.javascript.active {
-    --icon-hover-color: #{$on-javascript};
-    --icon-hover-bg: #{$javascript};
-
-    span {
-      --icon-inner-text: #{$javascript};
-    }
-  }
-
-  .icon.typescript:hover, .icon.typescript.active {
-    --icon-hover-color: #{$on-typescript};
-    --icon-hover-bg: #{$typescript};
-
-    span {
-      --icon-inner-text: #{$typescript};
-    }
-  }
-
-  .icon.keycloak:hover, .icon.keycloak.active {
-    --icon-hover-color: #{$on-keycloak};
-    --icon-hover-bg: #{$keycloak};
-  }
-
-  .icon.mysql:hover, .icon.mysql.active {
-    --icon-hover-color: #{$on-mysql};
-    --icon-hover-bg: #{$mysql};
-  }
-
-  .icon.mongodb:hover, .icon.mongodb.active {
-    --icon-hover-color: #{$on-mongodb};
-    --icon-hover-bg: #{$mongodb};
-  }
-
-  .icon.maven:hover, .icon.maven.active {
-    --icon-hover-color: #{$on-maven};
-    --icon-hover-bg: #{$maven};
-  }
-
-  .icon.git:hover, .icon.git.active {
-    --icon-hover-color: #{$on-git};
-    --icon-hover-bg: #{$git};
-  }
-
-  .icon.docker:hover, .icon.docker.active {
-    --icon-hover-color: #{$on-docker};
-    --icon-hover-bg: #{$docker};
-  }
-
-  .icon.kubernetes:hover, .icon.kubernetes.acive {
-    --icon-hover-color: #{$on-kubernetes};
-    --icon-hover-bg: #{$kubernetes};
-  }
+  @include badgeColor(java, $on-java, $java);
+  @include badgeColor(cplusplus, $on-cplusplus, $cplusplus);
+  @include badgeColor(csharp, $on-csharp, $csharp);
+  @include badgeColor(spring, $on-spring, $spring);
+  @include badgeColor(angular, $on-angular, $angular);
+  @include badgeColor(python, $on-python, $python);
+  @include badgeColor(android, $on-android, $android);
+  @include badgeColor(html, $on-html, $html);
+  @include badgeColor(css, $on-css, $css);
+  @include badgeShapeColor(javascript, $on-javascript, $javascript);
+  @include badgeShapeColor(typescript, $on-typescript, $typescript);
+  @include badgeColor(keycloak, $on-keycloak, $keycloak);
+  @include badgeColor(mysql, $on-mysql, $mysql);
+  @include badgeColor(mongodb, $on-mongodb, $mongodb);
+  @include badgeColor(maven, $on-maven, $maven);
+  @include badgeColor(git, $on-git, $git);
+  @include badgeColor(docker, $on-docker, $docker);
+  @include badgeColor(kubernetes, $on-kubernetes, $kubernetes);
 }
