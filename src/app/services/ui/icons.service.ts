@@ -1,10 +1,11 @@
 import {Injectable} from '@angular/core';
-import {faAngleDoubleUp, faCode, faDatabase, faFeather, faFilePdf, faKey, faLeaf, faMinus, faPlus} from '@fortawesome/free-solid-svg-icons';
+import {faAngleDoubleUp, faCode, faDatabase, faDharmachakra, faFeather, faFilePdf, faKey, faLeaf, faMinus, faPlus} from '@fortawesome/free-solid-svg-icons';
 import {IconDefinition} from '@fortawesome/fontawesome-common-types';
 import {
     faAndroid,
     faAngular,
     faCss3Alt,
+    faDocker,
     faEnvira,
     faGitAlt,
     faHtml5,
@@ -124,5 +125,17 @@ export class IconsService {
      * Used for light theme
      */
     readonly faMoonRegular: IconDefinition = faMoonRegular;
+
+    /**
+     * Font-Awesome - Docker
+     * Used for Docker skill
+     */
+    readonly faDocker: IconDefinition = faDocker;
+
+    /**
+     * Font-Awesome Dharmachakra (solid)
+     * Used for Kubernetes
+     */
+    faDharmachakra: IconDefinition = faDharmachakra;
 
 }

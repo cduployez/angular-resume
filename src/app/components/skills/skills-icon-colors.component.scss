@@ -101,4 +101,14 @@
     --icon-hover-color: #{$on-git};
     --icon-hover-bg: #{$git};
   }
+
+  .icon.docker:hover, .icon.docker.active {
+    --icon-hover-color: #{$on-docker};
+    --icon-hover-bg: #{$docker};
+  }
+
+  .icon.kubernetes:hover, .icon.kubernetes.acive {
+    --icon-hover-color: #{$on-kubernetes};
+    --icon-hover-bg: #{$kubernetes};
+  }
 }

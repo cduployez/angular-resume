@@ -12,7 +12,7 @@ export class SkillFactory {
         return [
             SkillFactory.getLanguageAndFrameworkGroup(iconsService),
             SkillFactory.getWebGroup(iconsService),
-            SkillFactory.getOtherGroup(iconsService)
+            SkillFactory.getOtherGroup(iconsService),
         ];
     }
 
@@ -47,6 +47,9 @@ export class SkillFactory {
         return {
             title: 'Divers',
             skillItemLists: [
+                [new FaSkillItem('Docker', SkillEnum.DOCKER, SkillEnumUtils.dockerKeyword, iconsService.faDocker),
+                new FaSkillItem('Kubernetes', SkillEnum.KUBERNETES, SkillEnumUtils.kubernetesChildrenKeywords,
+                    iconsService.faDharmachakra)],
                 [new FaSkillItem('Keycloak', SkillEnum.KEYCLOAK, null, iconsService.faKey),
                     new FaSkillItem('MySQL', SkillEnum.MYSQL, null, iconsService.faDatabase),
                     new FaSkillItem('MongoDB', SkillEnum.MONGODB, null, iconsService.faEnvira)],
