@@ -14,7 +14,7 @@ export class ExperienceFactory {
                 'Worldline',
                 JobTypeEnum.CDI,
                 'Projet Maela',
-                ['Lead Developer au sein d\'une équipe internale en méthode agile, développement d\'une solution de télésuivi médical pour professionnels de santé et patients'],
+                ['Lead Developer au sein d\'une équipe internationale en méthode agile, développement d\'une solution de télésuivi médical pour professionnels de santé et patients'],
                 [
                     SkillBadgeUtils.java,
                     SkillBadgeUtils.springBoot,
