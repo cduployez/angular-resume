@@ -1,23 +1,23 @@
 {
   "configVersion": 1,
-  "timestamp": 1582586307661,
+  "timestamp": 1637455674215,
   "index": "./index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
       "urls": [
         "./favicon.ico",
         "./index.html",
-        "./main-es2015.b68aff87456b1f9f58d7.js",
-        "./main-es5.b68aff87456b1f9f58d7.js",
+        "./main.f4595f4ab91fd7a3.js",
         "./manifest.webmanifest",
-        "./polyfills-es2015.ca64e4516afbb1b890d5.js",
-        "./polyfills-es5.277e2e1d6fb2daf91a5c.js",
-        "./runtime-es2015.0811dcefd377500b5b1a.js",
-        "./runtime-es5.0811dcefd377500b5b1a.js",
-        "./styles.80b580e2389d7af5b640.css"
+        "./polyfills.ba9221038051ec08.js",
+        "./runtime.f760d2297a7f138b.js",
+        "./styles.97ad397bffcd03f3.css"
       ],
       "patterns": []
     },
@@ -25,10 +25,13 @@
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
       "urls": [
-        "./Gudea-Bold.0926e1bf335012126a82.ttf",
-        "./Gudea-Italic.8a0d3ca1fc63c6100cc7.ttf",
-        "./Gudea-Regular.bc1331fe1a2b22912f3a.ttf",
+        "./Gudea-Bold.df9db2d9fbba308c.ttf",
+        "./Gudea-Italic.23f81215d9d085e9.ttf",
+        "./Gudea-Regular.19c7c88a2318b85c.ttf",
         "./assets/fonts/Gudea-Bold.ttf",
         "./assets/fonts/Gudea-Italic.ttf",
         "./assets/fonts/Gudea-Regular.ttf",
@@ -51,9 +54,9 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "./Gudea-Bold.0926e1bf335012126a82.ttf": "337e3933c80dfc002dec4874958cb33e66f13310",
-    "./Gudea-Italic.8a0d3ca1fc63c6100cc7.ttf": "3ae9a4e08c3ae78411b76d4364e3b60779ea9f25",
-    "./Gudea-Regular.bc1331fe1a2b22912f3a.ttf": "64c560f753caba8016cc564c9cb3ec6236241d7e",
+    "./Gudea-Bold.df9db2d9fbba308c.ttf": "337e3933c80dfc002dec4874958cb33e66f13310",
+    "./Gudea-Italic.23f81215d9d085e9.ttf": "3ae9a4e08c3ae78411b76d4364e3b60779ea9f25",
+    "./Gudea-Regular.19c7c88a2318b85c.ttf": "64c560f753caba8016cc564c9cb3ec6236241d7e",
     "./assets/fonts/Gudea-Bold.ttf": "337e3933c80dfc002dec4874958cb33e66f13310",
     "./assets/fonts/Gudea-Italic.ttf": "3ae9a4e08c3ae78411b76d4364e3b60779ea9f25",
     "./assets/fonts/Gudea-Regular.ttf": "64c560f753caba8016cc564c9cb3ec6236241d7e",
@@ -71,15 +74,12 @@
     "./assets/styles/themes.scss": "c4db28cfc7f1d3dcbe47b96c0532c0b0762f8777",
     "./assets/styles/variables.scss": "f4fcead52273510868823e21e1d0a81ecb0faae8",
     "./favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "./index.html": "b4b526b05415ea82abd4014ea04ca7ec375e97da",
-    "./main-es2015.b68aff87456b1f9f58d7.js": "9ad1960990d593e45b1a7657f7b9f4f2cbe77807",
-    "./main-es5.b68aff87456b1f9f58d7.js": "0f8047480e3c5f05c83b7b503c952e4d672b75bb",
+    "./index.html": "69674ebd5ca95fce2dea4025e330e48cf32e837f",
+    "./main.f4595f4ab91fd7a3.js": "9aa9c10747d664404377e577bfed14f6e9d85c39",
     "./manifest.webmanifest": "c91bd8aec77c44768709846b15bdc788790d615e",
-    "./polyfills-es2015.ca64e4516afbb1b890d5.js": "8779ed8d9bf0580e1b50b352a9b8fd520be24433",
-    "./polyfills-es5.277e2e1d6fb2daf91a5c.js": "8d03638471d7374e81cf33adfdea439f84ac3873",
-    "./runtime-es2015.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "./runtime-es5.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "./styles.80b580e2389d7af5b640.css": "c3943802d636bcae087bb2711aa8297b7436a564"
+    "./polyfills.ba9221038051ec08.js": "ccdcd748c3a40a9455b9a9489131ad4c641e0739",
+    "./runtime.f760d2297a7f138b.js": "51bc56d89611d4cd5cb98dfc9e5db4d8faed06e8",
+    "./styles.97ad397bffcd03f3.css": "fd7cbd51a51d4dae3fa73667ea4e7152212b9dd6"
   },
   "navigationUrls": [
     {
@@ -98,5 +98,6 @@
       "positive": false,
       "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
     }
-  ]
+  ],
+  "navigationRequestStrategy": "performance"
 }
