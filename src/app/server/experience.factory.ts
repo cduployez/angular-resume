@@ -95,17 +95,6 @@ export class ExperienceFactory {
                     new SkillBadge('Web', SkillEnumUtils.webKeywords),
                     new SkillBadge('SQL')
                 ]
-            ),
-            new ExperienceItem(
-                CvDate.yearRange(2014, 2016),
-                'ISEN',
-                null,
-                'Club Informatique',
-                ['Responsable Evènementiel', 'Soutien des étudiants : cours, logiciel, matériel'],
-                [
-                    new SkillBadge('Linux', SkillEnumUtils.linuxKeyword),
-                    new SkillBadge('Organisationnel')
-                ]
             )
         ];
     }
