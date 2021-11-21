@@ -20,5 +20,8 @@ export enum SkillEnum {
     MAVEN = 'maven',
     GIT = 'git',
     LINUX = 'linux',
-    DOCKER = 'docker'
+    DOCKER = 'docker',
+    KUBERNETES = 'kubernetes',
+    AZURE = 'azure',
+    ANSIBLE = 'ansible',
 }

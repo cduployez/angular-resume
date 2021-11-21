@@ -42,5 +42,14 @@ export class SkillEnumUtils {
 
     static readonly dockerKeyword: SkillEnum[] = [SkillEnum.DOCKER];
 
+    static readonly kubernetesKeyword: SkillEnum[] = [SkillEnum.KUBERNETES];
+
+    static readonly kubernetesChildrenKeywords: SkillEnum[] = SkillEnumUtils.dockerKeyword;
+
+    static readonly azureKeyword: SkillEnum[] = [SkillEnum.AZURE];
+
+    static readonly azureChildrenKeywords: SkillEnum[] = [SkillEnum.DOCKER, SkillEnum.KUBERNETES];
+
     static readonly linuxKeyword: SkillEnum[] = [SkillEnum.LINUX];
+
 }
