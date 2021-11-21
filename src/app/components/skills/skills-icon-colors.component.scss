@@ -51,7 +51,6 @@
   @include badgeColor(keycloak, $on-keycloak, $keycloak);
   @include badgeColor(mysql, $on-mysql, $mysql);
   @include badgeColor(mongodb, $on-mongodb, $mongodb);
-  @include badgeColor(maven, $on-maven, $maven);
   @include badgeColor(git, $on-git, $git);
   @include badgeColor(docker, $on-docker, $docker);
   @include badgeColor(kubernetes, $on-kubernetes, $kubernetes);

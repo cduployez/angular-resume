@@ -47,14 +47,18 @@ export class SkillFactory {
         return {
             title: 'Divers',
             skillItemLists: [
+                // Integration
                 [new FaSkillItem('Docker', SkillEnum.DOCKER, SkillEnumUtils.dockerKeyword, iconsService.faDocker),
-                new FaSkillItem('Kubernetes', SkillEnum.KUBERNETES, SkillEnumUtils.kubernetesChildrenKeywords,
-                    iconsService.faDharmachakra)],
-                [new FaSkillItem('Keycloak', SkillEnum.KEYCLOAK, null, iconsService.faKey),
+                    new FaSkillItem('Kubernetes', SkillEnum.KUBERNETES, SkillEnumUtils.kubernetesChildrenKeywords,
+                        iconsService.faDharmachakra)],
+                // Authentication
+                [new FaSkillItem('Keycloak', SkillEnum.KEYCLOAK, null, iconsService.faKey)],
+                // Databases
+                [
                     new FaSkillItem('MySQL', SkillEnum.MYSQL, null, iconsService.faDatabase),
                     new FaSkillItem('MongoDB', SkillEnum.MONGODB, null, iconsService.faEnvira)],
-                [new FaSkillItem('Maven', SkillEnum.MAVEN, null, iconsService.faFeather),
-                    new FaSkillItem('Git', SkillEnum.GIT, null, iconsService.faGit)]
+                // Code
+                [new FaSkillItem('Git', SkillEnum.GIT, null, iconsService.faGit)]
             ]
         };
     }
