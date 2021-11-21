@@ -103,12 +103,6 @@ export class IconsService {
     readonly faKey: IconDefinition = faKey;
 
     /**
-     * Font-Awesome - Feather
-     * Used for Maven
-     */
-    readonly faFeather: IconDefinition = faFeather;
-
-    /**
      * Font-Awesome - Envira
      * Used for MongoDB
      */
