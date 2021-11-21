@@ -24,4 +24,5 @@ export enum SkillEnum {
     KUBERNETES = 'kubernetes',
     AZURE = 'azure',
     ANSIBLE = 'ansible',
+    APACHE_TAPESTRY = 'apache-tapestry',
 }

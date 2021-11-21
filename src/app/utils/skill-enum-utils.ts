@@ -38,6 +38,10 @@ export class SkillEnumUtils {
 
     static readonly webKeywords: SkillEnum[] = [SkillEnum.HTML, SkillEnum.CSS, SkillEnum.JAVASCRIPT];
 
+    static readonly apacheTapestryKeyword: SkillEnum[] = [SkillEnum.APACHE_TAPESTRY];
+
+    static readonly apacheTapestryChildrenKeywords: SkillEnum[] = [SkillEnum.HTML, SkillEnum.CSS, SkillEnum.JAVA];
+
     static readonly mongoDbKeyword: SkillEnum[] = [SkillEnum.MONGODB];
 
     static readonly dockerKeyword: SkillEnum[] = [SkillEnum.DOCKER];

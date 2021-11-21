@@ -5,7 +5,6 @@ import {SkillBadge} from '../model/experience/skill-badge';
 import {SkillEnumUtils} from '../utils/skill-enum-utils';
 import {SkillBadgeUtils} from '../utils/skill-badge-utils';
 import {JobTypeEnum} from '../model/enums/job-type.enum';
-import {SkillEnum} from '../model/skill/skill-enum';
 
 export class ExperienceFactory {
 
@@ -18,14 +17,25 @@ export class ExperienceFactory {
                 ['Lead Developer au sein d\'une équipe internale en méthode agile, développement d\'une solution de télésuivi médical pour professionnels de santé et patients'],
                 [
                     SkillBadgeUtils.java,
-                    new SkillBadge('Spring Boot', SkillEnumUtils.springKeyword, SkillEnumUtils.springChildrenKeywords),
+                    SkillBadgeUtils.springBoot,
                     new SkillBadge('Angular 11', SkillEnumUtils.angularKeyword, SkillEnumUtils.angularChildrenKeywords),
                     new SkillBadge('MySQL', SkillEnumUtils.mySqlKeyword),
-                    new SkillBadge('Docker', SkillEnumUtils.dockerKeyword),
+                    SkillBadgeUtils.docker,
                     new SkillBadge('Kubernetes', SkillEnumUtils.kubernetesKeyword, SkillEnumUtils.kubernetesChildrenKeywords),
                     new SkillBadge('Azure', SkillEnumUtils.azureKeyword, SkillEnumUtils.azureChildrenKeywords),
                     new SkillBadge('Etat d\'esprit agile'),
                     new SkillBadge('Anglais')
+                ]
+            ),
+            new ExperienceItem(CvDate.monthRange(DateUtils.fromDate(1, 1, 2021), DateUtils.fromDate(30, 6, 2021)),
+                'Worldline',
+                JobTypeEnum.CDI,
+                'Projet Dossier Médical Partagé',
+                ['Interconnexion du Dossier Médical Partagé avec l\'Espace Numérique de Santé'],
+                [
+                    SkillBadgeUtils.java,
+                    SkillBadgeUtils.springBoot,
+                    new SkillBadge('Apache Tapestry', SkillEnumUtils.apacheTapestryKeyword, SkillEnumUtils.apacheTapestryChildrenKeywords)
                 ]
             ),
             new ExperienceItem(
@@ -38,7 +48,7 @@ export class ExperienceFactory {
                 [
                     SkillBadgeUtils.java,
                     new SkillBadge('Spring 5', SkillEnumUtils.springKeyword, SkillEnumUtils.springChildrenKeywords),
-                    new SkillBadge('Keycloak', SkillEnumUtils.keycloakKeyword),
+                    SkillBadgeUtils.keycloak,
                     new SkillBadge('Angular 8', SkillEnumUtils.angularKeyword, SkillEnumUtils.angularChildrenKeywords),
                     new SkillBadge('MySQL', SkillEnumUtils.mySqlKeyword),
                     new SkillBadge('Etat d\'esprit agile')
@@ -65,12 +75,12 @@ export class ExperienceFactory {
                 ['Assistant développeur sur différents projets de dématérialisation'],
                 [
                     SkillBadgeUtils.java,
-                    new SkillBadge('Spring Boot', SkillEnumUtils.springKeyword, SkillEnumUtils.springChildrenKeywords),
-                    new SkillBadge('Keycloak', SkillEnumUtils.keycloakKeyword),
+                    SkillBadgeUtils.springBoot,
+                    SkillBadgeUtils.keycloak,
                     new SkillBadge('Angular 2', SkillEnumUtils.angularKeyword, SkillEnumUtils.angularChildrenKeywords),
                     new SkillBadge('Ionic 2', SkillEnumUtils.angularKeyword, SkillEnumUtils.angularChildrenKeywords),
                     new SkillBadge('MongoDB', SkillEnumUtils.mongoDbKeyword),
-                    new SkillBadge('Docker', SkillEnumUtils.dockerKeyword)
+                    SkillBadgeUtils.docker
                 ]
             ),
             new ExperienceItem(
