@@ -39,7 +39,7 @@ export class ExperienceFactory {
                 ]
             ),
             new ExperienceItem(
-                CvDate.monthRange(DateUtils.fromDate(1, 1, 2017), DateUtils.fromDate(31, 12, 2020)),
+                CvDate.monthRange(DateUtils.fromDate(1, 1, 2018), DateUtils.fromDate(31, 12, 2020)),
                 'Worldline',
                 JobTypeEnum.CDI,
                 'Projet SI-VIC',
