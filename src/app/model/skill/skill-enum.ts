@@ -17,9 +17,10 @@ export enum SkillEnum {
     KEYCLOAK = 'keycloak',
     MYSQL = 'mysql',
     MONGODB = 'mongodb',
-    GIT = 'git',
+    GITLAB_CI = 'gitlab',
     DOCKER = 'docker',
     KUBERNETES = 'kubernetes',
     AZURE = 'azure',
+    OPENSHIFT = 'openshift',
     APACHE_TAPESTRY = 'apache-tapestry',
 }

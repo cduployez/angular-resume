@@ -54,4 +54,8 @@ export class SkillEnumUtils {
 
     static readonly azureChildrenKeywords: SkillEnum[] = [SkillEnum.DOCKER, SkillEnum.KUBERNETES];
 
+    static readonly openshiftKeyword: SkillEnum[] = [SkillEnum.OPENSHIFT];
+
+    static readonly openshiftChildrenKeywords: SkillEnum[] = [SkillEnum.DOCKER, SkillEnum.KUBERNETES]
+
 }

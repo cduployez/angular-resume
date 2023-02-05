@@ -8,10 +8,11 @@ import {
     faDocker,
     faEnvira,
     faGitAlt,
+    faGitlab,
     faHtml5,
     faJava,
     faLinkedin,
-    faPython
+    faPython,
 } from '@fortawesome/free-brands-svg-icons';
 import {faMoon as faMoonSolid} from '@fortawesome/free-solid-svg-icons/faMoon';
 import {faMoon as faMoonRegular} from '@fortawesome/free-regular-svg-icons';
@@ -130,6 +131,12 @@ export class IconsService {
      * Font-Awesome Dharmachakra (solid)
      * Used for Kubernetes
      */
-    faDharmachakra: IconDefinition = faDharmachakra;
+    readonly faDharmachakra: IconDefinition = faDharmachakra;
+
+    /**
+     * Font-Awesome Gitlab (solid)
+     * Used for Gitlab-CI
+     */
+    readonly faGitlab: IconDefinition = faGitlab;
 
 }

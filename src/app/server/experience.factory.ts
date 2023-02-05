@@ -13,6 +13,22 @@ export class ExperienceFactory {
             new ExperienceItem(CvDate.monthRange(DateUtils.fromDate(1, 7, 2021), /* Current */ null),
                 'Worldline',
                 JobTypeEnum.CDI,
+                'Projet Ecobonus',
+                ['Lead Developer au service d’un projet local et écologique visant à changer les habitudes des automobilistes'],
+                [
+                    SkillBadgeUtils.java,
+                    SkillBadgeUtils.springBoot,
+                    new SkillBadge('Angular 15', SkillEnumUtils.angularKeyword, SkillEnumUtils.angularChildrenKeywords),
+                    SkillBadgeUtils.docker,
+                    new SkillBadge('Kubernetes', SkillEnumUtils.kubernetesKeyword, SkillEnumUtils.kubernetesChildrenKeywords),
+                    new SkillBadge('Openshift', SkillEnumUtils.openshiftKeyword, SkillEnumUtils.openshiftChildrenKeywords),
+                    new SkillBadge('Kafka'),
+                    new SkillBadge('Etat d\'esprit agile')
+                ]
+            ),
+            new ExperienceItem(CvDate.monthRange(DateUtils.fromDate(1, 7, 2021), /* Current */ null),
+                'Worldline',
+                JobTypeEnum.CDI,
                 'Projet Maela',
                 ['Lead Developer au sein d\'une équipe internationale en méthode agile, développement d\'une solution de télésuivi médical pour professionnels de santé et patients'],
                 [
