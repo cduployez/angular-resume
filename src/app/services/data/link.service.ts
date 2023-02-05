@@ -13,6 +13,6 @@ export class LinkService {
      * 'dl=1' permet de lancer le téléchargement directement
      */
     readonly pdfDownloadUrl: string =
-        'https://www.dropbox.com/s/7abw5wjm2ci70j8/CV%20Cl%C3%A9ment%20Duployez%202021%20Linkedin.pdf?dl=1';
+        'https://www.dropbox.com/s/4mzxkjmmnpxmu43/CV%20Cl%C3%A9ment%20Duployez%202023%20Linkedin.pdf?dl=1';
 
 }
