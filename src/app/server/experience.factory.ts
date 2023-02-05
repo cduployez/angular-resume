@@ -10,7 +10,7 @@ export class ExperienceFactory {
 
     static getAll(): ExperienceItem[] {
         return [
-            new ExperienceItem(CvDate.monthRange(DateUtils.fromDate(1, 7, 2021), /* Current */ null),
+            new ExperienceItem(CvDate.monthRange(DateUtils.fromDate(1, 10, 2022), /* Current */ null),
                 'Worldline',
                 JobTypeEnum.CDI,
                 'Projet Ecobonus',
@@ -26,7 +26,7 @@ export class ExperienceFactory {
                     new SkillBadge('Etat d\'esprit agile')
                 ]
             ),
-            new ExperienceItem(CvDate.monthRange(DateUtils.fromDate(1, 7, 2021), /* Current */ null),
+            new ExperienceItem(CvDate.monthRange(DateUtils.fromDate(1, 7, 2021), DateUtils.fromDate(30, 9, 2022)),
                 'Worldline',
                 JobTypeEnum.CDI,
                 'Projet Maela',
