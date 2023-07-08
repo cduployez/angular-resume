@@ -1,0 +1,16 @@
+import { Injectable } from "@angular/core";
+import { environment } from "../../../environments/environment";
+import { IEnvironment } from "../../model/environment/ienvironment";
+
+@Injectable({
+  providedIn: "root",
+})
+export class EnvironmentService implements IEnvironment {
+  get production(): boolean {
+    return environment.production;
+  }
+
+  get backResumeUrl(): string {
+    return environment.backResumeUrl;
+  }
+}
