@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { ExperienceItem } from "../../model/experience/experience-item";
+import { ExperienceDtoMapper } from "../../mappers/dtos/experience-dto-mapper";
+import { ExperienceDto } from "../../model/dtos/experience-dto";
 import { HttpConfigService } from "../config/http-config.service";
 import { HttpService } from "../config/http.service";
 
@@ -12,7 +13,7 @@ export class ExperiencesHttpService extends HttpService {
     super(httpConfigService, "/experiences");
   }
 
-  findAll(): Observable<ExperienceItem[]> {
-    return this.httpGet("", (jsonArray: ExperienceItem[]) => jsonArray);
+  findAll(): Observable<ExperienceDto[]> {
+    return this.httpGet("", ExperienceDtoMapper.fromExperienceJsons);
   }
 }

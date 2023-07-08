@@ -1,24 +1,22 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {FaSkillItem} from '../../../model/skill/skill-item/fa-skill-item';
-import {SkillEnum} from '../../../model/skill/skill-enum';
+import { Component, Input } from "@angular/core";
+import { SkillEnum } from "../../../model/enums/skill.enum";
+import { FaSkillItem } from "../../../model/skill/skill-item/fa-skill-item";
+import { SkillMessages } from "../skill/skill-messages";
 
 @Component({
-    selector: 'cv-fa-skill',
-    templateUrl: './fa-skill.component.html',
-    styleUrls: ['./fa-skill.component.scss']
+  selector: "cv-fa-skill",
+  templateUrl: "./fa-skill.component.html",
+  styleUrls: ["./fa-skill.component.scss"],
 })
-export class FaSkillComponent implements OnInit {
+export class FaSkillComponent {
+  readonly messages: SkillMessages = new SkillMessages();
 
-    @Input()
-    item: FaSkillItem;
+  @Input()
+  item: FaSkillItem;
 
-    constructor() {
-    }
+  constructor() {}
 
-    ngOnInit(): void {
-    }
-
-    optionalClass(skillEnum: SkillEnum): string {
-        return skillEnum ? skillEnum.toString() : '';
-    }
+  optionalClass(skillEnum: SkillEnum): string {
+    return skillEnum ? this.messages.skillCssClass(skillEnum) : "";
+  }
 }
