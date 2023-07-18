@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "helm-chart.angular-resume.fullname" . }}
+  labels:
+    {{- include "helm-chart.angular-resume.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.angularResume.autoscaling.enabled }}
+  replicas: {{ .Values.angularResume.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "helm-chart.angular-resume.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.angularResume.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "helm-chart.angular-resume.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.angularResume.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+      - name: {{ .Chart.Name }}
+        # Replace $LOCATION with your Artifact Registry location (e.g., us-west1).
+        # Replace $GCLOUD_PROJECT with your project ID.
+        # image: $LOCATION-docker.pkg.dev/$GCLOUD_PROJECT/hello-repo/helloworld-gke:latest
+        image: "{{ .Values.angularResume.image.repository }}:{{ .Values.angularResume.image.tag | default .Chart.AppVersion }}"
+        # This app listens on port 8080 for web traffic by default.
+        ports:
+          - name: {{ .Values.angularResume.service.http.name }}
+            containerPort: {{ .Values.angularResume.service.containerPort }}
+            protocol: TCP
+      livenessProbe:
+        tcpSocket:
+          port: {{ .Values.angularResume.service.http.name }} # live when web server is running
+        initialDelaySeconds: 5   # Wait 5s before starting to probe
+        periodSeconds: 20        # Perform probe every 20 seconds
+      readinessProbe:
+        httpGet:
+          path: /                # <-- ready to accept connection when your home page is serving
+          port: {{ .Values.angularResume.service.http.name }}
+        initialDelaySeconds: 15
+        periodSeconds: 10
+        failureThreshold: 3 # Must not fail more than 3 times
+        resources:
+          requests:
+            memory: {{ .Values.angularResume.resources.requests.memory }}
+            cpu: {{ .Values.angularResume.resources.requests.cpu }}
+            ephemeral-storage: {{ .Values.angularResume.resources.requests.ephemeral_storage }}
+          limits:
+            memory: {{ .Values.angularResume.resources.limits.memory }}
+            cpu: {{ .Values.angularResume.resources.limits.cpu }}
+            ephemeral-storage: {{ .Values.angularResume.resources.limits.ephemeral_storage }}
+      {{- with .Values.angularResume.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.angularResume.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.angularResume.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+---

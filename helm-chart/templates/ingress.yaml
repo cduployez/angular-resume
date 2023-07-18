@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "helm-chart.angular-resume.fullname" . }}
+  labels:
+    {{- include "helm-chart.angular-resume.labels" . | nindent 4 }}
+  annotations:
+    kubernetes.io/ingress.class: {{ .Values.angularResume.ingress.className }}
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    cert-manager.io/issuer: {{ .Values.angularResume.certificate.issuerName }}
+spec:
+  tls:
+  - hosts:
+    - {{ .Values.angularResume.host }}
+    secretName: {{ include "helm-chart.angular-resume.fullname" . }}-tls
+  rules:
+    - host: {{ .Values.angularResume.host }}
+      http:
+        paths:
+          - path: {{ .Values.angularResume.ingress.path }}(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: {{ include "helm-chart.angular-resume.fullname" . }}
+                port:
+                  number: {{ .Values.angularResume.service.http.port }}

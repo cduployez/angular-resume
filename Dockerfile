@@ -7,7 +7,8 @@ ARG configuration=production
 RUN npm run build -- --output-path=./dist/out --configuration $configuration
 
 FROM nginx:1.15
-# Copy ci-dashboard-dist
+# Copy build output
 COPY --from=build-stage /app/dist/out/ /usr/share/nginx/html
 # Copy default nginx configuration
-COPY ./nginx.conf /etc/nginx/nginx.conf
+# COPY ./nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
