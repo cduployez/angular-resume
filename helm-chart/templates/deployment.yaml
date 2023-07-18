@@ -30,6 +30,10 @@ spec:
         # Replace $GCLOUD_PROJECT with your project ID.
         # image: $LOCATION-docker.pkg.dev/$GCLOUD_PROJECT/hello-repo/helloworld-gke:latest
         image: "{{ .Values.angularResume.image.repository }}:{{ .Values.angularResume.image.tag | default .Chart.AppVersion }}"
+        # Use the baseHref value as the environment variable or config file entry
+        env:
+          - name: BASE_HREF
+            value: "{{ .Values.angularResume.ingress.path }}/"
         # This app listens on port 8080 for web traffic by default.
         ports:
           - name: {{ .Values.angularResume.service.http.name }}
