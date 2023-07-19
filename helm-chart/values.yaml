@@ -7,6 +7,9 @@ angularResume:
   nameOverride: "angular-resume"
   fullnameOverride: "angular-resume"
 
+  # Force redeployment
+  forceRedeployment: true
+
   # Replicas
   replicaCount: 1
 

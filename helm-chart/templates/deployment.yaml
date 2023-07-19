@@ -13,10 +13,10 @@ spec:
       {{- include "helm-chart.angular-resume.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.angularResume.podAnnotations }}
       annotations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+        {{- if .Values.angularResume.forceRedeployment }}
+        rollme: {{ randAlphaNum 5 | quote }}
+        {{- end }}
       labels:
         {{- include "helm-chart.angular-resume.selectorLabels" . | nindent 8 }}
     spec:
@@ -60,16 +60,4 @@ spec:
             memory: {{ .Values.angularResume.resources.limits.memory }}
             cpu: {{ .Values.angularResume.resources.limits.cpu }}
             ephemeral-storage: {{ .Values.angularResume.resources.limits.ephemeral_storage }}
-      {{- with .Values.angularResume.nodeSelector }}
-      nodeSelector:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.angularResume.affinity }}
-      affinity:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.angularResume.tolerations }}
-      tolerations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
 ---
