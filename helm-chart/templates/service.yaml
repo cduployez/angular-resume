@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "helm-chart.angular-resume.fullname" . }}
+  labels:
+    {{- include "helm-chart.angular-resume.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+    {{- include "helm-chart.angular-resume.selectorLabels" . | nindent 4 }}
+  ports:
+  - port: {{ .Values.angularResume.service.http.port }}
+    targetPort: {{ .Values.angularResume.service.containerPort }}
+    protocol: TCP
+    name: {{ .Values.angularResume.service.http.name }}
+  - port: {{ .Values.angularResume.service.https.port }}
+    targetPort: {{ .Values.angularResume.service.containerPort }}
+    protocol: TCP
+    name: {{ .Values.angularResume.service.https.name }}

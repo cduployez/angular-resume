@@ -8,3 +8,5 @@ services:
     image: angular-resume
     ports:
       - 11001:80
+    environment:
+      - BASE_HREF="/"
