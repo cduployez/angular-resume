@@ -39,18 +39,18 @@ spec:
           - name: {{ .Values.angularResume.service.http.name }}
             containerPort: {{ .Values.angularResume.service.containerPort }}
             protocol: TCP
-      livenessProbe:
-        tcpSocket:
-          port: {{ .Values.angularResume.service.http.name }} # live when web server is running
-        initialDelaySeconds: 5   # Wait 5s before starting to probe
-        periodSeconds: 20        # Perform probe every 20 seconds
-      readinessProbe:
-        httpGet:
-          path: /                # <-- ready to accept connection when your home page is serving
-          port: {{ .Values.angularResume.service.http.name }}
-        initialDelaySeconds: 15
-        periodSeconds: 10
-        failureThreshold: 3 # Must not fail more than 3 times
+        livenessProbe:
+          tcpSocket:
+            port: {{ .Values.angularResume.service.http.name }} # live when web server is running
+          initialDelaySeconds: 5   # Wait 5s before starting to probe
+          periodSeconds: 20        # Perform probe every 20 seconds
+        readinessProbe:
+          httpGet:
+            path: /                # <-- ready to accept connection when your home page is serving
+            port: {{ .Values.angularResume.service.http.name }}
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          failureThreshold: 3 # Must not fail more than 3 times
         resources:
           requests:
             memory: {{ .Values.angularResume.resources.requests.memory }}
