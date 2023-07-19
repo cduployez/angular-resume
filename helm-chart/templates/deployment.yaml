@@ -41,12 +41,12 @@ spec:
             protocol: TCP
         livenessProbe:
           tcpSocket:
-            port: {{ .Values.angularResume.service.http.name }} # live when web server is running
-          initialDelaySeconds: 5   # Wait 5s before starting to probe
-          periodSeconds: 20        # Perform probe every 20 seconds
+            port: {{ .Values.angularResume.service.http.name }} # Live when web server is running
+          initialDelaySeconds: 5 # Wait 5s before starting to probe
+          periodSeconds: 20 # Perform probe every 20 seconds
         readinessProbe:
           httpGet:
-            path: /                # <-- ready to accept connection when your home page is serving
+            path: / # Ready to accept connection when home page is serving
             port: {{ .Values.angularResume.service.http.name }}
           initialDelaySeconds: 15
           periodSeconds: 10
