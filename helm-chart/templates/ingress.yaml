@@ -5,9 +5,15 @@ metadata:
   labels:
     {{- include "helm-chart.angular-resume.labels" . | nindent 4 }}
   annotations:
+    # Ingress controller name to be configured by this ingress
     kubernetes.io/ingress.class: {{ .Values.angularResume.ingress.className }}
+    # If root path is accessed, redirect to angular-resume app
+    nginx.ingress.kubernetes.io/app-root: {{ .Values.angularResume.ingress.path }}
+    # Maintain sub paths
     nginx.ingress.kubernetes.io/rewrite-target: /$2
+    # Redirect to https
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    # Certificate issuer
     cert-manager.io/issuer: {{ .Values.angularResume.certificate.issuerName }}
 spec:
   tls:
