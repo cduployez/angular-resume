@@ -38,7 +38,7 @@ angularResume:
     containerPort: 80
 
   # Host
-  host: dev.duployez.fr
+  host: clement.duployez.fr
 
   # Resources
   resources:
