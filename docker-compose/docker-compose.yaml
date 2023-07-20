@@ -9,4 +9,4 @@ services:
     ports:
       - 11001:80
     environment:
-      - BASE_HREF="/"
+      - BASE_HREF=

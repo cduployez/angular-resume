@@ -33,7 +33,7 @@ spec:
         # Use the baseHref value as the environment variable or config file entry
         env:
           - name: BASE_HREF
-            value: "{{ .Values.angularResume.ingress.path }}/"
+            value: "{{ .Values.angularResume.ingress.path }}"
         # This app listens on port 8080 for web traffic by default.
         ports:
           - name: {{ .Values.angularResume.service.http.name }}
