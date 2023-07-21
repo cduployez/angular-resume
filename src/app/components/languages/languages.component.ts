@@ -1,16 +1,37 @@
-import {Component} from '@angular/core';
-import {LanguageItem} from '../../model/language/language-item';
-import {LanguageFactory} from '../../server/language.factory';
+import {Component, OnInit} from '@angular/core';
+import {LanguagesModel} from './languages-model';
+import {LanguagesController} from './languages-controller';
+import {LanguagesHttpService} from '../../services/http/languages-http.service';
 
 @Component({
-    selector: 'cv-languages',
-    templateUrl: './languages.component.html',
-    styleUrls: ['./languages.component.scss']
+  selector: 'cv-languages',
+  templateUrl: './languages.component.html',
+  styleUrls: ['./languages.component.scss']
 })
-export class LanguagesComponent {
+export class LanguagesComponent implements OnInit {
 
-    languageItems: LanguageItem[] = LanguageFactory.getAll();
+  /**
+   * Model of the component
+   */
+  readonly model: LanguagesModel = new LanguagesModel();
 
-    constructor() {
-    }
+  /**
+   * Controller of the component
+   */
+  readonly controller: LanguagesController = new LanguagesController(this.model, this.languagesHttpService);
+
+  /**
+   * Constructor
+   *
+   * @param languagesHttpService HTTP service for languages
+   */
+  constructor(private readonly languagesHttpService: LanguagesHttpService) {
+  }
+
+  /**
+   * Init component
+   */
+  ngOnInit(): void {
+    this.controller.init();
+  }
 }

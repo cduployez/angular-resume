@@ -1,7 +1,7 @@
 <cv-category categoryTitle="Formation">
     <cv-item-container *ngFor="let item of formationItems;">
         <div>
-            <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
+            <cv-date-prefix [dateRange]="item.cvDate"></cv-date-prefix>
             <cv-title [title]="item.title"></cv-title>
         </div>
         <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>

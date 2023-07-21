@@ -1,7 +1,7 @@
 <cv-category categoryTitle="Expériences">
   <cv-item-container *ngFor="let experience of model.experiences">
     <div>
-      <cv-date-prefix [cvDate]="experience.dateRange"></cv-date-prefix>
+      <cv-date-prefix [dateRange]="experience.dateRange"></cv-date-prefix>
       <cv-title
         [detail]="messages.jobTypeText(experience.jobTypeEnum)"
         [title]="experience.company"

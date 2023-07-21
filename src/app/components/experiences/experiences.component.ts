@@ -1,13 +1,13 @@
-import { Component, OnInit } from "@angular/core";
-import { ExperiencesHttpService } from "../../services/http/experiences-http.service";
-import { ExperiencesController } from "./experiences-controller";
-import { ExperiencesMessages } from "./experiences-messages";
-import { ExperiencesModel } from "./experiences-model";
+import { Component, OnInit } from '@angular/core';
+import { ExperiencesHttpService } from '../../services/http/experiences-http.service';
+import { ExperiencesController } from './experiences-controller';
+import { ExperiencesMessages } from './experiences-messages';
+import { ExperiencesModel } from './experiences-model';
 
 @Component({
-  selector: "cv-experiences",
-  templateUrl: "./experiences.component.html",
-  styleUrls: ["./experiences.component.scss"],
+  selector: 'cv-experiences',
+  templateUrl: './experiences.component.html',
+  styleUrls: ['./experiences.component.scss'],
 })
 export class ExperiencesComponent implements OnInit {
   /**

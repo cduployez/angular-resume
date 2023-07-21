@@ -1,11 +1,11 @@
 <cv-category categoryTitle="Langues">
-    <cv-item-container *ngFor="let item of languageItems">
+    <cv-item-container *ngFor="let language of model.languages">
         <div>
-            <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
-            <cv-title [title]="item.title"></cv-title>
+            <cv-date-prefix [dateRange]="language.dateRange"></cv-date-prefix>
+            <cv-title [title]="language.title"></cv-title>
         </div>
         <div>
-            <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
+            <cv-descriptions [descriptions]="language.descriptions"></cv-descriptions>
         </div>
     </cv-item-container>
 </cv-category>
