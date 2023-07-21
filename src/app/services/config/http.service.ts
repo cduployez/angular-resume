@@ -1,7 +1,7 @@
-import { HttpClient, HttpParams } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
-import { HttpConfigService } from "./http-config.service";
+import {HttpClient, HttpParams} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
+import {HttpConfigService} from './http-config.service';
 
 /**
  * Base HTTP Service for all backend REST controllers
@@ -16,7 +16,7 @@ export abstract class HttpService {
    * Base URL for the back project
    */
   private readonly baseUrl: string =
-    this.httpConfigService.environment.backResumeUrl;
+    this.httpConfigService.configService.backResumeUrl;
 
   /**
    * Constructor
@@ -48,7 +48,7 @@ export abstract class HttpService {
   ): Observable<D> {
     return this.httpClient
       .get<J>(this.url(url), {
-        params: httpParams,
+        params: httpParams
       })
       .pipe(map(mapFunction));
   }
@@ -56,7 +56,7 @@ export abstract class HttpService {
   /**
    * Get the full URL to call the back-end service for a specific operation
    *
-   * @param operationUrl Operation part of the URL
+   * @param url Operation part of the URL
    * @returns Full URL using baseUrl, serviceUrl and operationUrl
    */
   private url(url: string): string {

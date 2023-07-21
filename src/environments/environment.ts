@@ -1,12 +1,11 @@
 // This file can be replaced during build by using the `fileReplacements` array.
-// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
+// `ng build --prod` replaces `config.ts` with `config.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-import { IEnvironment } from '../app/model/environment/ienvironment';
+import {IEnvironment} from '../app/model/config/ienvironment';
 
 export const environment: IEnvironment = {
-  production: false,
-  backResumeUrl: 'https://clement.duployez.fr/back-resume',
+  production: false
 };
 
 /*

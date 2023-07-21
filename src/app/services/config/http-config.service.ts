@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { EnvironmentService } from "./environment.service";
+import { ConfigService } from "./config.service";
 
 /**
  * Service to store http configurations
@@ -10,7 +10,7 @@ import { EnvironmentService } from "./environment.service";
 })
 export class HttpConfigService {
   constructor(
-    public environment: EnvironmentService,
+    public configService: ConfigService,
     public httpClient: HttpClient
   ) {}
 }
