@@ -36,7 +36,7 @@ export class DateUtils {
   ): Date {
     const date: Date | null = DateUtils.fromDateJson(formattedDate);
     if (!date) {
-      throw Error("Date is undefined");
+      throw Error('Date is undefined');
     }
     return date;
   }
@@ -45,5 +45,9 @@ export class DateUtils {
     date: number | string | undefined | null
   ): Date | null {
     return date ? new Date(date) : null;
+  }
+
+  static sortByDateDesc<T>(array: T[], dateGetter: (t: T) => Date): T[] {
+    return array.sort((a: T, b: T) => dateGetter(b).getTime() - dateGetter(a).getTime());
   }
 }

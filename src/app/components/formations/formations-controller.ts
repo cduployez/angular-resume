@@ -3,6 +3,8 @@ import {LanguageDto} from '../../model/dtos/language-dto';
 import {FormationsModel} from './formations-model';
 import {LanguagesHttpService} from '../../services/http/languages-http.service';
 import {FormationDto} from '../../model/dtos/formation-dto';
+import {DateRangeUtils} from '../../utils/date-range-utils';
+import {ExperienceDto} from '../../model/dtos/experience-dto';
 
 export class FormationsController {
   readonly findAllFormationsMethod: LoadingMethod<LanguageDto[]> =
@@ -23,7 +25,7 @@ export class FormationsController {
       .call(() => this.formationsHttpService.findAll())
       .subscribe({
         next: (formations: FormationDto[]) => {
-          this.model.formations = formations;
+          this.model.formations = DateRangeUtils.sortByBeginDateDesc(formations, (formation: FormationDto) => formation.dateRange);
         },
         error: (error: unknown) => {
           console.error(error);
