@@ -24,7 +24,7 @@ export class ProjectFactory {
                 ]
             ),
             new ProjectItem('Rubik Pixel Art Solver', 5,
-                ['Robot de scan et reproduction d\'images avec des Rubi\'s Cubes'],
+                ['Robot de scan et reproduction d\'images avec des Rubik\'s Cubes'],
                 [
                     SkillBadgeUtils.cPlusPlus,
                     new SkillBadge('Python', SkillEnumUtils.pythonKeyword),
