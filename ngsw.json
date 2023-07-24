@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1690211656103,
+  "timestamp": 1690211848432,
   "index": "./index.html",
   "assetGroups": [
     {
@@ -32,6 +32,7 @@
         "./Gudea-Bold.df9db2d9fbba308c.ttf",
         "./Gudea-Italic.23f81215d9d085e9.ttf",
         "./Gudea-Regular.19c7c88a2318b85c.ttf",
+        "./assets/config/config.github.json",
         "./assets/config/config.json",
         "./assets/fonts/Gudea-Bold.ttf",
         "./assets/fonts/Gudea-Italic.ttf",
@@ -58,6 +59,7 @@
     "./Gudea-Bold.df9db2d9fbba308c.ttf": "337e3933c80dfc002dec4874958cb33e66f13310",
     "./Gudea-Italic.23f81215d9d085e9.ttf": "3ae9a4e08c3ae78411b76d4364e3b60779ea9f25",
     "./Gudea-Regular.19c7c88a2318b85c.ttf": "64c560f753caba8016cc564c9cb3ec6236241d7e",
+    "./assets/config/config.github.json": "c7f4c8a0a0da14c5821224a2a4f29c349b109b0e",
     "./assets/config/config.json": "c5a58f85a67e729fe2bbfcfe4991905dd9329cab",
     "./assets/fonts/Gudea-Bold.ttf": "337e3933c80dfc002dec4874958cb33e66f13310",
     "./assets/fonts/Gudea-Italic.ttf": "3ae9a4e08c3ae78411b76d4364e3b60779ea9f25",
