@@ -1,6 +1,18 @@
 export enum JobTypeEnum {
-    STAGE = 'Stage',
-    ALTERNANCE = 'Alternance',
-    CDD = 'CDD',
-    CDI = 'CDI'
+  /**
+   * Stage
+   */
+  STAGE = "STAGE",
+  /**
+   * Alternance
+   */
+  ALTERNANCE = "ALTERNANCE",
+  /**
+   * CDD
+   */
+  CDD = "CDD",
+  /**
+   * CDI
+   */
+  CDI = "CDI",
 }

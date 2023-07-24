@@ -1,8 +1,8 @@
 <span class="date-range">
-    <span>{{ cvDate.beginDate | date: cvDate.datePipeFormat }}</span>
-    <ng-container *ngIf="cvDate.beginDate !== cvDate.endDate">
+    <span>{{ dateRange.beginDate | date: dateRange.datePipeFormat }}</span>
+    <ng-container *ngIf="dateRange.beginDate !== dateRange.endDate">
         <span> - </span>
-        <span *ngIf="cvDate.endDate else current">{{ cvDate.endDate | date: cvDate.datePipeFormat }}</span>
+        <span *ngIf="dateRange.endDate else current">{{ dateRange.endDate | date: dateRange.datePipeFormat }}</span>
     </ng-container>
 </span>
 

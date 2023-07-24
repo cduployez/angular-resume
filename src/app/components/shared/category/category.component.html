@@ -4,5 +4,11 @@
 ></cv-category-title>
 
 <div [@openClose]="openCloseState">
+  <ng-container *ngIf="!loading; else loadingTemplate">
     <ng-content></ng-content>
+  </ng-container>
 </div>
+
+<ng-template #loadingTemplate>
+  <span class="loader"></span>
+</ng-template>

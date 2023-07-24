@@ -1,14 +1,21 @@
-<cv-category categoryTitle="Expériences">
-    <cv-item-container *ngFor="let item of experienceItems">
-        <div>
-            <cv-date-prefix [cvDate]="item.cvDate"></cv-date-prefix>
-            <cv-title [detail]="item.jobTypeText" [title]="item.enterprise"></cv-title>
-        </div>
-        <div>
-            <cv-subtitle *ngIf="item.project" [subtitle]="item.project"></cv-subtitle>
-            <cv-descriptions [descriptions]="item.descriptions"></cv-descriptions>
-            <cv-badges [badges]="item.skills"></cv-badges>
-        </div>
-    </cv-item-container>
+<cv-category categoryTitle="Expériences" [loading]="controller.isLoading">
+  <cv-item-container *ngFor="let experience of model.experiences">
+    <div>
+      <cv-date-prefix [dateRange]="experience.dateRange"></cv-date-prefix>
+      <cv-title
+        [detail]="messages.jobTypeText(experience.jobTypeEnum)"
+        [title]="experience.company"
+      ></cv-title>
+    </div>
+    <div>
+      <cv-subtitle
+        *ngIf="experience.project"
+        [subtitle]="experience.project"
+      ></cv-subtitle>
+      <cv-descriptions
+        [descriptions]="experience.descriptions"
+      ></cv-descriptions>
+      <cv-badges [badges]="experience.skills"></cv-badges>
+    </div>
+  </cv-item-container>
 </cv-category>
-

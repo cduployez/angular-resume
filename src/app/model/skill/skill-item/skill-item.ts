@@ -1,21 +1,24 @@
+import {SkillEnum} from '../../enums/skill.enum';
 import {SkillTypeEnum} from '../skill-type-enum';
-import {SkillEnum} from '../skill-enum';
 
 export class SkillItem {
+  title: string;
 
-    title: string;
+  readonly skillTypeEnum: SkillTypeEnum;
 
-    readonly skillTypeEnum: SkillTypeEnum;
+  skillEnum: SkillEnum;
 
-    skillEnum: SkillEnum;
+  childrenKeywords: SkillEnum[];
 
-    childrenKeywords: SkillEnum[];
-
-    constructor(title: string, skillEnum: SkillEnum, keywords: SkillEnum[], skillTypeEnum: SkillTypeEnum) {
-        this.title = title;
-        this.skillEnum = skillEnum;
-        this.childrenKeywords = keywords;
-        this.skillTypeEnum = skillTypeEnum;
-    }
-
+  constructor(
+    title: string,
+    skillEnum: SkillEnum,
+    keywords: SkillEnum[],
+    skillTypeEnum: SkillTypeEnum
+  ) {
+    this.title = title;
+    this.skillEnum = skillEnum;
+    this.childrenKeywords = keywords;
+    this.skillTypeEnum = skillTypeEnum;
+  }
 }

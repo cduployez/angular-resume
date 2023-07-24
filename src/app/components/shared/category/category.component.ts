@@ -30,6 +30,9 @@ export class CategoryComponent implements OnInit {
     @Input()
     categoryTitle: string;
 
+    @Input()
+    loading: boolean = false;
+
     /**
      * true if category is displayed, false if hidden
      */

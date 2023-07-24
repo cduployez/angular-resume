@@ -1,50 +1,52 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {SkillBadge} from '../../../model/experience/skill-badge';
-import {ActiveSkillsService} from '../../../services/ui/active-skills.service';
-import {SkillEnum} from '../../../model/skill/skill-enum';
+import { Component, Input, OnDestroy, OnInit } from "@angular/core";
+import { SkillBadgeDto } from "../../../model/dtos/skill-badge-dto";
+import { SkillEnum } from "../../../model/enums/skill.enum";
+import { ActiveSkillsService } from "../../../services/ui/active-skills.service";
 
 @Component({
-    selector: 'cv-badge',
-    templateUrl: './badge.component.html',
-    styleUrls: ['./badge.component.scss']
+  selector: "cv-badge",
+  templateUrl: "./badge.component.html",
+  styleUrls: ["./badge.component.scss"],
 })
 export class BadgeComponent implements OnInit, OnDestroy {
+  @Input()
+  badge: SkillBadgeDto;
 
-    @Input()
-    badge: SkillBadge;
+  active: boolean = false;
 
-    active: boolean = false;
+  mouseInside: boolean = false;
 
-    mouseInside: boolean = false;
+  constructor(private activeSkillsService: ActiveSkillsService) {}
 
-    constructor(private activeSkillsService: ActiveSkillsService) {
+  ngOnInit(): void {
+    this.activeSkillsService.activeSkillEnums$.subscribe(
+      this.checkActive.bind(this)
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.activeSkillsService.activeSkillEnums$.unsubscribe();
+  }
+
+  checkActive(skillEnums: SkillEnum[]): void {
+    if (!this.mouseInside) {
+      this.active = skillEnums?.some((s: SkillEnum) =>
+        this.badge.keywords?.includes(s)
+      );
     }
+  }
 
-    ngOnInit(): void {
-        this.activeSkillsService.activeSkillEnums$.subscribe(this.checkActive.bind(this));
-    }
+  enableBadge(): void {
+    this.mouseInside = true;
+    this.activeSkillsService.activeSkillEnums = this.badge?.keywords;
+    this.activeSkillsService.activeChildrenSkillEnums =
+      this.badge?.childrenKeywords;
+  }
 
-    ngOnDestroy(): void {
-        this.activeSkillsService.activeSkillEnums$.unsubscribe();
-    }
-
-    checkActive(skillEnums: SkillEnum[]): void {
-        if (!this.mouseInside) {
-            this.active = skillEnums?.some(s => this.badge.keywords?.includes(s));
-        }
-    }
-
-    enableBadge(): void {
-        this.mouseInside = true;
-        this.activeSkillsService.activeSkillEnums = this.badge?.keywords;
-        this.activeSkillsService.activeChildrenSkillEnums = this.badge?.childrenKeywords;
-    }
-
-    disableBadge(): void {
-        this.mouseInside = false;
-        this.activeSkillsService.activeSkillEnums = null;
-        this.activeSkillsService.activeChildrenSkillEnums = null;
-        this.active = false;
-    }
-
+  disableBadge(): void {
+    this.mouseInside = false;
+    this.activeSkillsService.activeSkillEnums = null;
+    this.activeSkillsService.activeChildrenSkillEnums = null;
+    this.active = false;
+  }
 }

@@ -27,6 +27,9 @@ angularResume:
   certificate:
     issuerName: letsencrypt-production
 
+  configMap:
+    backResumeUrl: "https://clement.duployez.fr/back-resume"
+
   # Service
   service:
     http:
