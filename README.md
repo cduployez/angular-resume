@@ -25,6 +25,6 @@ Link: https://dev.to/this-is-angular/configure-prettier-and-eslint-with-angular-
 Run:
 ```sh
 ng add @angular-eslint/schematics
+npm install prettier --save-dev
 ```
-
 
