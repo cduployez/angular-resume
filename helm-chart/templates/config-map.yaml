@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "helm-chart.angular-resume.fullname" . }}
+  labels:
+    {{- include "helm-chart.angular-resume.labels" . | nindent 4 }}
+data:
+  BASE_HREF: {{ .Values.angularResume.ingress.path }}
+  config.json: |
+    {
+      "backResumeUrl": "{{ .Values.angularResume.configMap.backResumeUrl }}"
+    }
+---

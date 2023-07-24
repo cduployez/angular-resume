@@ -30,11 +30,6 @@ spec:
         # Replace $GCLOUD_PROJECT with your project ID.
         # image: $LOCATION-docker.pkg.dev/$GCLOUD_PROJECT/hello-repo/helloworld-gke:latest
         image: "{{ .Values.angularResume.image.repository }}:{{ .Values.angularResume.image.tag | default .Chart.AppVersion }}"
-        # Use the baseHref value as the environment variable or config file entry
-        env:
-          - name: BASE_HREF
-            value: "{{ .Values.angularResume.ingress.path }}"
-        # This app listens on port 8080 for web traffic by default.
         ports:
           - name: {{ .Values.angularResume.service.http.name }}
             containerPort: {{ .Values.angularResume.service.containerPort }}
@@ -51,6 +46,14 @@ spec:
           initialDelaySeconds: 15
           periodSeconds: 10
           failureThreshold: 3 # Must not fail more than 3 times
+        envFrom:
+          - configMapRef:
+              name: {{ include "helm-chart.angular-resume.fullname" . }}
+        volumeMounts:
+          - name: config-json
+            mountPath: /usr/share/nginx/html/assets/config/config.json
+            subPath: config.json
+            readOnly: true
         resources:
           requests:
             memory: {{ .Values.angularResume.resources.requests.memory }}
@@ -60,4 +63,11 @@ spec:
             memory: {{ .Values.angularResume.resources.limits.memory }}
             cpu: {{ .Values.angularResume.resources.limits.cpu }}
             ephemeral-storage: {{ .Values.angularResume.resources.limits.ephemeral_storage }}
+      volumes:
+        - name: config-json
+          configMap:
+            name: {{ include "helm-chart.angular-resume.fullname" . }}
+            items:
+              - key: config.json
+                path: config.json
 ---
