@@ -29,10 +29,13 @@ export class ConfigService implements IConfig {
   }
 
   load(): Promise<void> {
-    return lastValueFrom(
-      this.httpClient.get<IConfig>('assets/config/config.json')
-    ).then((config: IConfig) => {
-      this.config = config;
-    });
+    if (environment.includeConfig) {
+      return lastValueFrom(
+        this.httpClient.get<IConfig>('assets/config/config.json')
+      ).then((config: IConfig) => {
+        this.config = config;
+      });
+    }
+    return Promise.resolve();
   }
 }
