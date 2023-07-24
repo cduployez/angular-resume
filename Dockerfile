@@ -12,7 +12,7 @@ RUN npm install
 COPY ./ /app/
 
 # Build application
-ARG configuration=production
+ARG configuration=github
 RUN npm run build -- --output-path=./dist/out --configuration $configuration
 
 # Copy custom entrypoint
