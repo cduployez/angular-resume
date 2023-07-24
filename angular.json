@@ -114,9 +114,6 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-resume:build:production"
-            },
-            "github": {
-              "browserTarget": "angular-resume:build:github"
             }
           }
         },
@@ -153,9 +150,6 @@
           "configurations": {
             "production": {
               "devServerTarget": "angular-resume:serve:production"
-            },
-            "github": {
-              "devServerTarget": "angular-resume:serve:github"
             }
           }
         },
