@@ -6,8 +6,7 @@ import { IEnvironment } from '../app/model/config/ienvironment';
 
 export const environment: IEnvironment = {
   production: false,
-  includeConfig: true,
-  defaultBackResumeUrl: 'http://localhost:11001'
+  configFileName: 'config.json'
 };
 
 /*

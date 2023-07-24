@@ -25,17 +25,16 @@ export class ConfigService implements IConfig {
   constructor(private httpClient: HttpClient) {}
 
   get backResumeUrl(): string {
-    return this.config?.backResumeUrl || environment.defaultBackResumeUrl;
+    return this.config?.backResumeUrl || '';
   }
 
   load(): Promise<void> {
-    if (environment.includeConfig) {
-      return lastValueFrom(
-        this.httpClient.get<IConfig>('assets/config/config.json')
-      ).then((config: IConfig) => {
-        this.config = config;
-      });
-    }
-    return Promise.resolve();
+    return lastValueFrom(
+      this.httpClient.get<IConfig>(
+        `assets/config/${environment.configFileName}`
+      )
+    ).then((config: IConfig) => {
+      this.config = config;
+    });
   }
 }

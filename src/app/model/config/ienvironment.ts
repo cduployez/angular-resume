@@ -1,8 +1,7 @@
 export type IEnvironment = {
   production: boolean;
   /**
-   * Indicates if config.json from assets should be loaded
+   * Indicates which config file should be used
    */
-  includeConfig: boolean;
-  defaultBackResumeUrl: string;
+  configFileName: string;
 };
