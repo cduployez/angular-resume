@@ -1,4 +1,4 @@
-import { SkillEnum } from "../enums/skill.enum";
+import { SkillEnum } from '../enums/skill.enum';
 
 export interface SkillBadgeJson {
   title: string;

@@ -48,6 +48,8 @@ export class DateUtils {
   }
 
   static sortByDateDesc<T>(array: T[], dateGetter: (t: T) => Date): T[] {
-    return array.sort((a: T, b: T) => dateGetter(b).getTime() - dateGetter(a).getTime());
+    return array.sort(
+      (a: T, b: T) => dateGetter(b).getTime() - dateGetter(a).getTime()
+    );
   }
 }

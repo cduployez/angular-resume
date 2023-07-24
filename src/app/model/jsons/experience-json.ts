@@ -1,6 +1,6 @@
-import {JobTypeEnum} from '../enums/job-type.enum';
-import {DateRangeJson} from './date-range-json';
-import {SkillBadgeJson} from './skill-badge-json';
+import { JobTypeEnum } from '../enums/job-type.enum';
+import { DateRangeJson } from './date-range-json';
+import { SkillBadgeJson } from './skill-badge-json';
 
 /**
  * Object corresponding to deserialized JSON coming from the backend

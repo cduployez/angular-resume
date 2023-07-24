@@ -1,7 +1,7 @@
-import { ExperienceDto } from "../../model/dtos/experience-dto";
-import { ExperienceJson } from "../../model/jsons/experience-json";
-import { DateRangeDtoMapper } from "./date-range-dto-mapper";
-import { SkillBadgeDtoMapper } from "./skill-badge-dto-mapper";
+import { ExperienceDto } from '../../model/dtos/experience-dto';
+import { ExperienceJson } from '../../model/jsons/experience-json';
+import { DateRangeDtoMapper } from './date-range-dto-mapper';
+import { SkillBadgeDtoMapper } from './skill-badge-dto-mapper';
 
 export class ExperienceDtoMapper {
   static fromExperienceJson(json: ExperienceJson): ExperienceDto {

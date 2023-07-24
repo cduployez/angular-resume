@@ -1,20 +1,20 @@
-import { Component, Input, OnDestroy, OnInit } from "@angular/core";
-import { SkillBadgeDto } from "../../../model/dtos/skill-badge-dto";
-import { SkillEnum } from "../../../model/enums/skill.enum";
-import { ActiveSkillsService } from "../../../services/ui/active-skills.service";
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { SkillBadgeDto } from '../../../model/dtos/skill-badge-dto';
+import { SkillEnum } from '../../../model/enums/skill.enum';
+import { ActiveSkillsService } from '../../../services/ui/active-skills.service';
 
 @Component({
-  selector: "cv-badge",
-  templateUrl: "./badge.component.html",
-  styleUrls: ["./badge.component.scss"],
+  selector: 'cv-badge',
+  templateUrl: './badge.component.html',
+  styleUrls: ['./badge.component.scss'],
 })
 export class BadgeComponent implements OnInit, OnDestroy {
   @Input()
   badge: SkillBadgeDto;
 
-  active: boolean = false;
+  active = false;
 
-  mouseInside: boolean = false;
+  mouseInside = false;
 
   constructor(private activeSkillsService: ActiveSkillsService) {}
 
@@ -30,8 +30,8 @@ export class BadgeComponent implements OnInit, OnDestroy {
 
   checkActive(skillEnums: SkillEnum[]): void {
     if (!this.mouseInside) {
-      this.active = skillEnums?.some((s: SkillEnum) =>
-        this.badge.keywords?.includes(s)
+      this.active = skillEnums?.some(
+        (s: SkillEnum) => this.badge.keywords?.includes(s)
       );
     }
   }

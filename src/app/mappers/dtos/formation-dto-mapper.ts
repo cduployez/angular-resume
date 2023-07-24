@@ -1,6 +1,6 @@
-import {LanguageJson} from '../../model/jsons/language-json';
-import {LanguageDto} from '../../model/dtos/language-dto';
-import {DateRangeDtoMapper} from './date-range-dto-mapper';
+import { LanguageJson } from '../../model/jsons/language-json';
+import { LanguageDto } from '../../model/dtos/language-dto';
+import { DateRangeDtoMapper } from './date-range-dto-mapper';
 
 export class FormationDtoMapper {
   static fromFormationJson(json: LanguageJson): LanguageDto {

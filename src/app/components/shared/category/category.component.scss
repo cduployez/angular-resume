@@ -1,4 +1,4 @@
-@import "src/assets/styles/variables.scss";
+@import 'src/assets/styles/variables.scss';
 
 cv-category-title {
   cursor: pointer;
@@ -19,15 +19,23 @@ cv-category-title {
 
 @keyframes animloader {
   0% {
-    box-shadow: -38px -6px, -14px 6px, 14px -6px;
+    box-shadow: -38px -6px,
+    -14px 6px,
+    14px -6px;
   }
   33% {
-    box-shadow: -38px 6px, -14px -6px, 14px 6px;
+    box-shadow: -38px 6px,
+    -14px -6px,
+    14px 6px;
   }
   66% {
-    box-shadow: -38px -6px, -14px 6px, 14px -6px;
+    box-shadow: -38px -6px,
+    -14px 6px,
+    14px -6px;
   }
   100% {
-    box-shadow: -38px 6px, -14px -6px, 14px 6px;
+    box-shadow: -38px 6px,
+    -14px -6px,
+    14px 6px;
   }
 }

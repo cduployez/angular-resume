@@ -1,6 +1,6 @@
-import {SkillBadgeDtoMapper} from './skill-badge-dto-mapper';
-import {ProjectJson} from '../../model/jsons/project-json';
-import {ProjectDto} from '../../model/dtos/project-dto';
+import { SkillBadgeDtoMapper } from './skill-badge-dto-mapper';
+import { ProjectJson } from '../../model/jsons/project-json';
+import { ProjectDto } from '../../model/dtos/project-dto';
 
 export class ProjectDtoMapper {
   static fromProjectJson(json: ProjectJson): ProjectDto {

@@ -1,10 +1,11 @@
-@import "src/assets/styles/variables.scss";
+@import 'src/assets/styles/variables.scss';
 
 /**
   Mixin to add colors to font-awesome badges
  */
 @mixin badgeColor($badgeClassName, $hoverTextColor, $hoverBackgroundColor) {
-  .icon.#{$badgeClassName}:hover, .icon.#{$badgeClassName}.active {
+  .icon.#{$badgeClassName}:hover,
+  .icon.#{$badgeClassName}.active {
     --icon-hover-color: #{$hoverTextColor};
     --icon-hover-bg: #{$hoverBackgroundColor};
   }
@@ -13,12 +14,17 @@
 /**
   Mixin to add colors to shaped badges (javascript, typescript)
  */
-@mixin badgeShapeColor($badgeClassName, $hoverTextColor, $hoverBackgroundColor) {
+@mixin badgeShapeColor(
+  $badgeClassName,
+  $hoverTextColor,
+  $hoverBackgroundColor
+) {
   .icon.#{$badgeClassName} span {
     --icon-text: var(--icon-inner-text);
   }
 
-  .icon.#{$badgeClassName}:hover, .icon.#{$badgeClassName}.active {
+  .icon.#{$badgeClassName}:hover,
+  .icon.#{$badgeClassName}.active {
     --icon-hover-color: #{$hoverTextColor};
     --icon-hover-bg: #{$hoverBackgroundColor};
 
@@ -29,8 +35,8 @@
 }
 
 ::ng-deep {
-
-  .icon:hover, .icon.active {
+  .icon:hover,
+  .icon.active {
     --icon-hover-color: var(--icon);
     --icon-hover-bg: var(--on-icon);
     color: var(--icon-hover-color);

@@ -1,5 +1,5 @@
-import { SkillBadgeDto } from "../../model/dtos/skill-badge-dto";
-import { SkillBadgeJson } from "../../model/jsons/skill-badge-json";
+import { SkillBadgeDto } from '../../model/dtos/skill-badge-dto';
+import { SkillBadgeJson } from '../../model/jsons/skill-badge-json';
 
 export class SkillBadgeDtoMapper {
   static fromSkillBadgeJson(json: SkillBadgeJson): SkillBadgeDto {

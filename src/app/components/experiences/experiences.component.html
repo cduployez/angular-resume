@@ -1,20 +1,17 @@
-<cv-category categoryTitle="Expériences" [loading]="controller.isLoading">
+<cv-category [loading]="controller.isLoading" categoryTitle="Expériences">
   <cv-item-container *ngFor="let experience of model.experiences">
     <div>
       <cv-date-prefix [dateRange]="experience.dateRange"></cv-date-prefix>
       <cv-title
         [detail]="messages.jobTypeText(experience.jobTypeEnum)"
-        [title]="experience.company"
-      ></cv-title>
+        [title]="experience.company"></cv-title>
     </div>
     <div>
       <cv-subtitle
         *ngIf="experience.project"
-        [subtitle]="experience.project"
-      ></cv-subtitle>
+        [subtitle]="experience.project"></cv-subtitle>
       <cv-descriptions
-        [descriptions]="experience.descriptions"
-      ></cv-descriptions>
+        [descriptions]="experience.descriptions"></cv-descriptions>
       <cv-badges [badges]="experience.skills"></cv-badges>
     </div>
   </cv-item-container>

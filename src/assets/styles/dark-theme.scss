@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import 'variables.scss';
 
 .dark-theme {
   --primary: #{$pale-blue};
@@ -20,12 +20,11 @@
   --on-footer: #{$light-blue};
 
   --badge: #{$black};
-  --on-badge: #CFD8DC;
+  --on-badge: #cfd8dc;
 
   --icon: #{$dark-gray};
   --on-icon: #{$blue-gray-50};
   --icon-hover-color: #{$white};
   --icon-hover-bg: #{$black};
   --icon-inner-text: var(--icon);
-
 }

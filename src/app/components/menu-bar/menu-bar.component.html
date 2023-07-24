@@ -1,20 +1,29 @@
-<nav [ngClass]="{'minimized': minimized}">
-    <div *ngIf="!minimized" class="title">
-        <span>CV – {{ projectService.latestRevisionYear }}</span>
-    </div>
-    <div>
-        <a [href]="linkService.pdfDownloadUrl" class="pdf link">
-            <fa-icon [icon]="iconsService.faFilePdf"></fa-icon>
-        </a>
-        <a [href]="linkService.linkedInUrl" class="linkedin link" target="_blank">
-            <fa-icon [icon]="iconsService.faLinkedIn"></fa-icon>
-        </a>
-        <fa-icon (click)="nextTheme()" [icon]="themeIcon" class="link theme-button"></fa-icon>
-        <fa-icon (click)="minimized = true" *ngIf="!minimized" [icon]="iconsService.faMinus"
-                 class="link minimize"></fa-icon>
-        <fa-icon (click)="minimized = false" *ngIf="minimized" [icon]="iconsService.faPlus"
-                 class="link minimize"></fa-icon>
-    </div>
+<nav [ngClass]="{ minimized: minimized }">
+  <div *ngIf="!minimized" class="title">
+    <span>CV – {{ projectService.latestRevisionYear }}</span>
+  </div>
+  <div>
+    <a [href]="linkService.pdfDownloadUrl" class="pdf link">
+      <fa-icon [icon]="iconsService.faFilePdf"></fa-icon>
+    </a>
+    <a [href]="linkService.linkedInUrl" class="linkedin link" target="_blank">
+      <fa-icon [icon]="iconsService.faLinkedIn"></fa-icon>
+    </a>
+    <fa-icon
+      (click)="nextTheme()"
+      [icon]="themeIcon"
+      class="link theme-button"></fa-icon>
+    <fa-icon
+      (click)="minimized = true"
+      *ngIf="!minimized"
+      [icon]="iconsService.faMinus"
+      class="link minimize"></fa-icon>
+    <fa-icon
+      (click)="minimized = false"
+      *ngIf="minimized"
+      [icon]="iconsService.faPlus"
+      class="link minimize"></fa-icon>
+  </div>
 </nav>
 
 <div *ngIf="minimized" class="placeholder"></div>

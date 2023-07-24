@@ -1,7 +1,7 @@
-import {LoadingMethod} from '../../model/ui/calling-method';
-import {HobbiesHttpService} from '../../services/http/hobbies-http.service';
-import {HobbyDto} from '../../model/dtos/hobby-dto';
-import {HobbiesModel} from './hobbies-model';
+import { LoadingMethod } from '../../model/ui/calling-method';
+import { HobbiesHttpService } from '../../services/http/hobbies-http.service';
+import { HobbyDto } from '../../model/dtos/hobby-dto';
+import { HobbiesModel } from './hobbies-model';
 
 export class HobbiesController {
   readonly findAllHobbiesMethod: LoadingMethod<HobbyDto[]> =
@@ -10,8 +10,7 @@ export class HobbiesController {
   constructor(
     private readonly model: HobbiesModel,
     private readonly hobbiesHttpService: HobbiesHttpService
-  ) {
-  }
+  ) {}
 
   get isLoading(): boolean {
     return this.findAllHobbiesMethod.isLoading;
@@ -26,7 +25,7 @@ export class HobbiesController {
         },
         error: (error: unknown) => {
           console.error(error);
-        }
+        },
       });
   }
 }

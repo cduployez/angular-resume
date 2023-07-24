@@ -2,10 +2,10 @@
 // `ng build --prod` replaces `config.ts` with `config.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-import {IEnvironment} from '../app/model/config/ienvironment';
+import { IEnvironment } from '../app/model/config/ienvironment';
 
 export const environment: IEnvironment = {
-  production: false
+  production: false,
 };
 
 /*

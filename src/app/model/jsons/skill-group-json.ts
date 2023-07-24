@@ -1,4 +1,4 @@
-import {SkillJson} from './skill-json';
+import { SkillJson } from './skill-json';
 
 export interface SkillGroupJson {
   title: string;

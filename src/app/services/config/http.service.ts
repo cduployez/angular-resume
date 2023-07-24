@@ -1,7 +1,7 @@
-import {HttpClient, HttpParams} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
-import {HttpConfigService} from './http-config.service';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { HttpConfigService } from './http-config.service';
 
 /**
  * Base HTTP Service for all backend REST controllers
@@ -48,7 +48,7 @@ export abstract class HttpService {
   ): Observable<D> {
     return this.httpClient
       .get<J>(this.url(url), {
-        params: httpParams
+        params: httpParams,
       })
       .pipe(map(mapFunction));
   }

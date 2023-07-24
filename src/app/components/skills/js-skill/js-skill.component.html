@@ -1,5 +1,8 @@
-<cv-skill [title]="item.title" [skillEnum]="item.skillEnum" [childrenKeywords]="item.childrenKeywords">
-    <div class="icon">
-        <span>{{ item.iconText }}</span>
-    </div>
+<cv-skill
+  [childrenKeywords]="item.childrenKeywords"
+  [skillEnum]="item.skillEnum"
+  [title]="item.title">
+  <div class="icon">
+    <span>{{ item.iconText }}</span>
+  </div>
 </cv-skill>

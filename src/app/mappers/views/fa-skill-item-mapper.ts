@@ -1,9 +1,17 @@
-import {FaSkillItem} from '../../model/skill/skill-item/fa-skill-item';
-import {IconDefinition} from '@fortawesome/fontawesome-common-types';
-import {SkillDto} from '../../model/dtos/skill-dto';
+import { FaSkillItem } from '../../model/skill/skill-item/fa-skill-item';
+import { IconDefinition } from '@fortawesome/fontawesome-common-types';
+import { SkillDto } from '../../model/dtos/skill-dto';
 
 export class FaSkillItemMapper {
-  static fromSkillDto(dto: SkillDto, iconDefinition: IconDefinition): FaSkillItem {
-    return new FaSkillItem(dto.title, dto.keyword, dto.childrenKeywords, iconDefinition);
+  static fromSkillDto(
+    dto: SkillDto,
+    iconDefinition: IconDefinition
+  ): FaSkillItem {
+    return new FaSkillItem(
+      dto.title,
+      dto.keyword,
+      dto.childrenKeywords,
+      iconDefinition
+    );
   }
 }

@@ -1,4 +1,4 @@
-import {DateRangeJson} from './date-range-json';
+import { DateRangeJson } from './date-range-json';
 
 /**
  * Object corresponding to deserialized JSON coming from the backend

@@ -1,6 +1,6 @@
-import { JobTypeEnum } from "../enums/job-type.enum";
-import { DateRangeDto } from "./date-range-dto";
-import { SkillBadgeDto } from "./skill-badge-dto";
+import { JobTypeEnum } from '../enums/job-type.enum';
+import { DateRangeDto } from './date-range-dto';
+import { SkillBadgeDto } from './skill-badge-dto';
 
 export class ExperienceDto {
   /**

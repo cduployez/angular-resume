@@ -1,4 +1,4 @@
-@import "src/assets/styles/variables.scss";
+@import 'src/assets/styles/variables.scss';
 
 .title {
   color: var(--primary);
@@ -6,13 +6,13 @@
 
 .title:before {
   content: $title-delimiter;
-  margin-right: .2rem;
+  margin-right: 0.2rem;
 }
 
 .title:after {
   content: ':';
-  margin-left: .2rem;
-  margin-right: .2rem;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
 }
 
 .values {
