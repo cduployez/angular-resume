@@ -2,24 +2,20 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { lastValueFrom } from 'rxjs';
 import { IConfig } from '../../model/config/iconfig';
+import { environment } from '../../../environments/environment';
 
 /**
  * Based on: https://imran3.medium.com/runtime-configuration-for-angular-c9d9082e1de3
  */
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ConfigService implements IConfig {
-  /**
-   * Indicates if the config is loaded
-   */
-  loaded = false;
-
   /**
    * Config
    * @private
    */
-  private config: IConfig;
+  private config: IConfig | null = null;
 
   /**
    * Constructor
@@ -29,7 +25,7 @@ export class ConfigService implements IConfig {
   constructor(private httpClient: HttpClient) {}
 
   get backResumeUrl(): string {
-    return this.config.backResumeUrl;
+    return this.config?.backResumeUrl || environment.defaultBackResumeUrl;
   }
 
   load(): Promise<void> {
@@ -37,7 +33,6 @@ export class ConfigService implements IConfig {
       this.httpClient.get<IConfig>('assets/config/config.json')
     ).then((config: IConfig) => {
       this.config = config;
-      this.loaded = true;
     });
   }
 }

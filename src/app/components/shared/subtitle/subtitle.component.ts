@@ -1,15 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'cv-subtitle',
   templateUrl: './subtitle.component.html',
-  styleUrls: ['./subtitle.component.scss'],
+  styleUrls: ['./subtitle.component.scss']
 })
-export class SubtitleComponent implements OnInit {
+export class SubtitleComponent {
   @Input()
-  subtitle: string;
-
-  constructor() {}
-
-  ngOnInit(): void {}
+  subtitle: string = '';
 }

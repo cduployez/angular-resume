@@ -3,11 +3,7 @@ import { SkillJson } from '../../model/jsons/skill-json';
 
 export class SkillDtoMapper {
   static fromSkillJson(json: SkillJson): SkillDto {
-    const dto: SkillDto = new SkillDto();
-    dto.title = json.title;
-    dto.keyword = json.keyword;
-    dto.childrenKeywords = json.childrenKeywords;
-    return dto;
+    return new SkillDto(json.title, json.keyword, json.childrenKeywords);
   }
 
   static fromSkillJsons(jsons: SkillJson[]): SkillDto[] {

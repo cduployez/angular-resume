@@ -13,7 +13,7 @@ export class SkillBadge {
     childrenKeywords?: SkillEnum[]
   ) {
     this.title = title;
-    this.keywords = keywords;
-    this.childrenKeywords = childrenKeywords;
+    this.keywords = keywords || [];
+    this.childrenKeywords = childrenKeywords || [];
   }
 }

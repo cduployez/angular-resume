@@ -4,11 +4,11 @@ import { DateRangeDtoMapper } from './date-range-dto-mapper';
 
 export class LanguageDtoMapper {
   static fromLanguageJson(json: LanguageJson): LanguageDto {
-    const dto: LanguageDto = new LanguageDto();
-    dto.dateRange = DateRangeDtoMapper.fromDateRangeJson(json.dateRange);
-    dto.title = json.title;
-    dto.descriptions = json.descriptions;
-    return dto;
+    return new LanguageDto(
+      DateRangeDtoMapper.fromDateRangeJson(json.dateRange),
+      json.title,
+      json.descriptions
+    );
   }
 
   static fromLanguageJsons(jsons: LanguageJson[]): LanguageDto[] {

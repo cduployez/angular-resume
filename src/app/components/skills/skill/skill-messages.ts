@@ -25,10 +25,10 @@ export class SkillMessages {
     [SkillEnum.KUBERNETES]: 'kubernetes',
     [SkillEnum.AZURE]: 'azure',
     [SkillEnum.OPENSHIFT]: 'openshift',
-    [SkillEnum.APACHE_TAPESTRY]: 'apache-tapestry',
+    [SkillEnum.APACHE_TAPESTRY]: 'apache-tapestry'
   };
 
-  skillCssClass(skill: SkillEnum): string {
-    return this.skillCssClassRecord[skill];
+  skillCssClass(skill: SkillEnum | null): string {
+    return skill ? this.skillCssClassRecord[skill] : '';
   }
 }

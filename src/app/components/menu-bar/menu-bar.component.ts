@@ -10,10 +10,10 @@ import { ThemeEnum } from '../../model/ui/theme.enum';
 @Component({
   selector: 'cv-menu-bar',
   templateUrl: './menu-bar.component.html',
-  styleUrls: ['./menu-bar.component.scss'],
+  styleUrls: ['./menu-bar.component.scss']
 })
 export class MenuBarComponent {
-  themeIcon: IconDefinition;
+  themeIcon: IconDefinition = this.iconsService.faMoonRegular;
 
   constructor(
     public projectService: ProjectService,
@@ -39,13 +39,10 @@ export class MenuBarComponent {
   }
 
   private updateThemeIcon(theme: ThemeEnum): void {
-    switch (theme) {
-      case ThemeEnum.DARK:
-        this.themeIcon = this.iconsService.faMoonSolid;
-        break;
-      default:
-        this.themeIcon = this.iconsService.faMoonRegular;
-        break;
+    if (theme === ThemeEnum.DARK) {
+      this.themeIcon = this.iconsService.faMoonSolid;
+    } else {
+      this.themeIcon = this.iconsService.faMoonRegular;
     }
   }
 }

@@ -4,12 +4,12 @@ import { ProjectDto } from '../../model/dtos/project-dto';
 
 export class ProjectDtoMapper {
   static fromProjectJson(json: ProjectJson): ProjectDto {
-    const dto: ProjectDto = new ProjectDto();
-    dto.project = json.project;
-    dto.teamSize = json.teamSize;
-    dto.descriptions = json.descriptions;
-    dto.skills = SkillBadgeDtoMapper.fromSkillBadgeJsons(json.skills);
-    return dto;
+    return new ProjectDto(
+      json.project,
+      json.teamSize,
+      json.descriptions,
+      SkillBadgeDtoMapper.fromSkillBadgeJsons(json.skills)
+    );
   }
 
   static fromProjectJsons(jsons: ProjectJson[]): ProjectDto[] {

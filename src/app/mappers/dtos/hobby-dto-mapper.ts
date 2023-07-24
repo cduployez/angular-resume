@@ -3,11 +3,7 @@ import { HobbyJson } from '../../model/jsons/hobby-json';
 
 export class HobbyDtoMapper {
   static fromHobbyJson(json: HobbyJson): HobbyDto {
-    const dto: HobbyDto = new HobbyDto();
-    dto.title = json.title;
-    dto.values = json.values;
-    dto.ellipsis = json.ellipsis;
-    return dto;
+    return new HobbyDto(json.title, json.values, json.ellipsis);
   }
 
   static fromHobbyJsons(jsons: HobbyJson[]): HobbyDto[] {

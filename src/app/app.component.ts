@@ -6,7 +6,7 @@ import { BodyService } from './services/ui/body.service';
 @Component({
   selector: 'cv-app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   constructor(
@@ -19,15 +19,21 @@ export class AppComponent implements OnInit {
     this.themeService.themeChange$.subscribe(this.onThemeChange.bind(this));
     this.onThemeChange({
       previousTheme: null,
-      currentTheme: this.themeService.theme,
+      currentTheme: this.themeService.theme
     });
   }
 
   onThemeChange(themeInfo: {
-    previousTheme: ThemeEnum;
+    previousTheme: ThemeEnum | null;
     currentTheme: ThemeEnum;
   }): void {
-    this.bodyService.removeClass(this.renderer, themeInfo?.previousTheme);
-    this.bodyService.addClass(this.renderer, themeInfo?.currentTheme);
+    this.bodyService.removeClass(
+      this.renderer,
+      themeInfo?.previousTheme?.toString()
+    );
+    this.bodyService.addClass(
+      this.renderer,
+      themeInfo?.currentTheme?.toString()
+    );
   }
 }

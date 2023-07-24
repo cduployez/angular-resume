@@ -5,14 +5,14 @@ import { SkillBadgeDtoMapper } from './skill-badge-dto-mapper';
 
 export class ExperienceDtoMapper {
   static fromExperienceJson(json: ExperienceJson): ExperienceDto {
-    const dto: ExperienceDto = new ExperienceDto();
-    dto.dateRange = DateRangeDtoMapper.fromDateRangeJson(json.dateRange);
-    dto.company = json.company;
-    dto.jobType = json.jobType;
-    dto.project = json.project;
-    dto.descriptions = json.descriptions;
-    dto.skills = SkillBadgeDtoMapper.fromSkillBadgeJsons(json.skills);
-    return dto;
+    return new ExperienceDto(
+      DateRangeDtoMapper.fromDateRangeJson(json.dateRange),
+      json.company,
+      json.jobType,
+      json.project,
+      json.descriptions,
+      SkillBadgeDtoMapper.fromSkillBadgeJsons(json.skills)
+    );
   }
 
   static fromExperienceJsons(jsons: ExperienceJson[]): ExperienceDto[] {

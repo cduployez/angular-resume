@@ -1,10 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   animate,
   state,
   style,
   transition,
-  trigger,
+  trigger
 } from '@angular/animations';
 
 @Component({
@@ -17,7 +17,7 @@ import {
       state(
         'open',
         style({
-          opacity: 1,
+          opacity: 1
         })
       ),
       state(
@@ -29,34 +29,30 @@ import {
           marginTop: 0,
           marginBottom: 0,
           height: 0,
-          opacity: 0,
+          opacity: 0
         })
       ),
       // Transitions
-      transition('open => closed, closed => open', [animate('0.2s')]),
-    ]),
-  ],
+      transition('open => closed, closed => open', [animate('0.2s')])
+    ])
+  ]
 })
-export class CategoryComponent implements OnInit {
+export class CategoryComponent {
   @Input()
-  categoryTitle: string;
+  categoryTitle: string = '';
 
   @Input()
-  loading = false;
+  loading: boolean = false;
 
   /**
    * true if category is displayed, false if hidden
    */
-  categoryDisplayed = true;
+  categoryDisplayed: boolean = true;
 
   /**
    * openClose animation state
    */
   openCloseState: 'open' | 'closed' = 'open';
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   /**
    * Open/Close category

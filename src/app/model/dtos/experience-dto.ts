@@ -32,4 +32,20 @@ export class ExperienceDto {
    * Skills
    */
   skills: SkillBadgeDto[];
+
+  constructor(
+    dateRange: DateRangeDto,
+    company: string,
+    jobType: JobTypeEnum,
+    project: string,
+    descriptions: string[],
+    skills: SkillBadgeDto[]
+  ) {
+    this.dateRange = dateRange;
+    this.company = company;
+    this.jobType = jobType;
+    this.project = project;
+    this.descriptions = descriptions;
+    this.skills = skills;
+  }
 }

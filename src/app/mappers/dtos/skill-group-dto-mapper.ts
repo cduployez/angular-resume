@@ -4,10 +4,10 @@ import { SkillDtoMapper } from './skill-dto-mapper';
 
 export class SkillGroupDtoMapper {
   static fromSkillGroupJson(json: SkillGroupJson): SkillGroupDto {
-    const dto: SkillGroupDto = new SkillGroupDto();
-    dto.title = json.title;
-    dto.skills = SkillDtoMapper.fromSkillJsons(json.skills);
-    return dto;
+    return new SkillGroupDto(
+      json.title,
+      SkillDtoMapper.fromSkillJsons(json.skills)
+    );
   }
 
   static fromSkillGroupJsons(jsons: SkillGroupJson[]): SkillGroupDto[] {
