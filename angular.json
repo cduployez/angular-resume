@@ -104,7 +104,7 @@
               "ngswConfigPath": "ngsw-config.json"
             }
           },
-          "defaultConfiguration": ""
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -114,6 +114,9 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-resume:build:production"
+            },
+            "github": {
+              "browserTarget": "angular-resume:build:github"
             }
           }
         },
@@ -150,6 +153,9 @@
           "configurations": {
             "production": {
               "devServerTarget": "angular-resume:serve:production"
+            },
+            "github": {
+              "devServerTarget": "angular-resume:serve:github"
             }
           }
         },

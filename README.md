@@ -7,13 +7,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Deployment to GitHub Pages
 
 Run:
+
 ```sh
-ng deploy
+ng deploy --build-target=angular-resume:build:github
 ```
 
 ### Deployment to Google Cloud
 
 On WSL configured with `ansible-playbook`, run:
+
 ```sh
 gcloud.sh angular-resume-publish && gcloud.sh angular-resume-up
 ```
@@ -23,6 +25,7 @@ gcloud.sh angular-resume-publish && gcloud.sh angular-resume-up
 Link: https://dev.to/this-is-angular/configure-prettier-and-eslint-with-angular-526c
 
 Run:
+
 ```sh
 ng add @angular-eslint/schematics
 npm install prettier --save-dev
