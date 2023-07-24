@@ -26,5 +26,6 @@ Run:
 ```sh
 ng add @angular-eslint/schematics
 npm install prettier --save-dev
+npm install prettier-eslint eslint-config-prettier eslint-plugin-prettier — save-dev
 ```
 
