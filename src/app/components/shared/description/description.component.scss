@@ -1,8 +1,8 @@
-@import "src/assets/styles/variables.scss";
+@import 'src/assets/styles/variables.scss';
 
 .description {
-  margin-top: .2rem;
-  margin-bottom: .2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
   color: var(--on-background);
   transition: $transition-delay;
 }

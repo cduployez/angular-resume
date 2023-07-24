@@ -1,11 +1,13 @@
 <span class="date-range">
-    <span>{{ dateRange.beginDate | date: dateRange.datePipeFormat }}</span>
-    <ng-container *ngIf="dateRange.beginDate !== dateRange.endDate">
-        <span> - </span>
-        <span *ngIf="dateRange.endDate else current">{{ dateRange.endDate | date: dateRange.datePipeFormat }}</span>
-    </ng-container>
+  <span>{{ dateRange.beginDate | date: dateRange.datePipeFormat }}</span>
+  <ng-container *ngIf="dateRange.beginDate !== dateRange.endDate">
+    <span> - </span>
+    <span *ngIf="dateRange.endDate; else current">{{
+      dateRange.endDate | date: dateRange.datePipeFormat
+    }}</span>
+  </ng-container>
 </span>
 
 <ng-template #current>
-    <span>Actuel</span>
+  <span>Actuel</span>
 </ng-template>

@@ -1,9 +1,8 @@
-import {LoadingMethod} from '../../model/ui/calling-method';
-import {LanguageDto} from '../../model/dtos/language-dto';
-import {LanguagesModel} from './languages-model';
-import {LanguagesHttpService} from '../../services/http/languages-http.service';
-import {DateRangeUtils} from '../../utils/date-range-utils';
-import {FormationDto} from '../../model/dtos/formation-dto';
+import { LoadingMethod } from '../../model/ui/calling-method';
+import { LanguageDto } from '../../model/dtos/language-dto';
+import { LanguagesModel } from './languages-model';
+import { LanguagesHttpService } from '../../services/http/languages-http.service';
+import { DateRangeUtils } from '../../utils/date-range-utils';
 
 export class LanguagesController {
   readonly findAllLanguagesMethod: LoadingMethod<LanguageDto[]> =
@@ -12,8 +11,7 @@ export class LanguagesController {
   constructor(
     private readonly model: LanguagesModel,
     private readonly languagesHttpService: LanguagesHttpService
-  ) {
-  }
+  ) {}
 
   get isLoading(): boolean {
     return this.findAllLanguagesMethod.isLoading;
@@ -24,11 +22,14 @@ export class LanguagesController {
       .call(() => this.languagesHttpService.findAll())
       .subscribe({
         next: (languages: LanguageDto[]) => {
-          this.model.languages = DateRangeUtils.sortByBeginDateDesc(languages, (language: LanguageDto) => language.dateRange);
+          this.model.languages = DateRangeUtils.sortByBeginDateDesc(
+            languages,
+            (language: LanguageDto) => language.dateRange
+          );
         },
         error: (error: unknown) => {
           console.error(error);
-        }
+        },
       });
   }
 }

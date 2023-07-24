@@ -1,4 +1,4 @@
-import { SkillEnum } from "../model/enums/skill.enum";
+import { SkillEnum } from '../model/enums/skill.enum';
 
 export class SkillEnumUtils {
   static readonly javaKeyword: SkillEnum[] = [SkillEnum.JAVA];

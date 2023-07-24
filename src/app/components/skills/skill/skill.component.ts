@@ -1,33 +1,27 @@
-import { Component, Input, OnDestroy, OnInit } from "@angular/core";
-import { SkillEnum } from "../../../model/enums/skill.enum";
-import { ActiveSkillsService } from "../../../services/ui/active-skills.service";
-import { SkillMessages } from "./skill-messages";
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { SkillEnum } from '../../../model/enums/skill.enum';
+import { ActiveSkillsService } from '../../../services/ui/active-skills.service';
+import { SkillMessages } from './skill-messages';
 
 @Component({
-  selector: "cv-skill",
-  templateUrl: "./skill.component.html",
-  styleUrls: ["./skill.component.scss"],
+  selector: 'cv-skill',
+  templateUrl: './skill.component.html',
+  styleUrls: ['./skill.component.scss'],
 })
 export class SkillComponent implements OnInit, OnDestroy {
   readonly messages: SkillMessages = new SkillMessages();
-
-  private _skillEnum: SkillEnum;
-
-  private _skillEnums: SkillEnum[];
-
   @Input()
   title: string;
-
   @Input()
   childrenKeywords: SkillEnum[];
-
   mouseInside = false;
-
   active = false;
-
   childrenActive = false;
+  private _skillEnums: SkillEnum[];
 
   constructor(private activeSkillsService: ActiveSkillsService) {}
+
+  private _skillEnum: SkillEnum;
 
   get skillEnum(): SkillEnum {
     return this._skillEnum;
@@ -50,13 +44,13 @@ export class SkillComponent implements OnInit, OnDestroy {
 
   checkActive(skillEnums: SkillEnum[]): void {
     if (!this.mouseInside) {
-      this.active = skillEnums?.some((s) => this._skillEnum === s);
+      this.active = skillEnums?.some(s => this._skillEnum === s);
     }
   }
 
   checkActiveChildren(skillEnums: SkillEnum[]): void {
     if (!this.mouseInside) {
-      this.childrenActive = skillEnums?.some((s) => this._skillEnum === s);
+      this.childrenActive = skillEnums?.some(s => this._skillEnum === s);
     }
   }
 
@@ -79,6 +73,6 @@ export class SkillComponent implements OnInit, OnDestroy {
   }
 
   optionalClass(skillEnum: SkillEnum): string {
-    return skillEnum ? this.messages.skillCssClass(skillEnum) : "";
+    return skillEnum ? this.messages.skillCssClass(skillEnum) : '';
   }
 }

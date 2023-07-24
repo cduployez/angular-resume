@@ -1,3 +1,8 @@
-<cv-skill [skillEnum]="item.skillEnum" [title]="item.title" [childrenKeywords]="item.childrenKeywords">
-    <fa-icon [icon]="item.faIcon" [class]="optionalClass(item.skillEnum)"></fa-icon>
+<cv-skill
+  [childrenKeywords]="item.childrenKeywords"
+  [skillEnum]="item.skillEnum"
+  [title]="item.title">
+  <fa-icon
+    [class]="optionalClass(item.skillEnum)"
+    [icon]="item.faIcon"></fa-icon>
 </cv-skill>

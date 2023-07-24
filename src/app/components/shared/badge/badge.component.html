@@ -1,4 +1,6 @@
-<span (mouseenter)="enableBadge()"
-      (mouseleave)="disableBadge()"
-      [ngClass]="{active: active}"
->{{ badge.title }}</span>
+<span
+  (mouseenter)="enableBadge()"
+  (mouseleave)="disableBadge()"
+  [ngClass]="{ active: active }"
+  >{{ badge.title }}</span
+>

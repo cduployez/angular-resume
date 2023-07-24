@@ -8,9 +8,8 @@ describe('SubtitleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SubtitleComponent ]
-    })
-    .compileComponents();
+      declarations: [SubtitleComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

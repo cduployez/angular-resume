@@ -1,5 +1,5 @@
-import {SkillDto} from '../../model/dtos/skill-dto';
-import {SkillJson} from '../../model/jsons/skill-json';
+import { SkillDto } from '../../model/dtos/skill-dto';
+import { SkillJson } from '../../model/jsons/skill-json';
 
 export class SkillDtoMapper {
   static fromSkillJson(json: SkillJson): SkillDto {

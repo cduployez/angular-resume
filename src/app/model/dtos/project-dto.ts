@@ -1,4 +1,4 @@
-import {SkillBadgeDto} from './skill-badge-dto';
+import { SkillBadgeDto } from './skill-badge-dto';
 
 export class ProjectDto {
   /**

@@ -1,5 +1,5 @@
-import {HobbyDto} from '../../model/dtos/hobby-dto';
-import {HobbyJson} from '../../model/jsons/hobby-json';
+import { HobbyDto } from '../../model/dtos/hobby-dto';
+import { HobbyJson } from '../../model/jsons/hobby-json';
 
 export class HobbyDtoMapper {
   static fromHobbyJson(json: HobbyJson): HobbyDto {

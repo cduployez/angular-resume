@@ -1,4 +1,4 @@
-import {DateRangeDto} from './date-range-dto';
+import { DateRangeDto } from './date-range-dto';
 
 export class FormationDto {
   /**

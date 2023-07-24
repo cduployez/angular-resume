@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import {
   faAngleDoubleUp,
   faCode,
@@ -8,9 +8,9 @@ import {
   faKey,
   faLeaf,
   faMinus,
-  faPlus
+  faPlus,
 } from '@fortawesome/free-solid-svg-icons';
-import {IconDefinition} from '@fortawesome/fontawesome-common-types';
+import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import {
   faAndroid,
   faAngular,
@@ -22,14 +22,13 @@ import {
   faHtml5,
   faJava,
   faLinkedin,
-  faPython
+  faPython,
 } from '@fortawesome/free-brands-svg-icons';
-import {faMoon as faMoonSolid} from '@fortawesome/free-solid-svg-icons/faMoon';
-import {faMoon as faMoonRegular} from '@fortawesome/free-regular-svg-icons';
+import { faMoon as faMoonSolid } from '@fortawesome/free-solid-svg-icons/faMoon';
+import { faMoon as faMoonRegular } from '@fortawesome/free-regular-svg-icons';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class IconsService {
-
   /**
    * Font-Awesome - code
    */
@@ -148,5 +147,4 @@ export class IconsService {
    * Used for Gitlab-CI
    */
   readonly faGitlab: IconDefinition = faGitlab;
-
 }

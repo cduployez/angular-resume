@@ -1,5 +1,4 @@
 export class HobbyDto {
-
   title: string;
 
   ellipsis: boolean;
@@ -20,5 +19,4 @@ export class HobbyDto {
   get valuesFormat(): string {
     return this._valuesFormat;
   }
-
 }

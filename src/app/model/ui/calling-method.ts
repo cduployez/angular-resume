@@ -1,4 +1,4 @@
-import { EMPTY, finalize, Observable } from "rxjs";
+import { EMPTY, finalize, Observable } from 'rxjs';
 
 /**
  * Wrapper of an asynchronous request.

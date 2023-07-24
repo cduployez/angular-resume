@@ -1,15 +1,15 @@
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {HttpConfigService} from '../config/http-config.service';
-import {HttpService} from '../config/http.service';
-import {ProjectDtoMapper} from '../../mappers/dtos/project-dto-mapper';
-import {ProjectDto} from '../../model/dtos/project-dto';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpConfigService } from '../config/http-config.service';
+import { HttpService } from '../config/http.service';
+import { ProjectDtoMapper } from '../../mappers/dtos/project-dto-mapper';
+import { ProjectDto } from '../../model/dtos/project-dto';
 
 /**
  * HTTP service for languages
  */
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProjectsHttpService extends HttpService {
   constructor(httpConfigService: HttpConfigService) {

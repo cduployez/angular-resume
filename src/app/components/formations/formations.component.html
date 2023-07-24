@@ -1,5 +1,5 @@
-<cv-category categoryTitle="Formation" [loading]="controller.isLoading">
-  <cv-item-container *ngFor="let formation of model.formations;">
+<cv-category [loading]="controller.isLoading" categoryTitle="Formation">
+  <cv-item-container *ngFor="let formation of model.formations">
     <div>
       <cv-date-prefix [dateRange]="formation.dateRange"></cv-date-prefix>
       <cv-title [title]="formation.title"></cv-title>
@@ -7,6 +7,3 @@
     <cv-descriptions [descriptions]="formation.descriptions"></cv-descriptions>
   </cv-item-container>
 </cv-category>
-
-
-

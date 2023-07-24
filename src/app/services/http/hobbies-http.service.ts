@@ -1,15 +1,15 @@
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {HttpConfigService} from '../config/http-config.service';
-import {HttpService} from '../config/http.service';
-import {HobbyDtoMapper} from '../../mappers/dtos/hobby-dto-mapper';
-import {HobbyDto} from '../../model/dtos/hobby-dto';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpConfigService } from '../config/http-config.service';
+import { HttpService } from '../config/http.service';
+import { HobbyDtoMapper } from '../../mappers/dtos/hobby-dto-mapper';
+import { HobbyDto } from '../../model/dtos/hobby-dto';
 
 /**
  * HTTP service for languages
  */
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HobbiesHttpService extends HttpService {
   constructor(httpConfigService: HttpConfigService) {

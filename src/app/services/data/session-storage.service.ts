@@ -1,36 +1,36 @@
-import {Injectable} from '@angular/core';
-import {ThemeEnum} from '../../model/ui/theme.enum';
+import { Injectable } from '@angular/core';
+import { ThemeEnum } from '../../model/ui/theme.enum';
 
 const KEY_MENU_BAR_MINIMIZED = 'menuBarMinimized';
 const KEY_THEME = 'theme';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class SessionStorageService {
+  constructor() {
+    this._menuBarMinimized =
+      sessionStorage[KEY_MENU_BAR_MINIMIZED] === 'true' || false;
+    this._theme = sessionStorage[KEY_THEME];
+  }
 
-    private _menuBarMinimized = false;
-    private _theme: ThemeEnum;
+  private _menuBarMinimized = false;
 
-    constructor() {
-        this._menuBarMinimized = sessionStorage[KEY_MENU_BAR_MINIMIZED] === 'true' || false;
-        this._theme = sessionStorage[KEY_THEME];
-    }
+  get menuBarMinimized(): boolean {
+    return this._menuBarMinimized;
+  }
 
-    get theme(): ThemeEnum {
-        return this._theme;
-    }
+  set menuBarMinimized(minimized: boolean) {
+    this._menuBarMinimized = minimized;
+    sessionStorage[KEY_MENU_BAR_MINIMIZED] = minimized;
+  }
 
-    set theme(theme: ThemeEnum) {
-        this._theme = theme;
-        sessionStorage[KEY_THEME] = theme;
-    }
+  private _theme: ThemeEnum;
 
-    get menuBarMinimized(): boolean {
-        return this._menuBarMinimized;
-    }
+  get theme(): ThemeEnum {
+    return this._theme;
+  }
 
-    set menuBarMinimized(minimized: boolean) {
-        this._menuBarMinimized = minimized;
-        sessionStorage[KEY_MENU_BAR_MINIMIZED] = minimized;
-    }
-
+  set theme(theme: ThemeEnum) {
+    this._theme = theme;
+    sessionStorage[KEY_THEME] = theme;
+  }
 }

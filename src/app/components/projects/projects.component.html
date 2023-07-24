@@ -1,4 +1,6 @@
-<cv-category categoryTitle="Projets informatiques" [loading]="controller.isLoading">
+<cv-category
+  [loading]="controller.isLoading"
+  categoryTitle="Projets informatiques">
   <cv-item-container *ngFor="let project of model.projects">
     <div>
       <span class="title">{{ project.project }}</span>

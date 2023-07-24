@@ -1,39 +1,40 @@
 <section class="container">
+  <div class="side side-left">
+    <img [class]="themeService.theme" [src]="imageService.avatarUrl" />
+  </div>
 
-    <div class="side side-left">
-        <img [class]="themeService.theme" [src]="imageService.avatarUrl">
+  <div class="main">
+    <!-- Nom -->
+    <h1>{{ profileService.fullName }}</h1>
+    <!-- Infos complémentaires -->
+    <div class="main-grid info">
+      <div class="main-grid-col main-grid-col-left">
+        <ul>
+          <li *ngFor="let info of leftInfoList">{{ info }}</li>
+        </ul>
+      </div>
+      <div class="main-grid-col main-grid-col-right">
+        <ul>
+          <li *ngFor="let info of rightInfoList">{{ info }}</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="main">
-        <!-- Nom -->
-        <h1>{{ profileService.fullName }}</h1>
-        <!-- Infos complémentaires -->
-        <div class="main-grid info">
-            <div class="main-grid-col main-grid-col-left">
-                <ul>
-                    <li *ngFor="let info of leftInfoList">{{ info }}</li>
-                </ul>
-            </div>
-            <div class="main-grid-col main-grid-col-right">
-                <ul>
-                    <li *ngFor="let info of rightInfoList">{{ info }}</li>
-                </ul>
-            </div>
-        </div>
-        <!-- Contact -->
-        <div class="main-grid contact">
-            <div class="main-grid-col flex-merge-row">
-                <ul>
-                    <li><a href="mailto:{{profileService.email}}">{{profileService.email}}</a></li>
-                </ul>
-            </div>
-        </div>
+    <!-- Contact -->
+    <div class="main-grid contact">
+      <div class="main-grid-col flex-merge-row">
+        <ul>
+          <li>
+            <a href="mailto:{{ profileService.email }}">{{
+              profileService.email
+            }}</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 
-    <div class="side side-right">
-        <h2>{{goalTitle}}</h2>
-        <p *ngFor="let goal of profileService.goals">{{goal}}</p>
-    </div>
-
-
+  <div class="side side-right">
+    <h2>{{ goalTitle }}</h2>
+    <p *ngFor="let goal of profileService.goals">{{ goal }}</p>
+  </div>
 </section>

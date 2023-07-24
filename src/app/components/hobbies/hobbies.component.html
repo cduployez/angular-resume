@@ -1,7 +1,9 @@
 <cv-category categoryTitle="Loisirs">
   <cv-item-container *ngFor="let hobby of model.hobbies">
-    <span class="title">{{hobby.title}}</span>
-    <span class="values">{{hobby.valuesFormat}}
-      <ng-container *ngIf="hobby.ellipsis">...</ng-container></span>
+    <span class="title">{{ hobby.title }}</span>
+    <span class="values"
+      >{{ hobby.valuesFormat }}
+      <ng-container *ngIf="hobby.ellipsis">...</ng-container></span
+    >
   </cv-item-container>
 </cv-category>

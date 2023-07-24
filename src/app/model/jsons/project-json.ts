@@ -1,4 +1,4 @@
-import {SkillBadgeJson} from './skill-badge-json';
+import { SkillBadgeJson } from './skill-badge-json';
 
 export interface ProjectJson {
   /**
