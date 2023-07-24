@@ -1,13 +1,13 @@
 import {Injectable} from '@angular/core';
 import {ThemeEnum} from '../../model/ui/theme.enum';
 
-const KEY_MENU_BAR_MINIMIZED: string = 'menuBarMinimized';
-const KEY_THEME: string = 'theme';
+const KEY_MENU_BAR_MINIMIZED = 'menuBarMinimized';
+const KEY_THEME = 'theme';
 
 @Injectable({providedIn: 'root'})
 export class SessionStorageService {
 
-    private _menuBarMinimized: boolean = false;
+    private _menuBarMinimized = false;
     private _theme: ThemeEnum;
 
     constructor() {

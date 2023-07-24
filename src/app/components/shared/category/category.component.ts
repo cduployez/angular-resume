@@ -31,12 +31,12 @@ export class CategoryComponent implements OnInit {
     categoryTitle: string;
 
     @Input()
-    loading: boolean = false;
+    loading = false;
 
     /**
      * true if category is displayed, false if hidden
      */
-    categoryDisplayed: boolean = true;
+    categoryDisplayed = true;
 
     /**
      * openClose animation state

@@ -12,9 +12,9 @@ export class BadgeComponent implements OnInit, OnDestroy {
   @Input()
   badge: SkillBadgeDto;
 
-  active: boolean = false;
+  active = false;
 
-  mouseInside: boolean = false;
+  mouseInside = false;
 
   constructor(private activeSkillsService: ActiveSkillsService) {}
 

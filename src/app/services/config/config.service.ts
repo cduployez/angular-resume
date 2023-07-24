@@ -15,7 +15,7 @@ export class ConfigService implements IConfig {
   /**
    * Indicates if the config is loaded
    */
-  loaded: boolean = false;
+  loaded = false;
 
   /**
    * Config

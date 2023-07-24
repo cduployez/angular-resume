@@ -21,11 +21,11 @@ export class SkillComponent implements OnInit, OnDestroy {
   @Input()
   childrenKeywords: SkillEnum[];
 
-  mouseInside: boolean = false;
+  mouseInside = false;
 
-  active: boolean = false;
+  active = false;
 
-  childrenActive: boolean = false;
+  childrenActive = false;
 
   constructor(private activeSkillsService: ActiveSkillsService) {}
 

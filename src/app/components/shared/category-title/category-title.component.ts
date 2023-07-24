@@ -12,7 +12,7 @@ export class CategoryTitleComponent {
     categoryTitle: string;
 
     @Input()
-    categoryDisplayed: boolean = true;
+    categoryDisplayed = true;
 
     constructor(public iconsService: IconsService) {
     }

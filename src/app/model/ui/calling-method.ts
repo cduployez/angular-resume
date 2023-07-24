@@ -14,7 +14,7 @@ export class LoadingMethod<T> {
   /**
    * Indicates if there is a request in progress
    */
-  private _isLoading: boolean = false;
+  private _isLoading = false;
 
   /**
    * Indicates if there is a request in progress
