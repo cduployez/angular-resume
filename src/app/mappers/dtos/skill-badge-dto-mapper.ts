@@ -3,11 +3,7 @@ import { SkillBadgeJson } from '../../model/jsons/skill-badge-json';
 
 export class SkillBadgeDtoMapper {
   static fromSkillBadgeJson(json: SkillBadgeJson): SkillBadgeDto {
-    const dto: SkillBadgeDto = new SkillBadgeDto();
-    dto.title = json.title;
-    dto.keywords = json.keywords;
-    dto.childrenKeywords = json.childrenKeywords;
-    return dto;
+    return new SkillBadgeDto(json.title, json.keywords, json.childrenKeywords);
   }
 
   static fromSkillBadgeJsons(jsons: SkillBadgeJson[]): SkillBadgeDto[] {

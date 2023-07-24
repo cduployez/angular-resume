@@ -4,7 +4,7 @@ import { ThemeEnum } from '../../model/ui/theme.enum';
 import { Subject } from 'rxjs';
 import { ThemeEnumUtils } from '../../utils/theme-enum-utils';
 
-const THEMES: ThemeEnum[] = Object.keys(ThemeEnum).map(k => ThemeEnum[k]);
+const THEMES: ThemeEnum[] = [ThemeEnum.LIGHT, ThemeEnum.DARK];
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {

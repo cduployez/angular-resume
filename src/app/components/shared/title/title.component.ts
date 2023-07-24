@@ -1,18 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'cv-title',
   templateUrl: './title.component.html',
-  styleUrls: ['./title.component.scss'],
+  styleUrls: ['./title.component.scss']
 })
-export class TitleComponent implements OnInit {
+export class TitleComponent {
   @Input()
-  title: string;
+  title: string = '';
 
   @Input()
-  detail: string = null;
-
-  constructor() {}
-
-  ngOnInit(): void {}
+  detail: string | null = null;
 }

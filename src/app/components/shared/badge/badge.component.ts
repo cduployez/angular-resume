@@ -6,15 +6,15 @@ import { ActiveSkillsService } from '../../../services/ui/active-skills.service'
 @Component({
   selector: 'cv-badge',
   templateUrl: './badge.component.html',
-  styleUrls: ['./badge.component.scss'],
+  styleUrls: ['./badge.component.scss']
 })
 export class BadgeComponent implements OnInit, OnDestroy {
   @Input()
-  badge: SkillBadgeDto;
+  badge: SkillBadgeDto | null = null;
 
-  active = false;
+  active: boolean = false;
 
-  mouseInside = false;
+  mouseInside: boolean = false;
 
   constructor(private activeSkillsService: ActiveSkillsService) {}
 
@@ -31,22 +31,22 @@ export class BadgeComponent implements OnInit, OnDestroy {
   checkActive(skillEnums: SkillEnum[]): void {
     if (!this.mouseInside) {
       this.active = skillEnums?.some(
-        (s: SkillEnum) => this.badge.keywords?.includes(s)
+        (s: SkillEnum) => this.badge?.keywords?.includes(s)
       );
     }
   }
 
   enableBadge(): void {
     this.mouseInside = true;
-    this.activeSkillsService.activeSkillEnums = this.badge?.keywords;
+    this.activeSkillsService.activeSkillEnums = this.badge?.keywords || [];
     this.activeSkillsService.activeChildrenSkillEnums =
-      this.badge?.childrenKeywords;
+      this.badge?.childrenKeywords || [];
   }
 
   disableBadge(): void {
     this.mouseInside = false;
-    this.activeSkillsService.activeSkillEnums = null;
-    this.activeSkillsService.activeChildrenSkillEnums = null;
+    this.activeSkillsService.activeSkillEnums = [];
+    this.activeSkillsService.activeChildrenSkillEnums = [];
     this.active = false;
   }
 }

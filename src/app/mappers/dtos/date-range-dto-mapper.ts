@@ -5,8 +5,8 @@ import { DateUtils } from '../../utils/date-utils';
 export class DateRangeDtoMapper {
   static fromDateRangeJson(json: DateRangeJson): DateRangeDto {
     return new DateRangeDto(
-      DateUtils.fromDateJson(json.beginDate),
-      DateUtils.fromDateJson(json.endDate),
+      DateUtils.fromDateJson(json.beginDate) || new Date(),
+      DateUtils.fromDateJson(json.endDate) || new Date(),
       json.dateRangeType
     );
   }

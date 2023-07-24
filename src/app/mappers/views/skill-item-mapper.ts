@@ -5,6 +5,7 @@ import { FaSkillItemMapper } from './fa-skill-item-mapper';
 import { SkillDto } from '../../model/dtos/skill-dto';
 import { TextSkillItemMapper } from './text-skill-item-mapper';
 import { JsSkillItemMapper } from './js-skill-item-mapper';
+import { ArrayUtils } from '../../utils/array-utils';
 
 export class SkillItemMapper {
   static readonly fromSkillBadgeDtoMapperRecord: Partial<
@@ -14,10 +15,9 @@ export class SkillItemMapper {
       FaSkillItemMapper.fromSkillDto(dto, iconsService.faJava),
     SPRING: (dto: SkillDto, iconsService: IconsService) =>
       FaSkillItemMapper.fromSkillDto(dto, iconsService.faLeaf),
-    C_PLUS_PLUS: (dto: SkillDto, iconsService: IconsService) =>
+    C_PLUS_PLUS: (dto: SkillDto) =>
       TextSkillItemMapper.fromSkillDto(dto, 'C++'),
-    C_SHARP: (dto: SkillDto, iconsService: IconsService) =>
-      TextSkillItemMapper.fromSkillDto(dto, 'C#'),
+    C_SHARP: (dto: SkillDto) => TextSkillItemMapper.fromSkillDto(dto, 'C#'),
     PYTHON: (dto: SkillDto, iconsService: IconsService) =>
       FaSkillItemMapper.fromSkillDto(dto, iconsService.faPython),
     ANDROID: (dto: SkillDto, iconsService: IconsService) =>
@@ -28,10 +28,8 @@ export class SkillItemMapper {
       FaSkillItemMapper.fromSkillDto(dto, iconsService.faHtml5),
     CSS: (dto: SkillDto, iconsService: IconsService) =>
       FaSkillItemMapper.fromSkillDto(dto, iconsService.faCss3),
-    JAVASCRIPT: (dto: SkillDto, iconsService: IconsService) =>
-      JsSkillItemMapper.fromSkillDto(dto, 'JS'),
-    TYPESCRIPT: (dto: SkillDto, iconsService: IconsService) =>
-      JsSkillItemMapper.fromSkillDto(dto, 'TS'),
+    JAVASCRIPT: (dto: SkillDto) => JsSkillItemMapper.fromSkillDto(dto, 'JS'),
+    TYPESCRIPT: (dto: SkillDto) => JsSkillItemMapper.fromSkillDto(dto, 'TS'),
     GITLAB_CI: (dto: SkillDto, iconsService: IconsService) =>
       FaSkillItemMapper.fromSkillDto(dto, iconsService.faGitlab),
     DOCKER: (dto: SkillDto, iconsService: IconsService) =>
@@ -43,7 +41,7 @@ export class SkillItemMapper {
     MYSQL: (dto: SkillDto, iconsService: IconsService) =>
       FaSkillItemMapper.fromSkillDto(dto, iconsService.faDatabase),
     MONGODB: (dto: SkillDto, iconsService: IconsService) =>
-      FaSkillItemMapper.fromSkillDto(dto, iconsService.faEnvira),
+      FaSkillItemMapper.fromSkillDto(dto, iconsService.faEnvira)
   };
 
   static fromSkillDto(
@@ -51,7 +49,7 @@ export class SkillItemMapper {
     iconsService: IconsService
   ): SkillItem | null {
     const item: SkillItem | null =
-      SkillItemMapper.fromSkillBadgeDtoMapperRecord?.[dto.keyword](
+      SkillItemMapper.fromSkillBadgeDtoMapperRecord[dto.keyword]?.(
         dto,
         iconsService
       ) || null;
@@ -67,6 +65,6 @@ export class SkillItemMapper {
   ): SkillItem[] {
     return (dtos || [])
       .map((dto: SkillDto) => SkillItemMapper.fromSkillDto(dto, iconsService))
-      .filter(dto => !!dto);
+      .filter(ArrayUtils.notEmpty);
   }
 }

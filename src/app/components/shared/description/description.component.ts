@@ -1,15 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'cv-descriptions',
   templateUrl: './description.component.html',
-  styleUrls: ['./description.component.scss'],
+  styleUrls: ['./description.component.scss']
 })
-export class DescriptionComponent implements OnInit {
+export class DescriptionComponent {
   @Input()
-  descriptions: string[];
-
-  constructor() {}
-
-  ngOnInit(): void {}
+  descriptions: string[] = [];
 }

@@ -1,6 +1,7 @@
 <span
   (mouseenter)="enableBadge()"
   (mouseleave)="disableBadge()"
+  *ngIf="badge"
   [ngClass]="{ active: active }"
   >{{ badge.title }}</span
 >

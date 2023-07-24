@@ -15,4 +15,10 @@ export class FormationDto {
    * Descriptions
    */
   descriptions: string[];
+
+  constructor(dateRange: DateRangeDto, title: string, descriptions: string[]) {
+    this.dateRange = dateRange;
+    this.title = title;
+    this.descriptions = descriptions;
+  }
 }

@@ -6,31 +6,37 @@ import { SkillMessages } from './skill-messages';
 @Component({
   selector: 'cv-skill',
   templateUrl: './skill.component.html',
-  styleUrls: ['./skill.component.scss'],
+  styleUrls: ['./skill.component.scss']
 })
 export class SkillComponent implements OnInit, OnDestroy {
   readonly messages: SkillMessages = new SkillMessages();
+
   @Input()
-  title: string;
+  title: string = '';
+
   @Input()
-  childrenKeywords: SkillEnum[];
-  mouseInside = false;
-  active = false;
-  childrenActive = false;
-  private _skillEnums: SkillEnum[];
+  childrenKeywords: SkillEnum[] = [];
+
+  mouseInside: boolean = false;
+
+  active: boolean = false;
+
+  childrenActive: boolean = false;
+
+  private _skillEnums: SkillEnum[] = [];
 
   constructor(private activeSkillsService: ActiveSkillsService) {}
 
-  private _skillEnum: SkillEnum;
+  private _skillEnum: SkillEnum | null = null;
 
-  get skillEnum(): SkillEnum {
+  get skillEnum(): SkillEnum | null {
     return this._skillEnum;
   }
 
   @Input()
-  set skillEnum(value: SkillEnum) {
+  set skillEnum(value: SkillEnum | null) {
     this._skillEnum = value;
-    this._skillEnums = [value];
+    this._skillEnums = value ? [value] : [];
   }
 
   ngOnInit(): void {
@@ -66,13 +72,13 @@ export class SkillComponent implements OnInit, OnDestroy {
 
   disableBadge(): void {
     this.mouseInside = false;
-    this.activeSkillsService.activeSkillEnums = null;
-    this.activeSkillsService.activeChildrenSkillEnums = null;
+    this.activeSkillsService.activeSkillEnums = [];
+    this.activeSkillsService.activeChildrenSkillEnums = [];
     this.active = false;
     this.childrenActive = false;
   }
 
-  optionalClass(skillEnum: SkillEnum): string {
+  optionalClass(skillEnum: SkillEnum | null): string {
     return skillEnum ? this.messages.skillCssClass(skillEnum) : '';
   }
 }

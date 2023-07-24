@@ -4,14 +4,14 @@ import { IconsService } from '../../../services/ui/icons.service';
 @Component({
   selector: 'cv-category-title',
   templateUrl: 'category-title.component.html',
-  styleUrls: ['category-title.component.scss'],
+  styleUrls: ['category-title.component.scss']
 })
 export class CategoryTitleComponent {
   @Input()
-  categoryTitle: string;
+  categoryTitle: string = '';
 
   @Input()
-  categoryDisplayed = true;
+  categoryDisplayed: boolean = true;
 
   constructor(public iconsService: IconsService) {}
 }

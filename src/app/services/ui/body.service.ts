@@ -12,7 +12,7 @@ export class BodyService {
     }
   }
 
-  removeClass(renderer: Renderer2, className: string): void {
+  removeClass(renderer: Renderer2, className: string | undefined): void {
     if (className) {
       renderer.removeClass(this.body, className);
     }

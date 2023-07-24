@@ -6,6 +6,7 @@ import { IEnvironment } from '../app/model/config/ienvironment';
 
 export const environment: IEnvironment = {
   production: false,
+  defaultBackResumeUrl: 'https://clement.duployez.fr/back-resume'
 };
 
 /*
