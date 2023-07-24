@@ -37,7 +37,7 @@ export class ConfigService implements IConfig {
 
   load(): Promise<void> {
     return lastValueFrom(this.httpClient
-      .get<IConfig>('/assets/config/config.json'))
+      .get<IConfig>('assets/config/config.json'))
       .then((config: IConfig) => {
         this.config = config;
         this.loaded = true;
