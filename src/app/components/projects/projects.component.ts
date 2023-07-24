@@ -1,16 +1,37 @@
-import {Component} from '@angular/core';
-import {ProjectItem} from '../../model/project/project-item';
-import {ProjectFactory} from '../../server/project.factory';
+import {Component, OnInit} from '@angular/core';
+import {ProjectsModel} from './projects-model';
+import {ProjectsController} from './projects-controller';
+import {ProjectsHttpService} from '../../services/http/projects-http.service';
 
 @Component({
-    selector: 'cv-projects',
-    templateUrl: './projects.component.html',
-    styleUrls: ['./projects.component.scss']
+  selector: 'cv-projects',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
 
-    projectItems: ProjectItem[] = ProjectFactory.getAll();
+  /**
+   * Model of the component
+   */
+  readonly model: ProjectsModel = new ProjectsModel();
 
-    constructor() {
-    }
+  /**
+   * Controller of the component
+   */
+  readonly controller: ProjectsController = new ProjectsController(this.model, this.projectsHttpService);
+
+  /**
+   * Constructor
+   *
+   * @param projectsHttpService HTTP service for projects
+   */
+  constructor(private readonly projectsHttpService: ProjectsHttpService) {
+  }
+
+  /**
+   * Init component
+   */
+  ngOnInit(): void {
+    this.controller.init();
+  }
 }
