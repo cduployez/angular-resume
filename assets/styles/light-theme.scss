@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import 'variables.scss';
 
 .light-theme {
   --primary: #{$blue};
@@ -20,13 +20,11 @@
   --on-footer: #{$light-blue};
 
   --badge: #{$white};
-  --on-badge: #90A4AE;
-
+  --on-badge: #90a4ae;
 
   --icon: #{$blue};
   --on-icon: #{$white};
   --icon-hover-color: #{$black};
   --icon-hover-bg: #{$white};
   --icon-inner-text: var(--icon);
-
 }
