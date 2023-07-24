@@ -1,5 +1,5 @@
-import { SkillEnum } from "../../enums/skill.enum";
-import { SkillTypeEnum } from "../skill-type-enum";
+import {SkillEnum} from '../../enums/skill.enum';
+import {SkillTypeEnum} from '../skill-type-enum';
 
 export class SkillItem {
   title: string;

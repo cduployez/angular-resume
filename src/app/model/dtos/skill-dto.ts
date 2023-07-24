@@ -1,7 +1,7 @@
 import {SkillEnum} from '../enums/skill.enum';
 
-export class SkillBadgeDto {
+export class SkillDto {
   title: string;
-  keywords: SkillEnum[];
+  keyword: SkillEnum;
   childrenKeywords: SkillEnum[];
 }

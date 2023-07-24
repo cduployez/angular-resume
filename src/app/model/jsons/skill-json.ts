@@ -1,7 +1,7 @@
 import {SkillEnum} from '../enums/skill.enum';
 
-export class SkillBadgeDto {
+export interface SkillJson {
   title: string;
-  keywords: SkillEnum[];
+  keyword: SkillEnum;
   childrenKeywords: SkillEnum[];
 }

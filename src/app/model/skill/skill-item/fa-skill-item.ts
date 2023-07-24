@@ -9,10 +9,10 @@ export class FaSkillItem extends SkillItem {
   constructor(
     title: string,
     skillEnum: SkillEnum,
-    keywords: SkillEnum[],
+    childrenKeywords: SkillEnum[],
     faIcon: IconDefinition
   ) {
-    super(title, skillEnum, keywords, SkillTypeEnum.FA);
+    super(title, skillEnum, childrenKeywords, SkillTypeEnum.FA);
     this.faIcon = faIcon;
   }
 }

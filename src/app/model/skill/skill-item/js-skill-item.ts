@@ -1,6 +1,6 @@
-import { SkillEnum } from "../../enums/skill.enum";
-import { SkillTypeEnum } from "../skill-type-enum";
-import { SkillItem } from "./skill-item";
+import {SkillEnum} from '../../enums/skill.enum';
+import {SkillTypeEnum} from '../skill-type-enum';
+import {SkillItem} from './skill-item';
 
 export class JsSkillItem extends SkillItem {
   iconText: string;
