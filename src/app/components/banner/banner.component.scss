@@ -1,9 +1,10 @@
-@import 'src/assets/styles/variables.scss';
+@use 'variables/variables';
+@use 'variables/theme-variables';
 
 h1 {
-  background-color: var(--banner);
-  color: var(--on-banner);
-  transition: $transition-delay;
+  background-color: theme-variables.$banner;
+  color: theme-variables.$on-banner;
+  transition: variables.$transition-delay;
 
   padding: 0.5rem;
   border-radius: 5px;

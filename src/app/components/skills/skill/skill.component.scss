@@ -1,4 +1,5 @@
-@import 'src/assets/styles/variables.scss';
+@use 'variables/variables';
+@use 'variables/theme-variables';
 
 .icon-with-title {
   display: flex;
@@ -17,22 +18,22 @@
     width: 3rem;
     border-radius: 50%;
     /* Colors */
-    background-color: var(--icon);
-    color: var(--on-icon);
+    background-color: theme-variables.$icon;
+    color: theme-variables.$on-icon;
     /* Alignment */
     text-align: center;
     margin-left: 0.2em;
     margin-right: 0.2em;
-    transition: $transition-delay;
+    transition: variables.$transition-delay;
   }
 
   .icon:hover,
   .icon.active {
-    color: var(--icon-hover-color);
-    background-color: var(--icon-hover-bg);
+    color: theme-variables.$on-icon-hover;
+    background-color: theme-variables.$icon-hover;
   }
 
   .title {
-    color: var(--on-background);
+    color: theme-variables.$on-background;
   }
 }

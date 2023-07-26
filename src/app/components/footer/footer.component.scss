@@ -1,16 +1,17 @@
-@import 'src/assets/styles/variables.scss';
+@use 'variables/variables';
+@use 'variables/theme-variables';
 
 p {
   text-align: center;
   font-size: 25pt;
 
   fa-icon {
-    color: var(--on-footer);
+    color: theme-variables.$on-footer;
     cursor: pointer;
-    transition: $transition-delay;
+    transition: variables.$transition-delay;
   }
 
   fa-icon:hover {
-    color: var(--primary);
+    color: theme-variables.$primary;
   }
 }

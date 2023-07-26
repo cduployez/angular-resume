@@ -1,13 +1,14 @@
-@import 'src/assets/styles/variables.scss';
+@use 'variables/variables';
+@use 'variables/theme-variables';
 
 .title {
   font-weight: bold;
-  color: var(--on-background);
-  transition: $transition-delay;
+  color: theme-variables.$on-background;
+  transition: variables.$transition-delay;
 }
 
 .detail {
   margin-left: 0.2rem;
-  color: var(--on-background);
-  transition: $transition-delay;
+  color: theme-variables.$on-background;
+  transition: variables.$transition-delay;
 }

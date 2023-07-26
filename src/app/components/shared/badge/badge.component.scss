@@ -1,19 +1,20 @@
-@import 'src/assets/styles/variables.scss';
+@use 'variables/variables';
+@use 'variables/theme-variables';
 
 span {
   display: inline-block;
   margin: 0.2rem;
   padding: 0.2rem;
   border-radius: 5px;
-  border: 1px solid var(--on-badge);
-  color: var(--on-badge);
-  background-color: var(--badge);
-  transition: $transition-delay;
+  border: 1px solid theme-variables.$on-badge;
+  color: theme-variables.$on-badge;
+  background-color: theme-variables.$badge;
+  transition: variables.$transition-delay;
   cursor: default;
 }
 
 span:hover,
 span.active {
-  color: var(--badge);
-  background-color: var(--on-badge);
+  color: theme-variables.$badge;
+  background-color: theme-variables.$on-badge;
 }

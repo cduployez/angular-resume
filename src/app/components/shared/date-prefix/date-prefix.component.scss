@@ -1,12 +1,13 @@
-@import 'src/assets/styles/variables.scss';
+@use 'variables/variables';
+@use 'variables/theme-variables';
 
 .date-range {
-  color: var(--primary);
+  color: theme-variables.$primary;
   text-transform: capitalize;
 }
 
 .date-range:after {
-  content: $title-delimiter;
+  content: variables.$title-delimiter;
   margin-left: 0.2rem;
   margin-right: 0.2rem;
 }

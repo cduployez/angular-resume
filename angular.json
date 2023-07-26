@@ -32,8 +32,7 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/assets/styles/themes.scss",
-                "src/assets/styles/variables.scss"
+                "src/assets/styles"
               ]
             },
             "scripts": [],
