@@ -1,3 +1,4 @@
-export interface IConfig {
+export type IConfig = {
+  avatarUrl: string;
   backResumeUrl: string;
-}
+};

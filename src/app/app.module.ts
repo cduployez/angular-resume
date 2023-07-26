@@ -35,6 +35,7 @@ import { SkillComponent } from './components/skills/skill/skill.component';
 import { TextSkillComponent } from './components/skills/text-skill/text-skill.component';
 import { ConfigService } from './services/config/config.service';
 import { environment } from '../environments/environment';
+import { LoaderComponent } from './components/loader/loader.component';
 
 // the second parameter 'fr-FR' is optional
 registerLocaleData(localeFr, 'fr-FR');
@@ -73,6 +74,7 @@ export function loadConfig(configService: ConfigService): () => Promise<void> {
     FooterComponent,
     JsSkillComponent,
     CategoryComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -81,8 +83,8 @@ export function loadConfig(configService: ConfigService): () => Promise<void> {
     // Font Awesome
     FontAwesomeModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-    }),
+      enabled: environment.production
+    })
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' },
@@ -90,9 +92,9 @@ export function loadConfig(configService: ConfigService): () => Promise<void> {
       provide: APP_INITIALIZER,
       useFactory: loadConfig,
       deps: [ConfigService],
-      multi: true,
-    },
+      multi: true
+    }
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

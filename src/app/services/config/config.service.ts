@@ -24,6 +24,10 @@ export class ConfigService implements IConfig {
    */
   constructor(private httpClient: HttpClient) {}
 
+  get avatarUrl(): string {
+    return this.config?.avatarUrl || '';
+  }
+
   get backResumeUrl(): string {
     return this.config?.backResumeUrl || '';
   }

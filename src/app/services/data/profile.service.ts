@@ -21,6 +21,6 @@ export class ProfileService {
 
   readonly goals: string[] = [
     'Développement logiciel en équipe',
-    "Evolution souhaitée vers l'expertise technique",
+    "Evolution souhaitée vers l'expertise technique"
   ];
 }

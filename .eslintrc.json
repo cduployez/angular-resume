@@ -39,7 +39,7 @@
         "@typescript-eslint/no-empty-function": "error",
         "@typescript-eslint/consistent-type-definitions": [
           "error",
-          "type"
+          "interface"
         ],
         "@typescript-eslint/typedef": "error",
         "@typescript-eslint/no-inferrable-types": "off"

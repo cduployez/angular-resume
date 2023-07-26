@@ -1,29 +1,51 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ImageService } from '../../services/ui/image.service';
-import { ProfileService } from '../../services/data/profile.service';
 import { ThemeService } from '../../services/ui/theme.service';
+import { HeaderModel } from './header-model';
+import { HeaderController } from './header-controller';
+import { ProfileHttpService } from '../../services/http/profile-http.service';
+import { HeaderMessages } from './header-messages';
 
 @Component({
   selector: 'cv-header',
   templateUrl: 'header.component.html',
-  styleUrls: ['header.component.scss'],
+  styleUrls: ['header.component.scss']
 })
-export class HeaderComponent {
-  readonly goalTitle: string = 'Projet professionnel';
+export class HeaderComponent implements OnInit {
+  /**
+   * Messages of the component
+   */
+  readonly messages: HeaderMessages = new HeaderMessages();
 
-  readonly leftInfoList: string[];
-  readonly rightInfoList: string[];
+  /**
+   * Model of the component
+   */
+  readonly model: HeaderModel = new HeaderModel(this.messages);
+  /**
+   * Controller of the component
+   */
+  readonly controller: HeaderController = new HeaderController(
+    this.model,
+    this.profileHttpService
+  );
 
+  /**
+   * Constructor
+   *
+   * @param profileHttpService HTTP service for profile
+   * @param imageService Image service
+   * @param themeService Theme service
+   */
   constructor(
-    public profileService: ProfileService,
-    public imageService: ImageService,
-    public themeService: ThemeService
-  ) {
-    this.leftInfoList = [
-      this.profileService.ageWithSuffix,
-      this.profileService.city,
-    ];
+    private readonly profileHttpService: ProfileHttpService,
+    public readonly imageService: ImageService,
+    public readonly themeService: ThemeService
+  ) {}
 
-    this.rightInfoList = [this.profileService.driverLicense];
+  /**
+   * Init component
+   */
+  ngOnInit(): void {
+    this.controller.init();
   }
 }

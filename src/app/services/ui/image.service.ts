@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
+import { ConfigService } from '../config/config.service';
 
 @Injectable({ providedIn: 'root' })
 export class ImageService {
-  readonly avatarUrl: string =
-    'https://avatars1.githubusercontent.com/u/60548405?s=460&v=4';
+  constructor(private readonly configService: ConfigService) {}
+
+  get avatarUrl(): string {
+    return this.configService.avatarUrl;
+  }
 }

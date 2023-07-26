@@ -8,6 +8,7 @@ data:
   BASE_HREF: {{ .Values.angularResume.ingress.path }}
   config.json: |
     {
+      "avatarUrl": "{{ .Values.angularResume.configMap.avatarUrl }}",
       "backResumeUrl": "{{ .Values.angularResume.configMap.backResumeUrl }}"
     }
 ---

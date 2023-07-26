@@ -1,40 +1,50 @@
-<section class="container">
-  <div class="side side-left">
-    <img [class]="themeService.theme" [src]="imageService.avatarUrl" />
-  </div>
+<ng-container *ngIf="!controller.isLoading; else loader">
+  <ng-container *ngIf="model.profile">
+    <section class="container">
+      <div class="side side-left">
+        <img [class]="themeService.theme" [src]="imageService.avatarUrl" />
+      </div>
 
-  <div class="main">
-    <!-- Nom -->
-    <h1>{{ profileService.fullName }}</h1>
-    <!-- Infos complémentaires -->
-    <div class="main-grid info">
-      <div class="main-grid-col main-grid-col-left">
-        <ul>
-          <li *ngFor="let info of leftInfoList">{{ info }}</li>
-        </ul>
+      <div class="main">
+        <!-- Nom -->
+        <h1>{{ model.profile.fullName }}</h1>
+        <!-- Infos complémentaires -->
+        <div class="main-grid info">
+          <div class="main-grid-col main-grid-col-left">
+            <ul>
+              <li *ngFor="let info of model.leftInfoList">{{ info }}</li>
+            </ul>
+          </div>
+          <div class="main-grid-col main-grid-col-right">
+            <ul>
+              <li *ngFor="let info of model.rightInfoList">{{ info }}</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Contact -->
+        <div class="main-grid contact">
+          <div class="main-grid-col flex-merge-row">
+            <ul>
+              <li>
+                <a href="mailto:{{ model.profile.email }}">{{
+                  model.profile.email
+                }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="main-grid-col main-grid-col-right">
-        <ul>
-          <li *ngFor="let info of rightInfoList">{{ info }}</li>
-        </ul>
-      </div>
-    </div>
-    <!-- Contact -->
-    <div class="main-grid contact">
-      <div class="main-grid-col flex-merge-row">
-        <ul>
-          <li>
-            <a href="mailto:{{ profileService.email }}">{{
-              profileService.email
-            }}</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <div class="side side-right">
-    <h2>{{ goalTitle }}</h2>
-    <p *ngFor="let goal of profileService.goals">{{ goal }}</p>
-  </div>
-</section>
+      <div class="side side-right">
+        <h2>{{ messages.goalTitle }}</h2>
+        <p *ngFor="let goal of model.profile.goals">{{ goal }}</p>
+      </div>
+    </section>
+
+    <cv-banner [position]="model.profile.position"></cv-banner>
+  </ng-container>
+</ng-container>
+
+<ng-template #loader>
+  <cv-loader></cv-loader>
+</ng-template>
