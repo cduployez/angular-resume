@@ -1,8 +1,9 @@
-@import 'src/assets/styles/variables.scss';
+@use 'variables/variables';
+@use 'variables/theme-variables';
 
 nav {
-  background-color: var(--navbar);
-  color: var(--on-navbar);
+  background-color: theme-variables.$navbar;
+  color: theme-variables.$on-navbar;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,11 +11,11 @@ nav {
   margin-bottom: 2rem;
   font-size: larger;
   user-select: none;
-  transition: $transition-delay;
+  transition: variables.$transition-delay;
 
-  -webkit-box-shadow: 0 1px 15px 0 var(--navbar-shadow);
-  -moz-box-shadow: 0 1px 15px 0 var(--navbar-shadow);
-  box-shadow: 0 1px 15px 0 var(--navbar-shadow);
+  -webkit-box-shadow: 0 1px 15px 0 theme-variables.$navbar-shadow;
+  -moz-box-shadow: 0 1px 15px 0 theme-variables.$navbar-shadow;
+  box-shadow: 0 1px 15px 0 theme-variables.$navbar-shadow;
 
   .title {
     user-select: none;
@@ -24,8 +25,8 @@ nav {
     text-decoration: none;
     padding: 1rem;
     cursor: pointer;
-    transition: $transition-delay;
-    color: var(--on-navbar);
+    transition: variables.$transition-delay;
+    color: theme-variables.$on-navbar;
   }
 
   a {
@@ -37,23 +38,23 @@ nav {
   }
 
   a.linkedin:hover {
-    color: $linkedIn;
+    color: theme-variables.$linkedin;
   }
 
   a.github:hover {
-    color: var(--github);
+    color: theme-variables.$github;
   }
 
   a.pdf:hover {
-    color: $pdf;
+    color: theme-variables.$pdf;
   }
 
   .theme-button:hover {
-    color: $yellow;
+    color: theme-variables.$theme-button;
   }
 
   .minimize:hover {
-    color: var(--primary);
+    color: theme-variables.$primary;
   }
 }
 

@@ -1,8 +1,9 @@
-@import 'src/assets/styles/variables.scss';
+@use 'variables/variables';
+@use 'variables/theme-variables';
 
 .description {
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
-  color: var(--on-background);
-  transition: $transition-delay;
+  color: theme-variables.$on-background;
+  transition: variables.$transition-delay;
 }

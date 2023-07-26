@@ -1,16 +1,17 @@
-@import 'src/assets/styles/variables.scss';
+@use 'variables/variables';
+@use 'variables/theme-variables';
 
 .title {
   font-weight: bold;
-  color: var(--on-background);
+  color: theme-variables.$on-background;
 }
 
 .team-size {
-  color: var(--primary);
+  color: theme-variables.$primary;
 }
 
 .team-size:before {
-  content: $title-delimiter;
+  content: variables.$title-delimiter;
   margin-left: 0.2rem;
   margin-right: 0.2rem;
 }

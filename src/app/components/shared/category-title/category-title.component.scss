@@ -1,9 +1,10 @@
-@import 'src/assets/styles/variables.scss';
+@use 'variables/variables';
+@use 'variables/theme-variables';
 
 .title {
-  background-color: var(--primary);
-  transition: $transition-delay;
-  color: var(--on-primary);
+  background-color: theme-variables.$primary;
+  transition: variables.$transition-delay;
+  color: theme-variables.$on-primary;
   border-radius: 5px;
   margin-top: 0;
   margin-bottom: 1rem;

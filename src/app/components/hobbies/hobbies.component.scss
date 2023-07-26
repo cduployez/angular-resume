@@ -1,11 +1,12 @@
-@import 'src/assets/styles/variables.scss';
+@use 'variables/variables';
+@use 'variables/theme-variables';
 
 .title {
-  color: var(--primary);
+  color: theme-variables.$primary;
 }
 
 .title:before {
-  content: $title-delimiter;
+  content: variables.$title-delimiter;
   margin-right: 0.2rem;
 }
 
@@ -16,5 +17,5 @@
 }
 
 .values {
-  color: var(--on-background);
+  color: theme-variables.$on-background;
 }

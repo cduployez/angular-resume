@@ -1,8 +1,9 @@
-@import 'src/assets/styles/variables.scss';
+@use 'variables/variables';
+@use 'variables/theme-variables';
 
 div {
   text-align: center;
-  color: var(--secondary);
-  background-color: var(--on-secondary);
-  transition: $transition-delay;
+  color: theme-variables.$secondary;
+  background-color: theme-variables.$on-secondary;
+  transition: variables.$transition-delay;
 }
