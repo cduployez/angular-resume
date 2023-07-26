@@ -8,7 +8,7 @@ import {
   faKey,
   faLeaf,
   faMinus,
-  faPlus,
+  faPlus
 } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import {
@@ -18,11 +18,12 @@ import {
   faDocker,
   faEnvira,
   faGitAlt,
+  faGithub,
   faGitlab,
   faHtml5,
   faJava,
   faLinkedin,
-  faPython,
+  faPython
 } from '@fortawesome/free-brands-svg-icons';
 import { faMoon as faMoonSolid } from '@fortawesome/free-solid-svg-icons/faMoon';
 import { faMoon as faMoonRegular } from '@fortawesome/free-regular-svg-icons';
@@ -43,6 +44,11 @@ export class IconsService {
    * Font-Awesome - linkedin
    */
   readonly faLinkedIn: IconDefinition = faLinkedin;
+
+  /**
+   * Font-Awesome - github
+   */
+  readonly faGithub: IconDefinition = faGithub;
 
   /**
    * Font-Awesome - minus

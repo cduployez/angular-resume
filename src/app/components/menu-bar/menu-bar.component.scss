@@ -40,6 +40,10 @@ nav {
     color: $linkedIn;
   }
 
+  a.github:hover {
+    color: var(--github);
+  }
+
   a.pdf:hover {
     color: $pdf;
   }
