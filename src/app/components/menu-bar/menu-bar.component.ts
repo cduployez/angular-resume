@@ -13,7 +13,7 @@ import { ThemeEnum } from '../../model/ui/theme.enum';
   styleUrls: ['./menu-bar.component.scss']
 })
 export class MenuBarComponent {
-  themeIcon: IconDefinition = this.iconsService.faMoonRegular;
+  themeIcon: IconDefinition = this.iconsService.faMoonSolid;
 
   constructor(
     public projectService: ProjectService,
@@ -40,9 +40,9 @@ export class MenuBarComponent {
 
   private updateThemeIcon(theme: ThemeEnum): void {
     if (theme === ThemeEnum.DARK) {
-      this.themeIcon = this.iconsService.faMoonSolid;
+      this.themeIcon = this.iconsService.faSunSolid;
     } else {
-      this.themeIcon = this.iconsService.faMoonRegular;
+      this.themeIcon = this.iconsService.faMoonSolid;
     }
   }
 }

@@ -8,7 +8,8 @@ import {
   faKey,
   faLeaf,
   faMinus,
-  faPlus
+  faPlus,
+  faSun
 } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import {
@@ -26,7 +27,6 @@ import {
   faPython
 } from '@fortawesome/free-brands-svg-icons';
 import { faMoon as faMoonSolid } from '@fortawesome/free-solid-svg-icons/faMoon';
-import { faMoon as faMoonRegular } from '@fortawesome/free-regular-svg-icons';
 
 @Injectable({ providedIn: 'root' })
 export class IconsService {
@@ -126,15 +126,15 @@ export class IconsService {
 
   /**
    * Font-Awesome - Moon (filled)
-   * Used for dark theme
+   * Used for light theme
    */
   readonly faMoonSolid: IconDefinition = faMoonSolid;
 
   /**
-   * Font-Awesome - Moon (bordered)
-   * Used for light theme
+   * Font-Awesome - Sun (filled)
+   * Used for dark theme
    */
-  readonly faMoonRegular: IconDefinition = faMoonRegular;
+  readonly faSunSolid: IconDefinition = faSun;
 
   /**
    * Font-Awesome - Docker
