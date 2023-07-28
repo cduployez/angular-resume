@@ -9,6 +9,10 @@ data:
   config.json: |
     {
       "avatarUrl": "{{ .Values.angularResume.configMap.avatarUrl }}",
-      "backResumeUrl": "{{ .Values.angularResume.configMap.backResumeUrl }}"
+      "backResumeUrl": "{{ .Values.angularResume.configMap.backResumeUrl }}",
+      "linkedInUrl": "{{ .Values.angularResume.configMap.linkedInUrl }}",
+      "githubUrl": "{{ .Values.angularResume.configMap.githubUrl }}",
+      "pdfDownloadUrl": "{{ .Values.angularResume.configMap.pdfDownloadUrl }}",
+      "latestRevisionYear": {{ .Values.angularResume.configMap.latestRevisionYear }}
     }
 ---

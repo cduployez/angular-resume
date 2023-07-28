@@ -1,15 +1,15 @@
 <nav [ngClass]="{ minimized: minimized }">
   <div *ngIf="!minimized" class="title">
-    <span>CV – {{ projectService.latestRevisionYear }}</span>
+    <span>CV – {{ configService.latestRevisionYear }}</span>
   </div>
   <div>
-    <a [href]="linkService.pdfDownloadUrl" class="pdf link">
+    <a [href]="configService.pdfDownloadUrl" class="pdf link">
       <fa-icon [icon]="iconsService.faFilePdf"></fa-icon>
     </a>
-    <a [href]="linkService.linkedInUrl" class="linkedin link" target="_blank">
+    <a [href]="configService.linkedInUrl" class="linkedin link" target="_blank">
       <fa-icon [icon]="iconsService.faLinkedIn"></fa-icon>
     </a>
-    <a [href]="linkService.githubUrl" class="github link" target="_blank">
+    <a [href]="configService.githubUrl" class="github link" target="_blank">
       <fa-icon [icon]="iconsService.faGithub"></fa-icon>
     </a>
     <fa-icon

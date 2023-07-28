@@ -32,6 +32,22 @@ export class ConfigService implements IConfig {
     return this.config?.backResumeUrl || '';
   }
 
+  get githubUrl(): string {
+    return this.config?.githubUrl || '';
+  }
+
+  get linkedInUrl(): string {
+    return this.config?.linkedInUrl || '';
+  }
+
+  get pdfDownloadUrl(): string {
+    return this.config?.pdfDownloadUrl || '';
+  }
+
+  get latestRevisionYear(): number {
+    return this.config?.latestRevisionYear || new Date().getFullYear();
+  }
+
   load(): Promise<void> {
     return lastValueFrom(
       this.httpClient.get<IConfig>(

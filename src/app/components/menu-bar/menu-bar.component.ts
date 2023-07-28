@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { ProjectService } from '../../services/data/project.service';
 import { IconsService } from '../../services/ui/icons.service';
-import { LinkService } from '../../services/data/link.service';
 import { SessionStorageService } from '../../services/data/session-storage.service';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { ThemeService } from '../../services/ui/theme.service';
 import { ThemeEnum } from '../../model/ui/theme.enum';
+import { ConfigService } from '../../services/config/config.service';
 
 @Component({
   selector: 'cv-menu-bar',
@@ -16,8 +15,7 @@ export class MenuBarComponent {
   themeIcon: IconDefinition = this.iconsService.faMoonSolid;
 
   constructor(
-    public projectService: ProjectService,
-    public linkService: LinkService,
+    public configService: ConfigService,
     public iconsService: IconsService,
     private themeService: ThemeService,
     private sessionStorageService: SessionStorageService
