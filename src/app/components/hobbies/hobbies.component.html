@@ -1,4 +1,4 @@
-<cv-category categoryTitle="Loisirs">
+<cv-category [categoryTitle]="messages.categoryTitle">
   <cv-item-container *ngFor="let hobby of model.hobbies">
     <span class="title">{{ hobby.title }}</span>
     <span class="values"

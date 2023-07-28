@@ -1,10 +1,12 @@
 <cv-category
-  [loading]="controller.isLoading"
-  categoryTitle="Projets informatiques">
+  [categoryTitle]="messages.categoryTitle"
+  [loading]="controller.isLoading">
   <cv-item-container *ngFor="let project of model.projects">
     <div>
       <span class="title">{{ project.project }}</span>
-      <span class="team-size">{{ project.teamSize }} personnes</span>
+      <span class="team-size">{{
+        messages.teamSizeFormat(project.teamSize)
+      }}</span>
     </div>
     <div>
       <cv-descriptions [descriptions]="project.descriptions"></cv-descriptions>

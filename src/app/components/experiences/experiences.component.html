@@ -1,4 +1,6 @@
-<cv-category [loading]="controller.isLoading" categoryTitle="Expériences">
+<cv-category
+  [categoryTitle]="messages.categoryTitle"
+  [loading]="controller.isLoading">
   <cv-item-container *ngFor="let experience of model.experiences">
     <div>
       <cv-date-prefix [dateRange]="experience.dateRange"></cv-date-prefix>

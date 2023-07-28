@@ -2,13 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { LanguagesModel } from './languages-model';
 import { LanguagesController } from './languages-controller';
 import { LanguagesHttpService } from '../../services/http/languages-http.service';
+import { LanguagesMessages } from './languages-messages';
 
 @Component({
   selector: 'cv-languages',
   templateUrl: './languages.component.html',
-  styleUrls: ['./languages.component.scss'],
+  styleUrls: ['./languages.component.scss']
 })
 export class LanguagesComponent implements OnInit {
+  /**
+   * Messages of the component
+   */
+  readonly messages: LanguagesMessages = new LanguagesMessages();
+
   /**
    * Model of the component
    */

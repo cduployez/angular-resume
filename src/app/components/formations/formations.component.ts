@@ -2,13 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { FormationsModel } from './formations-model';
 import { FormationsController } from './formations-controller';
 import { FormationsHttpService } from '../../services/http/formations-http.service';
+import { FormationsMessages } from './formations-messages';
 
 @Component({
   selector: 'cv-formations',
   templateUrl: './formations.component.html',
-  styleUrls: ['./formations.component.scss'],
+  styleUrls: ['./formations.component.scss']
 })
 export class FormationsComponent implements OnInit {
+  /**
+   * Messages of the component
+   */
+  readonly messages: FormationsMessages = new FormationsMessages();
+
   /**
    * Model of the component
    */

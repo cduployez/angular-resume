@@ -2,13 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { HobbiesHttpService } from '../../services/http/hobbies-http.service';
 import { HobbiesModel } from './hobbies-model';
 import { HobbiesController } from './hobbies-controller';
+import { HobbiesMessages } from './hobbies-messages';
 
 @Component({
   selector: 'cv-hobbies',
   templateUrl: './hobbies.component.html',
-  styleUrls: ['./hobbies.component.scss'],
+  styleUrls: ['./hobbies.component.scss']
 })
 export class HobbiesComponent implements OnInit {
+  /**
+   * Messages of the component
+   */
+  readonly messages: HobbiesMessages = new HobbiesMessages();
+
   /**
    * Model of the component
    */

@@ -1,4 +1,6 @@
-<cv-category [loading]="controller.isLoading" categoryTitle="Langues">
+<cv-category
+  [categoryTitle]="messages.categoryTitle"
+  [loading]="controller.isLoading">
   <cv-item-container *ngFor="let language of model.languages">
     <div>
       <cv-date-prefix [dateRange]="language.dateRange"></cv-date-prefix>
