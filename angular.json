@@ -176,7 +176,6 @@
       }
     }
   },
-  "defaultProject": "angular-resume",
   "cli": {
     "analytics": false,
     "schematicCollections": [
