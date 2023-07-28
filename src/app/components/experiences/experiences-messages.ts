@@ -5,10 +5,10 @@ export class ExperiencesMessages {
     STAGE: 'Stage',
     ALTERNANCE: 'Alternance',
     CDD: 'CDD',
-    CDI: 'CDI',
+    CDI: 'CDI'
   };
 
-  jobTypeText(jobType: JobTypeEnum): string {
-    return this.jobTypeRecord[jobType];
+  jobTypeText(jobType: JobTypeEnum): string | null {
+    return jobType !== JobTypeEnum.CDI ? this.jobTypeRecord[jobType] : null;
   }
 }
