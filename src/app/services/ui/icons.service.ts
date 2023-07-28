@@ -8,6 +8,7 @@ import {
   faKey,
   faLeaf,
   faMinus,
+  faMoon,
   faPlus,
   faSun
 } from '@fortawesome/free-solid-svg-icons';
@@ -26,7 +27,6 @@ import {
   faLinkedin,
   faPython
 } from '@fortawesome/free-brands-svg-icons';
-import { faMoon as faMoonSolid } from '@fortawesome/free-solid-svg-icons/faMoon';
 
 @Injectable({ providedIn: 'root' })
 export class IconsService {
@@ -125,10 +125,10 @@ export class IconsService {
   readonly faEnvira: IconDefinition = faEnvira;
 
   /**
-   * Font-Awesome - Moon (filled)
+   * Font-Awesome - Moon (solid)
    * Used for light theme
    */
-  readonly faMoonSolid: IconDefinition = faMoonSolid;
+  readonly faMoonSolid: IconDefinition = faMoon;
 
   /**
    * Font-Awesome - Sun (filled)
