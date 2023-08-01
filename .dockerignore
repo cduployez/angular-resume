@@ -1,0 +1,7 @@
+.angular/
+dist/
+e2e/
+helm-chart/
+node_modules/
+.gitignore
+*.md

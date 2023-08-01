@@ -26,7 +26,7 @@ export abstract class HttpService {
    */
   constructor(
     protected httpConfigService: HttpConfigService,
-    private readonly serviceUrl: string
+    private readonly serviceUrl: `/${string}`
   ) {
     this.httpClient = httpConfigService.httpClient;
   }
@@ -48,7 +48,7 @@ export abstract class HttpService {
   ): Observable<D> {
     return this.httpClient
       .get<J>(this.url(url), {
-        params: httpParams,
+        params: httpParams
       })
       .pipe(map(mapFunction));
   }
