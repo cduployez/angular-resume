@@ -1,17 +1,16 @@
 import { LoadingMethod } from '../../model/ui/calling-method';
-import { LanguageDto } from '../../model/dtos/language-dto';
 import { FormationsModel } from './formations-model';
-import { LanguagesHttpService } from '../../services/http/languages-http.service';
 import { FormationDto } from '../../model/dtos/formation-dto';
 import { DateRangeUtils } from '../../utils/date-range-utils';
+import { FormationsHttpService } from '../../services/http/formations-http.service';
 
 export class FormationsController {
-  readonly findAllFormationsMethod: LoadingMethod<LanguageDto[]> =
+  readonly findAllFormationsMethod: LoadingMethod<FormationDto[]> =
     new LoadingMethod();
 
   constructor(
     private readonly model: FormationsModel,
-    private readonly formationsHttpService: LanguagesHttpService
+    private readonly formationsHttpService: FormationsHttpService
   ) {}
 
   get isLoading(): boolean {
@@ -30,7 +29,7 @@ export class FormationsController {
         },
         error: (error: unknown) => {
           console.error(error);
-        },
+        }
       });
   }
 }
