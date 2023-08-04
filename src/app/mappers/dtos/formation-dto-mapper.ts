@@ -1,17 +1,17 @@
-import { LanguageJson } from '../../model/jsons/language-json';
-import { LanguageDto } from '../../model/dtos/language-dto';
 import { DateRangeDtoMapper } from './date-range-dto-mapper';
+import { FormationJson } from '../../model/jsons/formation-json';
+import { FormationDto } from '../../model/dtos/formation-dto';
 
 export class FormationDtoMapper {
-  static fromFormationJson(json: LanguageJson): LanguageDto {
-    return new LanguageDto(
+  static fromFormationJson(json: FormationJson): FormationDto {
+    return new FormationDto(
       DateRangeDtoMapper.fromDateRangeJson(json.dateRange),
       json.title,
       json.descriptions
     );
   }
 
-  static fromFormationJsons(jsons: LanguageJson[]): LanguageDto[] {
+  static fromFormationJsons(jsons: FormationJson[]): FormationDto[] {
     return jsons.map(FormationDtoMapper.fromFormationJson);
   }
 }

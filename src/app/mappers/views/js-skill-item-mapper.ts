@@ -1,5 +1,5 @@
 import { SkillDto } from '../../model/dtos/skill-dto';
-import { JsSkillItem } from '../../model/skill/skill-item/js-skill-item';
+import { JsSkillItem } from '../../model/views/js-skill-item';
 
 export class JsSkillItemMapper {
   static fromSkillDto(dto: SkillDto, iconText: string): JsSkillItem {

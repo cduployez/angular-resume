@@ -1,8 +1,8 @@
-import { SkillEnum } from '../../enums/skill.enum';
-import { SkillTypeEnum } from '../skill-type-enum';
+import { SkillEnum } from '../enums/skill.enum';
+import { SkillTypeEnum } from '../enums/skill-type-enum';
 import { SkillItem } from './skill-item';
 
-export class TextSkillItem extends SkillItem {
+export class JsSkillItem extends SkillItem {
   iconText: string;
 
   constructor(
@@ -11,7 +11,7 @@ export class TextSkillItem extends SkillItem {
     keywords: SkillEnum[],
     iconText: string
   ) {
-    super(title, skillEnum, keywords, SkillTypeEnum.TEXT);
+    super(title, skillEnum, keywords, SkillTypeEnum.JS);
     this.iconText = iconText;
   }
 }

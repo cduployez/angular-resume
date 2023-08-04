@@ -1,4 +1,4 @@
-import { SkillItem } from '../../model/skill/skill-item/skill-item';
+import { SkillItem } from '../../model/views/skill-item';
 import { SkillEnum } from '../../model/enums/skill.enum';
 import { IconsService } from '../../services/ui/icons.service';
 import { FaSkillItemMapper } from './fa-skill-item-mapper';

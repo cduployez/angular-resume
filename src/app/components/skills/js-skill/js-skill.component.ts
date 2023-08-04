@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { JsSkillItem } from '../../../model/skill/skill-item/js-skill-item';
+import { JsSkillItem } from '../../../model/views/js-skill-item';
 
 @Component({
   selector: 'cv-js-skill',

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { SkillItem } from '../../model/skill/skill-item/skill-item';
-import { FaSkillItem } from '../../model/skill/skill-item/fa-skill-item';
-import { TextSkillItem } from '../../model/skill/skill-item/text-skill-item';
-import { JsSkillItem } from '../../model/skill/skill-item/js-skill-item';
-import { SkillTypeEnum } from '../../model/skill/skill-type-enum';
+import { SkillItem } from '../../model/views/skill-item';
+import { FaSkillItem } from '../../model/views/fa-skill-item';
+import { TextSkillItem } from '../../model/views/text-skill-item';
+import { JsSkillItem } from '../../model/views/js-skill-item';
+import { SkillTypeEnum } from '../../model/enums/skill-type-enum';
 import { SkillsHttpService } from '../../services/http/skills-http.service';
 import { IconsService } from '../../services/ui/icons.service';
 import { SkillsController } from './skills-controller';

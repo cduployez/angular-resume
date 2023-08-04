@@ -1,4 +1,4 @@
-import { FaSkillItem } from '../../model/skill/skill-item/fa-skill-item';
+import { FaSkillItem } from '../../model/views/fa-skill-item';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { SkillDto } from '../../model/dtos/skill-dto';
 

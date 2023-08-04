@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { SkillEnum } from '../../../model/enums/skill.enum';
-import { FaSkillItem } from '../../../model/skill/skill-item/fa-skill-item';
+import { FaSkillItem } from '../../../model/views/fa-skill-item';
 import { SkillMessages } from '../skill/skill-messages';
 
 @Component({

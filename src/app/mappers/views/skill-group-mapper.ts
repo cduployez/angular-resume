@@ -1,6 +1,6 @@
 import { IconsService } from '../../services/ui/icons.service';
 import { SkillGroupDto } from '../../model/dtos/skill-group-dto';
-import { SkillGroup } from '../../model/skill/skill-group';
+import { SkillGroup } from '../../model/views/skill-group';
 import { SkillItemMapper } from './skill-item-mapper';
 
 export class SkillGroupMapper {

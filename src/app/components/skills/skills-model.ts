@@ -1,4 +1,4 @@
-import { SkillGroup } from '../../model/skill/skill-group';
+import { SkillGroup } from '../../model/views/skill-group';
 
 export class SkillsModel {
   skillGroups: SkillGroup[] = [];
