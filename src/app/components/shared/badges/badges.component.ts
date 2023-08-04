@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SkillBadge } from '../../../model/experience/skill-badge';
+import { SkillBadgeDto } from '../../../model/dtos/skill-badge-dto';
 
 @Component({
   selector: 'cv-badges',
@@ -8,5 +8,5 @@ import { SkillBadge } from '../../../model/experience/skill-badge';
 })
 export class BadgesComponent {
   @Input()
-  badges: SkillBadge[] = [];
+  badges: SkillBadgeDto[] = [];
 }
