@@ -8,16 +8,22 @@ import { SkillsHttpService } from '../../services/http/skills-http.service';
 import { IconsService } from '../../services/ui/icons.service';
 import { SkillsController } from './skills-controller';
 import { SkillsModel } from './skills-model';
+import { SkillsMessages } from './skills-messages';
 
 @Component({
   selector: 'cv-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss', './skills-icon-colors.component.scss'],
+  styleUrls: ['./skills.component.scss', './skills-icon-colors.component.scss']
 })
 export class SkillsComponent implements OnInit {
   faTypeEnum: SkillTypeEnum = SkillTypeEnum.FA;
   textTypeEnum: SkillTypeEnum = SkillTypeEnum.TEXT;
   jsTypeEnum: SkillTypeEnum = SkillTypeEnum.JS;
+
+  /**
+   * Messages of the component
+   */
+  readonly messages: SkillsMessages = new SkillsMessages();
 
   /**
    * Model of the component

@@ -1,4 +1,6 @@
-<cv-category categoryTitle="Compétences">
+<cv-category
+  [categoryTitle]="messages.categoryTitle"
+  [loading]="controller.isLoading">
   <cv-item-container *ngFor="let skillGroup of model.skillGroups">
     <p>{{ skillGroup.title }}</p>
     <div class="row-container">
