@@ -25,7 +25,7 @@ export class HobbiesController {
         },
         error: (error: unknown) => {
           console.error(error);
-        },
+        }
       });
   }
 }
