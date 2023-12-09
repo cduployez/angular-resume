@@ -108,21 +108,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-resume:build"
+            "buildTarget": "angular-resume:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-resume:build:production"
+              "buildTarget": "angular-resume:build:production"
             },
             "github": {
-              "browserTarget": "angular-resume:build:github"
+              "buildTarget": "angular-resume:build:github"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-resume:build"
+            "buildTarget": "angular-resume:build"
           }
         },
         "test": {

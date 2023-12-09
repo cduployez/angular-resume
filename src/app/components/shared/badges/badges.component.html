@@ -1,3 +1,5 @@
 <div>
-  <cv-badge *ngFor="let badge of badges" [badge]="badge"></cv-badge>
+  @for (badge of badges; track badge) {
+    <cv-badge [badge]="badge"></cv-badge>
+  }
 </div>

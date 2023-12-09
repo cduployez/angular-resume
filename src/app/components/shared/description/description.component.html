@@ -1,5 +1,7 @@
 <div>
-  <p *ngFor="let description of descriptions" class="description">
-    {{ description }}
-  </p>
+  @for (description of descriptions; track description) {
+    <p class="description">
+      {{ description }}
+    </p>
+  }
 </div>

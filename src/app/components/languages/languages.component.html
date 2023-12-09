@@ -1,13 +1,15 @@
 <cv-category
   [categoryTitle]="messages.categoryTitle"
   [loading]="controller.isLoading">
-  <cv-item-container *ngFor="let language of model.languages">
-    <div>
-      <cv-date-prefix [dateRange]="language.dateRange"></cv-date-prefix>
-      <cv-title [title]="language.title"></cv-title>
-    </div>
-    <div>
-      <cv-descriptions [descriptions]="language.descriptions"></cv-descriptions>
-    </div>
-  </cv-item-container>
+  @for (language of model.languages; track language) {
+    <cv-item-container>
+      <div>
+        <cv-date-prefix [dateRange]="language.dateRange"></cv-date-prefix>
+        <cv-title [title]="language.title"></cv-title>
+      </div>
+      <div>
+        <cv-descriptions [descriptions]="language.descriptions"></cv-descriptions>
+      </div>
+    </cv-item-container>
+  }
 </cv-category>

@@ -1,11 +1,13 @@
 <cv-category
   [categoryTitle]="messages.categoryTitle"
   [loading]="controller.isLoading">
-  <cv-item-container *ngFor="let formation of model.formations">
-    <div>
-      <cv-date-prefix [dateRange]="formation.dateRange"></cv-date-prefix>
-      <cv-title [title]="formation.title"></cv-title>
-    </div>
-    <cv-descriptions [descriptions]="formation.descriptions"></cv-descriptions>
-  </cv-item-container>
+  @for (formation of model.formations; track formation) {
+    <cv-item-container>
+      <div>
+        <cv-date-prefix [dateRange]="formation.dateRange"></cv-date-prefix>
+        <cv-title [title]="formation.title"></cv-title>
+      </div>
+      <cv-descriptions [descriptions]="formation.descriptions"></cv-descriptions>
+    </cv-item-container>
+  }
 </cv-category>

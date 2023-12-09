@@ -1,13 +1,18 @@
-<span *ngIf="dateRange" class="date-range">
-  <span>{{ dateRange.beginDate | date: dateRange.datePipeFormat }}</span>
-  <ng-container *ngIf="dateRange.beginDate !== dateRange.endDate">
-    <span> - </span>
-    <span *ngIf="dateRange.endDate; else current">{{
-      dateRange.endDate | date: dateRange.datePipeFormat
-    }}</span>
-  </ng-container>
-</span>
-
+@if (dateRange) {
+  <span class="date-range">
+    <span>{{ dateRange.beginDate | date: dateRange.datePipeFormat }}</span>
+    @if (dateRange.beginDate !== dateRange.endDate) {
+      <span> - </span>
+      @if (dateRange.endDate) {
+        <span>{{
+          dateRange.endDate | date: dateRange.datePipeFormat
+        }}</span>
+      } @else {
+        <span>{{ messages.current }}</span>
+      }
+    }
+  </span>
+}
 <ng-template #current>
   <span>{{ messages.current }}</span>
 </ng-template>

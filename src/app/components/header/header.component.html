@@ -1,10 +1,9 @@
-<ng-container *ngIf="!controller.isLoading; else loader">
-  <ng-container *ngIf="model.profile">
+@if (!controller.isLoading) {
+  @if (model.profile) {
     <section class="container">
       <div class="side side-left">
         <img [class]="themeService.theme" [src]="imageService.avatarUrl" />
       </div>
-
       <div class="main">
         <!-- Nom -->
         <h1>{{ model.profile.fullName }}</h1>
@@ -12,12 +11,16 @@
         <div class="main-grid info">
           <div class="main-grid-col main-grid-col-left">
             <ul>
-              <li *ngFor="let info of model.leftInfoList">{{ info }}</li>
+              @for (info of model.leftInfoList; track info) {
+                <li>{{ info }}</li>
+              }
             </ul>
           </div>
           <div class="main-grid-col main-grid-col-right">
             <ul>
-              <li *ngFor="let info of model.rightInfoList">{{ info }}</li>
+              @for (info of model.rightInfoList; track info) {
+                <li>{{ info }}</li>
+              }
             </ul>
           </div>
         </div>
@@ -34,17 +37,15 @@
           </div>
         </div>
       </div>
-
       <div class="side side-right">
         <h2>{{ messages.goalTitle }}</h2>
-        <p *ngFor="let goal of model.profile.goals">{{ goal }}</p>
+        @for (goal of model.profile.goals; track goal) {
+          <p>{{ goal }}</p>
+        }
       </div>
     </section>
-
     <cv-banner [position]="model.profile.position"></cv-banner>
-  </ng-container>
-</ng-container>
-
-<ng-template #loader>
+  }
+} @else {
   <cv-loader></cv-loader>
-</ng-template>
+}

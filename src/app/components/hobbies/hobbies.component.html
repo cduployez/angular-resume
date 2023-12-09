@@ -1,9 +1,14 @@
 <cv-category [categoryTitle]="messages.categoryTitle">
-  <cv-item-container *ngFor="let hobby of model.hobbies">
-    <span class="title">{{ hobby.title }}</span>
-    <span class="values"
-      >{{ hobby.valuesFormat
-      }}<ng-container *ngIf="hobby.ellipsis">...</ng-container></span
-    >
-  </cv-item-container>
-</cv-category>
+  @for (hobby of model.hobbies; track hobby) {
+    <cv-item-container>
+      <span class="title">{{ hobby.title }}</span>
+      <span class="values"
+        >{{ hobby.valuesFormat
+        }}@if (hobby.ellipsis) {
+        ...
+        }</span
+        >
+      </cv-item-container>
+    }
+  </cv-category>
+  
