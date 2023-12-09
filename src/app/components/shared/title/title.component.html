@@ -1,2 +1,4 @@
 <span class="title">{{ title }}</span>
-<span *ngIf="detail" class="detail">({{ detail }})</span>
+@if (detail) {
+  <span class="detail">({{ detail }})</span>
+}

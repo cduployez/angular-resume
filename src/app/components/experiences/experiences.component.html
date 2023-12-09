@@ -1,20 +1,23 @@
 <cv-category
   [categoryTitle]="messages.categoryTitle"
   [loading]="controller.isLoading">
-  <cv-item-container *ngFor="let experience of model.experiences">
-    <div>
-      <cv-date-prefix [dateRange]="experience.dateRange"></cv-date-prefix>
-      <cv-title
-        [detail]="messages.jobTypeText(experience.jobType)"
+  @for (experience of model.experiences; track experience) {
+    <cv-item-container>
+      <div>
+        <cv-date-prefix [dateRange]="experience.dateRange"></cv-date-prefix>
+        <cv-title
+          [detail]="messages.jobTypeText(experience.jobType)"
         [title]="experience.company"></cv-title>
-    </div>
-    <div>
-      <cv-subtitle
-        *ngIf="experience.project"
-        [subtitle]="experience.project"></cv-subtitle>
-      <cv-descriptions
+      </div>
+      <div>
+        @if (experience.project) {
+          <cv-subtitle
+          [subtitle]="experience.project"></cv-subtitle>
+        }
+        <cv-descriptions
         [descriptions]="experience.descriptions"></cv-descriptions>
-      <cv-badges [badges]="experience.skills"></cv-badges>
-    </div>
-  </cv-item-container>
+        <cv-badges [badges]="experience.skills"></cv-badges>
+      </div>
+    </cv-item-container>
+  }
 </cv-category>

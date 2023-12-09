@@ -1,14 +1,11 @@
 <cv-category-title
   (click)="toggle()"
   [categoryDisplayed]="categoryDisplayed"
-  [categoryTitle]="categoryTitle"></cv-category-title>
-
+[categoryTitle]="categoryTitle"></cv-category-title>
 <div [@openClose]="openCloseState">
-  <ng-container *ngIf="!loading; else loader">
+  @if (!loading) {
     <ng-content></ng-content>
-  </ng-container>
+  } @else {
+    <cv-loader></cv-loader>
+  }
 </div>
-
-<ng-template #loader>
-  <cv-loader></cv-loader>
-</ng-template>

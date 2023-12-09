@@ -1,9 +1,10 @@
-<cv-skill
-  *ngIf="item"
-  [childrenKeywords]="item.childrenKeywords"
-  [skillEnum]="item.skillEnum"
-  [title]="item.title">
-  <div class="icon">
-    <span>{{ item.iconText }}</span>
-  </div>
-</cv-skill>
+@if (item) {
+  <cv-skill
+    [childrenKeywords]="item.childrenKeywords"
+    [skillEnum]="item.skillEnum"
+    [title]="item.title">
+    <div class="icon">
+      <span>{{ item.iconText }}</span>
+    </div>
+  </cv-skill>
+}

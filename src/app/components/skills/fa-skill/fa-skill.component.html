@@ -1,9 +1,10 @@
-<cv-skill
-  *ngIf="item"
-  [childrenKeywords]="item.childrenKeywords"
-  [skillEnum]="item.skillEnum"
-  [title]="item.title">
-  <fa-icon
-    [class]="optionalClass(item.skillEnum)"
+@if (item) {
+  <cv-skill
+    [childrenKeywords]="item.childrenKeywords"
+    [skillEnum]="item.skillEnum"
+    [title]="item.title">
+    <fa-icon
+      [class]="optionalClass(item.skillEnum)"
     [icon]="item.faIcon"></fa-icon>
-</cv-skill>
+  </cv-skill>
+}

@@ -1,16 +1,18 @@
 <cv-category
   [categoryTitle]="messages.categoryTitle"
   [loading]="controller.isLoading">
-  <cv-item-container *ngFor="let project of model.projects">
-    <div>
-      <span class="title">{{ project.project }}</span>
-      <span class="team-size">{{
-        messages.teamSizeFormat(project.teamSize)
-      }}</span>
-    </div>
-    <div>
-      <cv-descriptions [descriptions]="project.descriptions"></cv-descriptions>
-      <cv-badges [badges]="project.skills"></cv-badges>
-    </div>
-  </cv-item-container>
+  @for (project of model.projects; track project) {
+    <cv-item-container>
+      <div>
+        <span class="title">{{ project.project }}</span>
+        <span class="team-size">{{
+          messages.teamSizeFormat(project.teamSize)
+        }}</span>
+      </div>
+      <div>
+        <cv-descriptions [descriptions]="project.descriptions"></cv-descriptions>
+        <cv-badges [badges]="project.skills"></cv-badges>
+      </div>
+    </cv-item-container>
+  }
 </cv-category>
