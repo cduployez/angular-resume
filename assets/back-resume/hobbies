@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Films et séries",
+        "values": [
+            "Inception",
+            "Le Roi Lion",
+            "Kaamelott"
+        ],
+        "ellipsis": true
+    },
+    {
+        "title": "Musique",
+        "values": [
+            "Pratique de la guitare"
+        ],
+        "ellipsis": false
+    },
+    {
+        "title": "Sport",
+        "values": [
+            "Natation",
+            "Footing",
+            "Escalade"
+        ],
+        "ellipsis": false
+    }
+]
