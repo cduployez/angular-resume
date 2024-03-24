@@ -18,9 +18,10 @@
     {
         "title": "Sport",
         "values": [
-            "Natation",
-            "Footing",
-            "Escalade"
+            "Course à pied",
+            "Musculation",
+            "Escalade",
+            "Natation"
         ],
         "ellipsis": false
     }
