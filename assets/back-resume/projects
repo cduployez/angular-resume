@@ -1,23 +1,5 @@
 [
     {
-        "project": "TwinMax",
-        "teamSize": 5,
-        "descriptions": [
-            "Application Android de calcul et affichage de courbes en temps réel afin de calibrer les carburateurs d’une moto pour l’entreprise Selectronic"
-        ],
-        "skills": [
-            {
-                "title": "Android 5",
-                "keywords": [
-                    "ANDROID"
-                ],
-                "childrenKeywords": [
-                    "JAVA"
-                ]
-            }
-        ]
-    },
-    {
         "project": "MatchFM",
         "teamSize": 4,
         "descriptions": [
