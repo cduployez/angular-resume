@@ -6,12 +6,12 @@
             "Le Roi Lion",
             "Kaamelott"
         ],
-        "ellipsis": true
+        "ellipsis": false
     },
     {
         "title": "Musique",
         "values": [
-            "Pratique de la guitare"
+            "Guitare"
         ],
         "ellipsis": false
     },
@@ -22,6 +22,15 @@
             "Musculation",
             "Escalade",
             "Natation"
+        ],
+        "ellipsis": false
+    },
+    {
+        "title": "Courses",
+        "values": [
+            "10K du semi-marathon de Lille (2024 et 2025)",
+            "10K Odyssea Villeneuve d'Ascq (2024)",
+            "20K de Maroilles 2026"
         ],
         "ellipsis": false
     }
