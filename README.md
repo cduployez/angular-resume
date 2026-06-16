@@ -12,6 +12,8 @@ Run:
 ng deploy --build-target=angular-resume:build:github
 ```
 
+In repository settings > Pages > Custom domain: Save value `clement.duployez.fr`
+
 ### Deployment to Google Cloud
 
 On WSL configured with `ansible-playbook`, run:
