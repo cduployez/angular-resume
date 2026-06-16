@@ -28,13 +28,6 @@
                 "title": "Python",
                 "keyword": "PYTHON",
                 "childrenKeywords": []
-            },
-            {
-                "title": "Android",
-                "keyword": "ANDROID",
-                "childrenKeywords": [
-                    "JAVA"
-                ]
             }
         ]
     },
