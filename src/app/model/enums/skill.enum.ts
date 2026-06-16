@@ -23,4 +23,6 @@ export enum SkillEnum {
   AZURE = 'AZURE',
   OPENSHIFT = 'OPENSHIFT',
   APACHE_TAPESTRY = 'APACHE_TAPESTRY',
+  PHP = 'PHP',
+  AWS = 'AWS'
 }

@@ -1,8 +1,61 @@
 [
+        {
+        "dateRange": {
+            "beginDate": "2025-09-01T00:00:00Z",
+            "endDate": null,
+            "dateRangeType": "MONTH"
+        },
+        "company": "Magellan",
+        "jobType": "CDI",
+        "project": "Projet Tarification Solidarité Transport",
+        "descriptions": [
+            "Migration Move to Cloud du projet visant à réduire les frais de transport pour les ménages les plus modestes en Île-de-France"
+        ],
+        "skills": [
+            {
+                "title": "PHP",
+                "keywords": [
+                    "PHP"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Docker",
+                "keywords": [
+                    "DOCKER"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Kubernetes",
+                "keywords": [
+                    "KUBERNETES"
+                ],
+                "childrenKeywords": [
+                    "DOCKER"
+                ]
+            },
+            {
+                "title": "AWS",
+                "keywords": [
+                    "AWS"
+                ],
+                "childrenKeywords": [
+                    "DOCKER",
+                    "KUBERNETES"
+                ]
+            },
+            {
+                "title": "Etat d'esprit agile",
+                "keywords": [],
+                "childrenKeywords": []
+            }
+        ]
+    },
     {
         "dateRange": {
             "beginDate": "2022-10-01T00:00:00Z",
-            "endDate": null,
+            "endDate": "2025-09-01T00:00:00Z",
             "dateRangeType": "MONTH"
         },
         "company": "Worldline",

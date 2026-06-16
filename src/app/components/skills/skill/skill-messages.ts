@@ -25,7 +25,9 @@ export class SkillMessages {
     [SkillEnum.KUBERNETES]: 'kubernetes',
     [SkillEnum.AZURE]: 'azure',
     [SkillEnum.OPENSHIFT]: 'openshift',
-    [SkillEnum.APACHE_TAPESTRY]: 'apache-tapestry'
+    [SkillEnum.APACHE_TAPESTRY]: 'apache-tapestry',
+    [SkillEnum.PHP]: 'php',
+    [SkillEnum.AWS]: 'aws'
   };
 
   skillCssClass(skill: SkillEnum | null): string {
