@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1781601466155,
+  "timestamp": 1781602325500,
   "index": "./index.html",
   "assetGroups": [
     {
@@ -76,7 +76,7 @@
     "./assets/back-resume/profile": "fdab39d3cb2d83898d6ed941038f25bf28036e36",
     "./assets/back-resume/projects": "52dea9272f09b352cd2e17cac8b8763be8198b27",
     "./assets/back-resume/skills": "12ee4301f977eff4ce9318873bff55b9cd479031",
-    "./assets/config/config.github.json": "9ae737a89b8bc2dc6b4cd0caef9a6575fdaed89a",
+    "./assets/config/config.github.json": "41bd4673698d0f7578184d095137195f5e44e7c9",
     "./assets/config/config.json": "ca065d5631a4ee10c4e0e0e594ed9a444c0a6472",
     "./assets/fonts/Gudea-Bold.ttf": "337e3933c80dfc002dec4874958cb33e66f13310",
     "./assets/fonts/Gudea-Italic.ttf": "3ae9a4e08c3ae78411b76d4364e3b60779ea9f25",
